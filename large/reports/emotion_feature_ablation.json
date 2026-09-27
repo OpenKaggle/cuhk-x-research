@@ -1,0 +1,47 @@
+{
+  "experiment": "hau_emotion_feature_ablation_loso",
+  "seed": 20260909,
+  "trees_per_fold": 120,
+  "rows": 809,
+  "train_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+  "feature_cache_sha256": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+  "results": {
+    "imu_all_sqrt": {
+      "feature_count": 655,
+      "overall_accuracy": 0.411619283065513,
+      "worst_subject_accuracy": 0.32558139534883723,
+      "best_subject_accuracy": 0.6326530612244898
+    },
+    "imu_motion_sqrt": {
+      "feature_count": 305,
+      "overall_accuracy": 0.4289245982694685,
+      "worst_subject_accuracy": 0.30303030303030304,
+      "best_subject_accuracy": 0.5882352941176471
+    },
+    "imu_spectral_sqrt": {
+      "feature_count": 95,
+      "overall_accuracy": 0.4079110012360939,
+      "worst_subject_accuracy": 0.2222222222222222,
+      "best_subject_accuracy": 0.5098039215686274
+    },
+    "skeleton_sqrt": {
+      "feature_count": 650,
+      "overall_accuracy": 0.3930778739184178,
+      "worst_subject_accuracy": 0.2857142857142857,
+      "best_subject_accuracy": 0.5510204081632653
+    },
+    "combined_sqrt": {
+      "feature_count": 1305,
+      "overall_accuracy": 0.44128553770086526,
+      "worst_subject_accuracy": 0.3137254901960784,
+      "best_subject_accuracy": 0.5918367346938775
+    },
+    "imu_motion_mf025_leaf2": {
+      "feature_count": 305,
+      "overall_accuracy": 0.4721878862793572,
+      "worst_subject_accuracy": 0.30952380952380953,
+      "best_subject_accuracy": 0.6111111111111112
+    }
+  },
+  "runtime_seconds": 190.48242050001863
+}

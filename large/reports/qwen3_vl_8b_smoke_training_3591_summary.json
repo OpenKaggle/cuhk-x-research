@@ -1,0 +1,37 @@
+{
+  "experiment": "qwen3_vl_8b_smoke_training_3591",
+  "task": "zero-shot HARn single recognition; exact 8B/4B protocol match",
+  "selection": "same stable action-first and subject-spread selector as the archived 4B route",
+  "seed": 20260909,
+  "fps": 1,
+  "max_tokens": 8,
+  "temperature": 0,
+  "prompt_template_sha256": "f35c92f442c5daab051111449c7eebd084ea80de34a11145dc420d0ca178dee0",
+  "eligible_rows": 122,
+  "valid_predictions": 1,
+  "errors": 0,
+  "accuracy": 0,
+  "action_coverage": 1,
+  "subject_coverage": 1,
+  "worst_action_accuracy": 0,
+  "worst_subject_accuracy": 0,
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-8B-Instruct-4bit",
+    "revision": "defcdea7cc7a4b0858fea563cbbce171d328e457",
+    "license": "apache-2.0",
+    "manifest_sha256": "92e4b276b3f04fcdca7b89e91d612b7b63da1ceb128dea58635c4b5c01fd0c44"
+  },
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "partial_visual_manifest_sha256": "cd96f84c211c61f8b2034a660ef194db397c7bdd87e5abace392a28628381741",
+    "prediction_log_sha256": "b5a0398a170df66d026e89433cc73cd899369889ce6b7ae2f4862d4c21c6c26d"
+  },
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6",
+    "pandas": "3.0.3"
+  },
+  "code_sha256": "7fc73b23583d4da475d08625cba36265e31565c84536429e3a4ca04c86a54a25",
+  "total_inference_runtime_seconds": 1.8033755839569494,
+  "incremental_runtime_seconds": 2.758640083950013
+}

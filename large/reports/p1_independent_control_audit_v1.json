@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "audited_utc": "2026-09-11T05:19:53Z",
+  "control_plane": "../CUHK_X_CONTROL_PLANE.md",
+  "experiment": "p1_decomposed_sensor_fresh48_v1",
+  "decision": "REJECT_P1_CONTROL_AUDIT_NO_RETRY",
+  "scientific_terminal_decision": "REJECT_P1_NO_TEST_NO_SUBMISSION",
+  "checks": {
+    "cohort_manifest_label_blind": true,
+    "cohort_rows_complete": true,
+    "cohort_rows": 48,
+    "unique_qa_ids": 48,
+    "unique_clips": 48,
+    "pre_freeze_exposure_union_overlap_zero": true,
+    "atomic_exposure_reservation_before_freeze": false,
+    "label_blind_minimum_frame_receipt_before_reservation": false,
+    "posthoc_label_blind_readability_rows": 48,
+    "posthoc_minimum_observed_frames": 4,
+    "posthoc_exposure_conflicts_expected_after_run": 48,
+    "generic_invalid_zero": false,
+    "decomposed_invalid_zero": false,
+    "test_qa_read": false,
+    "test_prediction_written": false,
+    "candidate_written": false,
+    "submission_performed": false,
+    "all_exposed_rows_registered_after_run": true
+  },
+  "findings": [
+    "The selection excluded the then-frozen QA-ID/clip exposure union and was label-blind, so no pre-run reuse was detected.",
+    "The control plane's newer atomic reservation requirement was not satisfied: no P1 reservation event existed before protocol freeze.",
+    "File/hash availability was checked, but there was no separate label-blind frame-count receipt before reservation/freeze.",
+    "The completed screen independently failed its original scientific invalid=0 gate: generic invalid 28, decomposed answer invalid 1, decomposed evidence-schema invalid 1.",
+    "Because the sole screen is now exposed, neither governance gap can be repaired retroactively and the cohort cannot be rerun as fresh evidence."
+  ],
+  "artifacts": {
+    "protocol": [
+      "reports/p1_decomposed_sensor_fresh48_v1_protocol.json",
+      "e547c24f90fa412b763fee8437975d58bd1c7cd68fe50a5368d14e60e0ee89c5"
+    ],
+    "scientific_validation": [
+      "reports/p1_decomposed_sensor_fresh48_v1_validation.json",
+      "daec1dbe0730f38dc277c8c997e92cca794bf1d06f4d0ea41ffeee971d69b8f8"
+    ],
+    "posthoc_reservation_audit": [
+      "reports/p1_posthoc_control_plane_audit_exposure_reservation.json",
+      "ee47efab997fa643ca9037f9dc27d31aaa62610826e2a60c8674da1b7c7058f0"
+    ],
+    "canonical_exposure_registry": [
+      "artifacts/manifests/vlm_exposure_registry.jsonl",
+      "df026dd85e7c5ba7e6e4b4e4e9a79f771cb508dbc111d63cd86c225f14e8ca98"
+    ],
+    "row_level_exposure_registry": [
+      "reports/vlm_exposure_registry.jsonl",
+      "8171c4e07b665834f3e1a87af813c8e278b7a3538c884f41e8801e907febed5d"
+    ],
+    "future_reservation_tool": [
+      "scripts/reserve_vlm_fresh_cohort.py",
+      "0f4a54a23025dbef69e6ba76840476a4f31b3c39188870a1591453619209f6a6"
+    ]
+  },
+  "release": "P1 remains rejected. No retry, replacement cohort, test inference, candidate mutation, leaderboard probe, or submission is permitted."
+}

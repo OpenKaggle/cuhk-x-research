@@ -1,0 +1,124 @@
+{
+  "experiment": "hau_multi_pairwise_option_xgb_v1",
+  "seed": 20260909,
+  "validation": "18-fold leave-one-subject-out; one row per clip/category; exact string-match metric",
+  "rows": 809,
+  "feature_count": 955,
+  "feature_set": "305 IMU motion features + 650 skeleton summary features",
+  "option_vocab_count": 40,
+  "threshold_selection": "maximize OOF exact-match accuracy, then worst-subject accuracy, then closeness to 0.5 over fixed grid",
+  "threshold_metrics": {
+    "0.30": {
+      "accuracy": 0.1557478368355995,
+      "correct": 126,
+      "worst_subject_accuracy": 0.047619047619047616,
+      "mean_confidence": 0.05656142917050714
+    },
+    "0.35": {
+      "accuracy": 0.23980222496909764,
+      "correct": 194,
+      "worst_subject_accuracy": 0.14285714285714285,
+      "mean_confidence": 0.0503874366911881
+    },
+    "0.40": {
+      "accuracy": 0.2941903584672435,
+      "correct": 238,
+      "worst_subject_accuracy": 0.19047619047619047,
+      "mean_confidence": 0.05128865874520928
+    },
+    "0.45": {
+      "accuracy": 0.3337453646477132,
+      "correct": 270,
+      "worst_subject_accuracy": 0.19047619047619047,
+      "mean_confidence": 0.060120847128672404
+    },
+    "0.50": {
+      "accuracy": 0.3300370828182942,
+      "correct": 267,
+      "worst_subject_accuracy": 0.16666666666666666,
+      "mean_confidence": 0.0755307075598626
+    },
+    "0.55": {
+      "accuracy": 0.315203955500618,
+      "correct": 255,
+      "worst_subject_accuracy": 0.16666666666666666,
+      "mean_confidence": 0.09441485262035
+    },
+    "0.60": {
+      "accuracy": 0.30407911001236093,
+      "correct": 246,
+      "worst_subject_accuracy": 0.14285714285714285,
+      "mean_confidence": 0.11564440250912468
+    },
+    "0.65": {
+      "accuracy": 0.2843016069221261,
+      "correct": 230,
+      "worst_subject_accuracy": 0.11904761904761904,
+      "mean_confidence": 0.13700757898270569
+    },
+    "0.70": {
+      "accuracy": 0.2558714462299135,
+      "correct": 207,
+      "worst_subject_accuracy": 0.11904761904761904,
+      "mean_confidence": 0.1574562929543046
+    }
+  },
+  "selected_threshold": 0.45,
+  "overall_accuracy": 0.3337453646477132,
+  "parent_accuracy": 0.311495673671199,
+  "worst_subject_accuracy": 0.19047619047619047,
+  "fixed_confidence_overlays": {
+    "0.00": {
+      "accuracy": 0.3337453646477132,
+      "net_correct_vs_parent": 18,
+      "worst_subject_accuracy": 0.19047619047619047
+    },
+    "0.02": {
+      "accuracy": 0.34487021013597036,
+      "net_correct_vs_parent": 27,
+      "worst_subject_accuracy": 0.19047619047619047
+    },
+    "0.05": {
+      "accuracy": 0.36093943139678614,
+      "net_correct_vs_parent": 40,
+      "worst_subject_accuracy": 0.23809523809523808
+    },
+    "0.10": {
+      "accuracy": 0.35599505562422745,
+      "net_correct_vs_parent": 36,
+      "worst_subject_accuracy": 0.21428571428571427
+    },
+    "0.15": {
+      "accuracy": 0.33127317676143386,
+      "net_correct_vs_parent": 16,
+      "worst_subject_accuracy": 0.23809523809523808
+    },
+    "0.20": {
+      "accuracy": 0.3164400494437577,
+      "net_correct_vs_parent": 4,
+      "worst_subject_accuracy": 0.21428571428571427
+    }
+  },
+  "test_rows": 144,
+  "test_sensor_present": 144,
+  "test_disagreements_vs_parent": 113,
+  "versions": {
+    "python": "3.13.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "xgboost": "3.4.1"
+  },
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "feature_cache_sha256": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+    "parent_oof_sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33",
+    "parent_test_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c"
+  },
+  "outputs": {
+    "oof_sha256": "1f6adee33bacf80c8b8fa678792578e229c63f6cfa1b266c135d361d569e78d8",
+    "test_predictions_sha256": "3e69feeb5e30091bc3668f3ce5c99eaec73dfbbb363f42ea9a2b3f4bd29fc727",
+    "model_sha256": "4a9e203a3c2cba9a2e1d886bd52a095892570af2e0b71e58ee01bb29492e2ccc"
+  },
+  "code_sha256": "b2c31913983ef3b7d73c2c6bb80819977296477d68b291a3c09537d9ce4a87ac",
+  "runtime_seconds": 125.09414729196578
+}

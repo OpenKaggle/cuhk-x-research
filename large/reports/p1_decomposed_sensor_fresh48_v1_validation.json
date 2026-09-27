@@ -1,0 +1,137 @@
+{
+  "experiment": "p1_decomposed_sensor_fresh48_v1",
+  "decision": "REJECT_P1_NO_TEST_NO_SUBMISSION",
+  "passed": false,
+  "fresh_screen": true,
+  "prior_exposure_conflicts": 0,
+  "test_qa_read": false,
+  "test_prediction_written": false,
+  "candidate_csv_written": false,
+  "submission_performed": false,
+  "network_isolation": {
+    "hf_hub_offline": "1",
+    "transformers_offline": "1",
+    "socket_probe_blocked": true
+  },
+  "equal_budget": {
+    "model": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "network": "disabled before model import/load",
+    "same_video": true,
+    "modality": "Depth",
+    "fps_each": 1,
+    "max_generation_tokens_each": 48,
+    "temperature_each": 0,
+    "generic_prompt": "Inspect the entire timestamped depth video and answer the multiple-choice question.\nQuestion: {question}\n{options}\nReturn exactly: evidence=<brief visual evidence>; answer=<A|B|C|D>",
+    "generic_prompt_sha256": "377c6040e2447e3b0b992b099c52021bf037056c29075519b3ad655973fb2d76",
+    "decomposed_prompt": "Inspect the entire timestamped depth video. Separately identify the main action verb, the manipulated object or body target, and when the decisive motion occurs; then answer the multiple-choice question.\nQuestion: {question}\n{options}\nReturn exactly: verb=<brief>; object=<brief or none>; temporal=<early|middle|late|throughout>; answer=<A|B|C|D>",
+    "decomposed_prompt_sha256": "ee351caad611e563dbc32167f02c2af18047802df2a17084e0f8747839952754"
+  },
+  "validation": {
+    "overall": {
+      "rows": 48,
+      "generic_correct": 12,
+      "generic_accuracy": 0.25,
+      "candidate_correct": 33,
+      "candidate_accuracy": 0.6875,
+      "net_gain": 21,
+      "accuracy_gain": 0.4375,
+      "raw_generic_accuracy": 0.20833333333333334,
+      "raw_decomposed_accuracy": 0.375
+    },
+    "by_category": {
+      "object_interaction": {
+        "rows": 24,
+        "generic_correct": 3,
+        "generic_accuracy": 0.125,
+        "candidate_correct": 21,
+        "candidate_accuracy": 0.875,
+        "net_gain": 18,
+        "accuracy_gain": 0.75,
+        "raw_generic_accuracy": 0.08333333333333333,
+        "raw_decomposed_accuracy": 0.2916666666666667
+      },
+      "single": {
+        "rows": 24,
+        "generic_correct": 9,
+        "generic_accuracy": 0.375,
+        "candidate_correct": 12,
+        "candidate_accuracy": 0.5,
+        "net_gain": 3,
+        "accuracy_gain": 0.125,
+        "raw_generic_accuracy": 0.3333333333333333,
+        "raw_decomposed_accuracy": 0.4583333333333333
+      }
+    },
+    "by_subject_half": {
+      "first_nine": {
+        "rows": 24,
+        "generic_correct": 6,
+        "generic_accuracy": 0.25,
+        "candidate_correct": 17,
+        "candidate_accuracy": 0.7083333333333334,
+        "net_gain": 11,
+        "accuracy_gain": 0.4583333333333333,
+        "raw_generic_accuracy": 0.20833333333333334,
+        "raw_decomposed_accuracy": 0.3333333333333333
+      },
+      "second_nine": {
+        "rows": 24,
+        "generic_correct": 6,
+        "generic_accuracy": 0.25,
+        "candidate_correct": 16,
+        "candidate_accuracy": 0.6666666666666666,
+        "net_gain": 10,
+        "accuracy_gain": 0.4166666666666667,
+        "raw_generic_accuracy": 0.20833333333333334,
+        "raw_decomposed_accuracy": 0.4166666666666667
+      }
+    },
+    "subject_macro_gain": 0.37777777777777777,
+    "worst_subject_accuracy_delta": 0,
+    "generic_invalid": 28,
+    "decomposed_invalid": 1,
+    "decomposed_schema_invalid": 1,
+    "parent_disagreements": 30,
+    "parent_disagreement_net_gain": 21
+  },
+  "gate": {
+    "frozen": {
+      "candidate_vs_equal_budget_generic_subject_macro_gain_min": 0.02,
+      "single_net_gain_min": 0,
+      "object_net_gain_min": 0,
+      "worst_subject_accuracy_delta_min": -0.03,
+      "generic_invalid_max": 0,
+      "decomposed_invalid_max": 0,
+      "decomposed_evidence_schema_invalid_max": 0,
+      "parent_disagreement_net_gain_min_exclusive": 0,
+      "all_conditions_required": true
+    },
+    "checks": {
+      "subject_macro_gain": true,
+      "single_nonnegative": true,
+      "object_nonnegative": true,
+      "worst_subject_loss": true,
+      "generic_invalid_zero": false,
+      "decomposed_invalid_zero": false,
+      "decomposed_schema_invalid_zero": false,
+      "parent_disagreement_net_positive": true
+    },
+    "passed": false
+  },
+  "artifacts": {
+    "protocol_sha256": "e547c24f90fa412b763fee8437975d58bd1c7cd68fe50a5368d14e60e0ee89c5",
+    "manifest_sha256": "a829fece2c2ed85f0ba59a2f6765c8dc767542e3153c35bdc4dd8d37486323e5",
+    "prediction_log_sha256": "d6916e14aad5bac523ff062b6a8bfe5d4b178b8e3e12e33365baf3b24370dbd8",
+    "code_sha256": "761306ad4584d76dd9267a5cc57c915a0f7a7596aee9633dea2b25bbc45264d7"
+  },
+  "versions": {
+    "python": "3.13.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6"
+  },
+  "total_inference_runtime_seconds": 194.82104629266541,
+  "incremental_runtime_seconds": 195.2599562079413
+}

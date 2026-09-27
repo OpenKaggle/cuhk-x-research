@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "network": {
+    "hf_hub_offline": "1",
+    "transformers_offline": "1",
+    "socket_probe_blocked": true,
+    "original_socket_type": "<class 'socket.socket'>",
+    "original_connection": "<function create_connection at 0x105321940>"
+  },
+  "forbidden_source_hits": [],
+  "candidate_exists_before_gate": false,
+  "test_vlm_log_exists_before_gate": false
+}

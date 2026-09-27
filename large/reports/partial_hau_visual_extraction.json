@@ -1,0 +1,38 @@
+{
+  "archive_prefix_bytes": 100663296,
+  "expected_final_bytes": 3674779437,
+  "archive_prefix_fraction": 0.02739301711184578,
+  "archive_prefix_sha256": "dd55b53b944ec60e1f45a7dd5ae166e82674152465fd0b8fb5cc99c6c36ff138",
+  "complete_file_entries_before_boundary": 85,
+  "first_incomplete_entry": {
+    "name": "HAU/[participant-index]/3-1-1/Depth_Color/Depth_Color.mp4",
+    "header_offset": 99531142,
+    "data_offset": 99531215,
+    "compressed_size": 2206748,
+    "available_data_bytes": 1132081
+  },
+  "selection": "HAU units referenced by organizer training_qa.csv; complete MP4 entries only",
+  "extracted_units": 22,
+  "extracted_subjects": [
+    "[participant-index]"
+  ],
+  "extracted_files": 85,
+  "extracted_bytes": 102957619,
+  "modalities": {
+    "Depth": 22,
+    "Depth_Color": 21,
+    "IR": 21,
+    "Thermal": 21
+  },
+  "covered_qa_rows_by_category": {
+    "combination": 22,
+    "emotion": 22,
+    "multi": 22,
+    "sequence": 10,
+    "single": 22
+  },
+  "manifest_sha256": "95fbe034dc95ff29a2b8cc00f1dc7d97eea4f63cecf2aca25c36bb8c4d9e336a",
+  "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+  "code_sha256": "1d5d8548db325cff5c8af76a038ef16b841311a1a1b43c62d19756bd4b6402cb",
+  "runtime_seconds": 0.4349506249418482
+}

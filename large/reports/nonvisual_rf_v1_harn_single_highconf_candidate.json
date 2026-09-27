@@ -1,0 +1,20 @@
+{
+  "candidate": "nonvisual_rf_v1_harn_single_highconf.csv",
+  "parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+  "expert_predictions_sha256": "ff48f19986e95390430120630a73c253486b5f50fe88fe07145ac43a09da914d",
+  "oof_summary_sha256": "8f29cba28eb93e45156db54a2f493b54d8798671bf7a29da46c61148be7ab507",
+  "gate": {
+    "source": "HARn",
+    "category": "single",
+    "sensor_present": true,
+    "confidence_at_least": 0.3,
+    "must_disagree_with_parent": true
+  },
+  "subject_disjoint_oof_gate_result": {
+    "accuracy": 0.4965034965034965,
+    "net_correct_vs_parent": 27,
+    "worst_subject_accuracy": 0.2608695652173913
+  },
+  "changed_row_count": 1,
+  "candidate_sha256": "1154a175c51b989957206ba02d9091528ffe5a50eda9cc87da8221614d8cb300"
+}

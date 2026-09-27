@@ -1,0 +1,56 @@
+{
+  "experiment": "public_fususu_compact_graph_leave_one_subject_out",
+  "source_notebook_sha256": "38811edf7312f8c5ff5af73278568092de762a85885f22dce0fbb5af595fea15",
+  "data_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+  "rows": 4087,
+  "folds": 18,
+  "clip_grouping_enforced": true,
+  "overall_accuracy": 0.5666748226082702,
+  "worst_subject_accuracy": 0.48333333333333334,
+  "best_subject_accuracy": 0.6104868913857678,
+  "runtime_seconds": 9.589871167030651,
+  "by_source_category": [
+    {
+      "source": "HARn",
+      "category": "object_interaction",
+      "rows": 133,
+      "accuracy": 0.849624060150376
+    },
+    {
+      "source": "HARn",
+      "category": "single",
+      "rows": 429,
+      "accuracy": 0.43356643356643354
+    },
+    {
+      "source": "HAU",
+      "category": "combination",
+      "rows": 790,
+      "accuracy": 0.8354430379746836
+    },
+    {
+      "source": "HAU",
+      "category": "emotion",
+      "rows": 809,
+      "accuracy": 0.32014833127317677
+    },
+    {
+      "source": "HAU",
+      "category": "multi",
+      "rows": 809,
+      "accuracy": 0.311495673671199
+    },
+    {
+      "source": "HAU",
+      "category": "sequence",
+      "rows": 308,
+      "accuracy": 0.40584415584415584
+    },
+    {
+      "source": "HAU",
+      "category": "single",
+      "rows": 809,
+      "accuracy": 0.8912237330037083
+    }
+  ]
+}

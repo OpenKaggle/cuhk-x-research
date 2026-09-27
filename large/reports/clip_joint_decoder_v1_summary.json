@@ -1,0 +1,371 @@
+{
+  "experiment": "cuhk_x_large_clip_joint_decoder_v1",
+  "status": "REJECTED",
+  "decision_reason": "At least one predeclared gate failed; no test data were opened and no candidate was created.",
+  "design": {
+    "parent": "public graph leave-one-subject-out OOF",
+    "outer_validation": "18-fold leave-one-subject-out; every QA row for a clip stays in its subject fold",
+    "joint_factor": "selected combination option atoms imply a unique same-clip single option",
+    "signature": "selected atom-count bin (2, 3, or 4plus) x sequence-sibling presence",
+    "fold_local_selector": {
+      "minimum_disagreement_rows": 5,
+      "minimum_subjects": 3,
+      "minimum_proposal_accuracy": 0.8,
+      "must_beat_parent_on_training_fold": true
+    },
+    "test_access_policy": "test QA and test predictions are opened only if every gate passes"
+  },
+  "metrics": {
+    "aggregate": {
+      "rows": 4087,
+      "parent_correct": 2316,
+      "joint_correct": 2335,
+      "parent_accuracy": 0.5666748226082702,
+      "joint_accuracy": 0.5713237093222413,
+      "accuracy_delta": 0.004648886713971128,
+      "net_correct": 19,
+      "changed": 19
+    },
+    "by_category": [
+      {
+        "source": "HARn",
+        "category": "object_interaction",
+        "rows": 133,
+        "parent_accuracy": 0.849624060150376,
+        "joint_accuracy": 0.849624060150376,
+        "net_correct": 0,
+        "changed": 0
+      },
+      {
+        "source": "HARn",
+        "category": "single",
+        "rows": 429,
+        "parent_accuracy": 0.43356643356643354,
+        "joint_accuracy": 0.43356643356643354,
+        "net_correct": 0,
+        "changed": 0
+      },
+      {
+        "source": "HAU",
+        "category": "combination",
+        "rows": 790,
+        "parent_accuracy": 0.8354430379746836,
+        "joint_accuracy": 0.8354430379746836,
+        "net_correct": 0,
+        "changed": 0
+      },
+      {
+        "source": "HAU",
+        "category": "emotion",
+        "rows": 809,
+        "parent_accuracy": 0.32014833127317677,
+        "joint_accuracy": 0.32014833127317677,
+        "net_correct": 0,
+        "changed": 0
+      },
+      {
+        "source": "HAU",
+        "category": "multi",
+        "rows": 809,
+        "parent_accuracy": 0.311495673671199,
+        "joint_accuracy": 0.311495673671199,
+        "net_correct": 0,
+        "changed": 0
+      },
+      {
+        "source": "HAU",
+        "category": "sequence",
+        "rows": 308,
+        "parent_accuracy": 0.40584415584415584,
+        "joint_accuracy": 0.40584415584415584,
+        "net_correct": 0,
+        "changed": 0
+      },
+      {
+        "source": "HAU",
+        "category": "single",
+        "rows": 809,
+        "parent_accuracy": 0.8912237330037083,
+        "joint_accuracy": 0.9147095179233622,
+        "net_correct": 19,
+        "changed": 19
+      }
+    ],
+    "worst_subject": {
+      "parent": {
+        "user": 1,
+        "rows": 180,
+        "parent_accuracy": 0.48333333333333334,
+        "joint_accuracy": 0.48333333333333334,
+        "net_correct": 0,
+        "changed": 0
+      },
+      "joint": {
+        "user": 1,
+        "rows": 180,
+        "parent_accuracy": 0.48333333333333334,
+        "joint_accuracy": 0.48333333333333334,
+        "net_correct": 0,
+        "changed": 0
+      }
+    },
+    "parent_disagreement": {
+      "rows": 19,
+      "joint_wins": 19,
+      "joint_losses": 0,
+      "both_wrong": 0,
+      "net_correct": 19,
+      "one_sided_exact_sign_p": 0.0000019073486328125
+    },
+    "fixed_subject_cohorts": {
+      "odd_subject_ids": {
+        "rows": 2020,
+        "changed": 9,
+        "net_correct": 9
+      },
+      "even_subject_ids": {
+        "rows": 2067,
+        "changed": 10,
+        "net_correct": 10
+      }
+    }
+  },
+  "conflict_rate": {
+    "eligible_constraints": 620,
+    "parent_conflicts": 30,
+    "joint_conflicts": 11,
+    "parent_conflict_rate": 0.04838709677419355,
+    "joint_conflict_rate": 0.017741935483870968,
+    "relative_reduction": 0.6333333333333333
+  },
+  "counterfactuals": {
+    "option_permutation": {
+      "definition": "Deterministic independent A/B/C/D permutation for every QA row.",
+      "rows": 4087,
+      "equivariant_rows": 4087,
+      "exact_equivariance": true
+    },
+    "text_only": {
+      "definition": "Remove every sibling answer prediction; choose a unique single option only from its normalized text frequency across all sibling option lists, then replace all parent disagreements. No labels or fitted parameters are used.",
+      "eligible_rows": 723,
+      "aggregate": {
+        "rows": 4087,
+        "parent_correct": 2316,
+        "joint_correct": 2338,
+        "parent_accuracy": 0.5666748226082702,
+        "joint_accuracy": 0.5720577440665525,
+        "accuracy_delta": 0.005382921458282359,
+        "net_correct": 22,
+        "changed": 32
+      },
+      "by_category": [
+        {
+          "source": "HARn",
+          "category": "object_interaction",
+          "rows": 133,
+          "parent_accuracy": 0.849624060150376,
+          "joint_accuracy": 0.849624060150376,
+          "net_correct": 0,
+          "changed": 0
+        },
+        {
+          "source": "HARn",
+          "category": "single",
+          "rows": 429,
+          "parent_accuracy": 0.43356643356643354,
+          "joint_accuracy": 0.43356643356643354,
+          "net_correct": 0,
+          "changed": 0
+        },
+        {
+          "source": "HAU",
+          "category": "combination",
+          "rows": 790,
+          "parent_accuracy": 0.8354430379746836,
+          "joint_accuracy": 0.8354430379746836,
+          "net_correct": 0,
+          "changed": 0
+        },
+        {
+          "source": "HAU",
+          "category": "emotion",
+          "rows": 809,
+          "parent_accuracy": 0.32014833127317677,
+          "joint_accuracy": 0.32014833127317677,
+          "net_correct": 0,
+          "changed": 0
+        },
+        {
+          "source": "HAU",
+          "category": "multi",
+          "rows": 809,
+          "parent_accuracy": 0.311495673671199,
+          "joint_accuracy": 0.311495673671199,
+          "net_correct": 0,
+          "changed": 0
+        },
+        {
+          "source": "HAU",
+          "category": "sequence",
+          "rows": 308,
+          "parent_accuracy": 0.40584415584415584,
+          "joint_accuracy": 0.40584415584415584,
+          "net_correct": 0,
+          "changed": 0
+        },
+        {
+          "source": "HAU",
+          "category": "single",
+          "rows": 809,
+          "parent_accuracy": 0.8912237330037083,
+          "joint_accuracy": 0.9184177997527813,
+          "net_correct": 22,
+          "changed": 32
+        }
+      ],
+      "worst_subject": {
+        "parent": {
+          "user": 1,
+          "rows": 180,
+          "parent_accuracy": 0.48333333333333334,
+          "joint_accuracy": 0.4777777777777778,
+          "net_correct": -1,
+          "changed": 1
+        },
+        "joint": {
+          "user": 1,
+          "rows": 180,
+          "parent_accuracy": 0.48333333333333334,
+          "joint_accuracy": 0.4777777777777778,
+          "net_correct": -1,
+          "changed": 1
+        }
+      },
+      "parent_disagreement": {
+        "rows": 32,
+        "joint_wins": 26,
+        "joint_losses": 4,
+        "both_wrong": 2,
+        "net_correct": 22,
+        "one_sided_exact_sign_p": 0.000029738061130046844
+      },
+      "fixed_subject_cohorts": {
+        "odd_subject_ids": {
+          "rows": 2020,
+          "changed": 15,
+          "net_correct": 8
+        },
+        "even_subject_ids": {
+          "rows": 2067,
+          "changed": 17,
+          "net_correct": 14
+        }
+      }
+    }
+  },
+  "all_training_signature_fit": [
+    {
+      "signature": "atoms=2|sequence=no",
+      "rows": 10,
+      "proposal_correct": 10,
+      "parent_correct": 0,
+      "proposal_accuracy": 1,
+      "net": 10,
+      "selected": true
+    },
+    {
+      "signature": "atoms=2|sequence=yes",
+      "rows": 2,
+      "proposal_correct": 0,
+      "parent_correct": 2,
+      "proposal_accuracy": 0,
+      "net": -2,
+      "selected": false
+    },
+    {
+      "signature": "atoms=3|sequence=no",
+      "rows": 4,
+      "proposal_correct": 2,
+      "parent_correct": 2,
+      "proposal_accuracy": 0.5,
+      "net": 0,
+      "selected": false
+    },
+    {
+      "signature": "atoms=3|sequence=yes",
+      "rows": 1,
+      "proposal_correct": 1,
+      "parent_correct": 0,
+      "proposal_accuracy": 1,
+      "net": 1,
+      "selected": false
+    },
+    {
+      "signature": "atoms=4plus|sequence=no",
+      "rows": 4,
+      "proposal_correct": 3,
+      "parent_correct": 1,
+      "proposal_accuracy": 0.75,
+      "net": 2,
+      "selected": false
+    },
+    {
+      "signature": "atoms=4plus|sequence=yes",
+      "rows": 9,
+      "proposal_correct": 9,
+      "parent_correct": 0,
+      "proposal_accuracy": 1,
+      "net": 9,
+      "selected": true
+    }
+  ],
+  "gates": {
+    "exactly_18_outer_loso_folds": true,
+    "same_clip_single_subject_fold": true,
+    "aggregate_delta_at_least_0_0025": true,
+    "parent_disagreement_net_at_least_10": true,
+    "zero_parent_disagreement_losses": true,
+    "one_sided_exact_sign_p_at_most_0_01": true,
+    "both_fixed_subject_cohorts_positive": true,
+    "worst_subject_accuracy_not_lower": true,
+    "no_source_category_regression": true,
+    "conflict_rate_relative_reduction_at_least_0_50": true,
+    "option_permutation_exact_equivariance": true,
+    "text_only_counterfactual_does_not_reproduce_half_the_net_gain": false
+  },
+  "candidate": null,
+  "inputs": {
+    "training_qa": {
+      "path": "[local-path]",
+      "sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc"
+    },
+    "public_graph_oof": {
+      "path": "[local-path]",
+      "sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33"
+    },
+    "code": {
+      "path": "[local-path]",
+      "sha256": "9db5ccb8d84ed75590c96a5e6d9aa515a7b2135dbf48220b968b632bfd6beabe"
+    }
+  },
+  "artifacts": {
+    "oof_predictions": {
+      "path": "[local-path]",
+      "sha256": "ef92a7a42d5e81e2f5b4524011d0871ba7c07c06f622d70685792d6bb3ef0dd5"
+    },
+    "fold_selector_trace": {
+      "path": "[local-path]",
+      "sha256": "7ddc0cb4707902c5f365b042ae58d2d4c981cff351cd65432bcbf8a07a38f768"
+    },
+    "eligible_constraints": {
+      "path": "[local-path]",
+      "sha256": "c81f20962031080738ee78fc623a597aee6aef1e3aa991110f3602b641bdae54"
+    }
+  },
+  "prohibitions": {
+    "kaggle_run": false,
+    "submission": false,
+    "frozen_artifacts_modified": false
+  },
+  "runtime_seconds": 12.977145040989853
+}

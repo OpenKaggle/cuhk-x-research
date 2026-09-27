@@ -1,0 +1,248 @@
+{
+  "experiment": "p1_posthoc_control_plane_audit",
+  "decision": "REJECT_FAIL_CLOSED_NO_RESERVATION",
+  "passed": false,
+  "audit_only": true,
+  "cohort_sha256": "a829fece2c2ed85f0ba59a2f6765c8dc767542e3153c35bdc4dd8d37486323e5",
+  "label_blind": true,
+  "readability_rows": 48,
+  "minimum_frames": 1,
+  "minimum_observed_frames": 4,
+  "too_short": [],
+  "exposure_conflicts": [
+    {
+      "qa_id": "training_3545",
+      "clip": "HARn/10_Stir_drinks/[participant-index]/3-1-1"
+    },
+    {
+      "qa_id": "training_3548",
+      "clip": "HARn/10_Stir_drinks/[participant-index]/3-2-3"
+    },
+    {
+      "qa_id": "training_3558",
+      "clip": "HARn/11_Peel_fruits/[participant-index]/3-1-1"
+    },
+    {
+      "qa_id": "training_3571",
+      "clip": "HARn/12_Sweep_the_floor/[participant-index]/6-2-1"
+    },
+    {
+      "qa_id": "training_3612",
+      "clip": "HARn/16_Fold_clothes/[participant-index]/4-3-3"
+    },
+    {
+      "qa_id": "training_3616",
+      "clip": "HARn/17_Tap_the_keyboard/[participant-index]/4-3-1"
+    },
+    {
+      "qa_id": "training_3618",
+      "clip": "HARn/17_Tap_the_keyboard/[participant-index]/5-1-2"
+    },
+    {
+      "qa_id": "training_3622",
+      "clip": "HARn/17_Tap_the_keyboard/[participant-index]/4-3-1"
+    },
+    {
+      "qa_id": "training_3628",
+      "clip": "HARn/18_Write/[participant-index]/2-2-3"
+    },
+    {
+      "qa_id": "training_3637",
+      "clip": "HARn/19_Make_a_phone_call/[participant-index]/4-1-2"
+    },
+    {
+      "qa_id": "training_3642",
+      "clip": "HARn/19_Make_a_phone_call/[participant-index]/1-2-1"
+    },
+    {
+      "qa_id": "training_3664",
+      "clip": "HARn/21_Read_documents/[participant-index]/7-3-3"
+    },
+    {
+      "qa_id": "training_3668",
+      "clip": "HARn/21_Read_documents/[participant-index]/5-2-2"
+    },
+    {
+      "qa_id": "training_3679",
+      "clip": "HARn/22_Turn_pages/[participant-index]/2-1-3"
+    },
+    {
+      "qa_id": "training_3773",
+      "clip": "HARn/31_Do_stretching_exercises/[participant-index]/3-2-2"
+    },
+    {
+      "qa_id": "training_3803",
+      "clip": "HARn/34_Sit_down/[participant-index]/1-2-2"
+    },
+    {
+      "qa_id": "training_3807",
+      "clip": "HARn/35_Do_lunges/[participant-index]/3-2-1"
+    },
+    {
+      "qa_id": "training_3823",
+      "clip": "HARn/36_Walk/[participant-index]/7-2-3"
+    },
+    {
+      "qa_id": "training_3826",
+      "clip": "HARn/36_Walk/[participant-index]/4-1-3"
+    },
+    {
+      "qa_id": "training_3838",
+      "clip": "HARn/38_Massage_oneself/[participant-index]/7-1-3"
+    },
+    {
+      "qa_id": "training_3848",
+      "clip": "HARn/39_Take_body_temperature/[participant-index]/4-1-3"
+    },
+    {
+      "qa_id": "training_3930",
+      "clip": "HARn/6_Drink_water/[participant-index]/2-2-1"
+    },
+    {
+      "qa_id": "training_3935",
+      "clip": "HARn/6_Drink_water/[participant-index]/3-2-3"
+    },
+    {
+      "qa_id": "training_3943",
+      "clip": "HARn/7_Eat_food/[participant-index]/7-2-3"
+    },
+    {
+      "qa_id": "training_3976",
+      "clip": "HARn/16_Fold_clothes/[participant-index]/2-1-2"
+    },
+    {
+      "qa_id": "training_3983",
+      "clip": "HARn/16_Fold_clothes/[participant-index]/2-1-3"
+    },
+    {
+      "qa_id": "training_3985",
+      "clip": "HARn/17_Tap_the_keyboard/[participant-index]/4-1-3"
+    },
+    {
+      "qa_id": "training_3987",
+      "clip": "HARn/17_Tap_the_keyboard/[participant-index]/2-2-3"
+    },
+    {
+      "qa_id": "training_3989",
+      "clip": "HARn/17_Tap_the_keyboard/[participant-index]/4-1-3"
+    },
+    {
+      "qa_id": "training_3990",
+      "clip": "HARn/17_Tap_the_keyboard/[participant-index]/4-1-1"
+    },
+    {
+      "qa_id": "training_3994",
+      "clip": "HARn/19_Make_a_phone_call/[participant-index]/4-1-3"
+    },
+    {
+      "qa_id": "training_3997",
+      "clip": "HARn/19_Make_a_phone_call/[participant-index]/3-2-3"
+    },
+    {
+      "qa_id": "training_4004",
+      "clip": "HARn/21_Read_documents/[participant-index]/1-2-2"
+    },
+    {
+      "qa_id": "training_4005",
+      "clip": "HARn/21_Read_documents/[participant-index]/4-1-2"
+    },
+    {
+      "qa_id": "training_4006",
+      "clip": "HARn/21_Read_documents/[participant-index]/4-1-3"
+    },
+    {
+      "qa_id": "training_4009",
+      "clip": "HARn/21_Read_documents/[participant-index]/4-1-3"
+    },
+    {
+      "qa_id": "training_4011",
+      "clip": "HARn/21_Read_documents/[participant-index]/4-1-2"
+    },
+    {
+      "qa_id": "training_4020",
+      "clip": "HARn/22_Turn_pages/[participant-index]/4-1-2"
+    },
+    {
+      "qa_id": "training_4049",
+      "clip": "HARn/26_Play_games/[participant-index]/5-3-1"
+    },
+    {
+      "qa_id": "training_4052",
+      "clip": "HARn/26_Play_games/[participant-index]/4-1-1"
+    },
+    {
+      "qa_id": "training_4053",
+      "clip": "HARn/26_Play_games/[participant-index]/4-1-2"
+    },
+    {
+      "qa_id": "training_4056",
+      "clip": "HARn/26_Play_games/[participant-index]/6-2-2"
+    },
+    {
+      "qa_id": "training_4066",
+      "clip": "HARn/27_Take_a_selfie/[participant-index]/1-2-3"
+    },
+    {
+      "qa_id": "training_4088",
+      "clip": "HARn/6_Drink_water/[participant-index]/2-1-3"
+    },
+    {
+      "qa_id": "training_4090",
+      "clip": "HARn/6_Drink_water/[participant-index]/1-2-2"
+    },
+    {
+      "qa_id": "training_4091",
+      "clip": "HARn/6_Drink_water/[participant-index]/4-1-1"
+    },
+    {
+      "qa_id": "training_4093",
+      "clip": "HARn/6_Drink_water/[participant-index]/3-2-2"
+    },
+    {
+      "qa_id": "training_4096",
+      "clip": "HARn/6_Drink_water/[participant-index]/3-2-2"
+    }
+  ],
+  "exposure_sources_scanned": [
+    "artifacts/manifests/vlm_exposure_registry.jsonl",
+    "reports/vlm_exposure_registry.jsonl",
+    "artifacts/vlm/harn_stage2_native_v1_fresh48.jsonl",
+    "artifacts/vlm/p1_decomposed_sensor_fresh48_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_fresh20_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_hau_combination_user8_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_hau_emotion_user8_full22_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_hau_emotion_user8_probe8_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_hau_multi_user8_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_hau_sequence_user8_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_hau_single_user8_probe8_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_mosaic_full112_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_mosaic_smoke_training_3591.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_multiview_balanced18_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_multiview_full112_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_multiview_smoke_training_3591.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_multiview_smoke_training_3591_v2.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_small20_frozen_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_test_harn_object_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_test_harn_single_full_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_test_harn_single_mosaic_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_test_harn_single_multiview_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_test_harn_single_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_zero_shot_balanced18_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_zero_shot_object66_v1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_zero_shot_probe1.jsonl",
+    "artifacts/vlm/qwen3_vl_4b_zero_shot_probe2.jsonl",
+    "artifacts/vlm/qwen3_vl_8b_smoke_training_3591.jsonl",
+    "artifacts/vlm/qwen3_vl_8b_zero_shot_balanced18_v1.jsonl",
+    "artifacts/vlm/stage2_native_qwen_missing_sensor_v1.jsonl",
+    "artifacts/manifests/harn_stage2_native48.csv",
+    "artifacts/manifests/stage2_native_qwen_missing_sensor_v1.csv",
+    "artifacts/manifests/temporal_vlm_preregistered50.csv",
+    "artifacts/manifests/vlm_fresh20_validation.csv",
+    "artifacts/manifests/vlm_small20_validation.csv"
+  ],
+  "reservation_event": null,
+  "canonical_registry_sha256": "df026dd85e7c5ba7e6e4b4e4e9a79f771cb508dbc111d63cd86c225f14e8ca98",
+  "code_sha256": "0f4a54a23025dbef69e6ba76840476a4f31b3c39188870a1591453619209f6a6"
+}

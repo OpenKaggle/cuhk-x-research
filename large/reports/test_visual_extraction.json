@@ -1,0 +1,20 @@
+{
+  "archive": "large_model_track_test.zip",
+  "archive_bytes": 1994984736,
+  "archive_sha256": "a4ba8644208e08b0bf436c85e1bfcdf5342849675f0924285b481f6a2477f7a1",
+  "zip_integrity": "all members passed CRC test",
+  "qa_units": 208,
+  "extracted_units": 208,
+  "extracted_files": 754,
+  "extracted_bytes": 2146076111,
+  "modalities": {
+    "Depth": 208,
+    "Depth_Color": 198,
+    "IR": 208,
+    "Thermal": 140
+  },
+  "manifest_sha256": "041d7163fd3225509206b9fe722b592cc7f1d9b73a3a6da419b73ef47d7447c3",
+  "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+  "code_sha256": "adc8008bcaf6fbcc3b8cb8ad4ee304cfc0c817d841d3d904cd2ee89949000111",
+  "runtime_seconds": 23.530430375016294
+}

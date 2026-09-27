@@ -1,0 +1,84 @@
+{
+  "experiment": "qwen3_vl_4b_fresh20_v1",
+  "freshness_status": "20_QA_AND_CLIPS_FIRST_EVER_VLM_INFERENCE",
+  "protocol_sha256": "ef71bd50cd29e31d1e89aee6af68bbe34b0c6ace5cfe86c9b04101ceb5a7c408",
+  "processed_rows": 20,
+  "valid_predictions": 20,
+  "invalid_outputs": 0,
+  "implementation_failures": 0,
+  "stopped_early": false,
+  "overall": {
+    "rows": 20,
+    "vlm_correct": 12,
+    "parent_correct": 13,
+    "net_correct": -1,
+    "vlm_accuracy": 0.6,
+    "parent_accuracy": 0.65
+  },
+  "by_task": {
+    "object_interaction": {
+      "rows": 10,
+      "vlm_correct": 5,
+      "parent_correct": 9,
+      "net_correct": -4,
+      "vlm_accuracy": 0.5,
+      "parent_accuracy": 0.9
+    },
+    "single": {
+      "rows": 10,
+      "vlm_correct": 7,
+      "parent_correct": 4,
+      "net_correct": 3,
+      "vlm_accuracy": 0.7,
+      "parent_accuracy": 0.4
+    }
+  },
+  "by_fixed_subject_cohort": {
+    "first_five": {
+      "rows": 10,
+      "vlm_correct": 8,
+      "parent_correct": 7,
+      "net_correct": 1,
+      "vlm_accuracy": 0.8,
+      "parent_accuracy": 0.7
+    },
+    "second_five": {
+      "rows": 10,
+      "vlm_correct": 4,
+      "parent_correct": 6,
+      "net_correct": -2,
+      "vlm_accuracy": 0.4,
+      "parent_accuracy": 0.6
+    }
+  },
+  "subject_sign_test": {
+    "positive_subjects": 2,
+    "negative_subjects": 3,
+    "tied_subjects": 5,
+    "one_sided_exact_positive_sign_p": 0.8125
+  },
+  "precommitted_gate_results": {
+    "implementation_gate": true,
+    "primary_subject_sign_p_le_0_05": false,
+    "no_negative_subject": false,
+    "both_tasks_net_positive": false,
+    "both_fixed_cohorts_net_positive": false,
+    "all_gates": false
+  },
+  "decision": "REJECT_AND_REFREEZE_VLM",
+  "candidate": "NONE",
+  "submission": "PROHIBITED",
+  "next_step": "Keep VLM direct/router direction frozen; do not mine this screen for a new rule.",
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4",
+    "seed": 20260910,
+    "fps": 1,
+    "max_tokens": 8,
+    "temperature": 0
+  },
+  "prediction_log_sha256": "49322840722b880d324a49fdbb99031902d01168534201ddd96060446729a67d",
+  "code_sha256": "a54994ebdb67fd47227f7f04071f9416d8e4b01aa068366c37071ce79812dd5c",
+  "runtime_seconds": 14.669880165951326
+}

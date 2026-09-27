@@ -1,0 +1,46 @@
+{
+  "experiment": "harn_stage2_native_v1",
+  "recorded_utc": "2026-09-11T04:49:48Z",
+  "status": "REJECTED_IMPLEMENTATION_ABORT_NO_CANDIDATE",
+  "decision": "FAIL_CLOSED",
+  "reason": "The frozen fixed-8-frame loader reached an official five-frame clip at row 36. Changing the padding or sampling rule after observing 35 fresh outputs would violate the immutable preregistration, so the run was not resumed.",
+  "failure": {
+    "qa_id": "training_3656",
+    "clip": "HARn/20_Check_the_time/[participant-index]/5-1-2",
+    "exception": "ValueError: nframes must be in [2, 5], got 8."
+  },
+  "fresh_screen": {
+    "planned_rows": 48,
+    "attempted_and_logged_rows": 35,
+    "unique_qa_ids": 35,
+    "valid_outputs": 35,
+    "invalid_outputs": 0,
+    "inference_errors_in_logged_rows": 0,
+    "logged_fixed_frame_counts": [
+      8
+    ],
+    "performance_metrics_computed": false,
+    "performance_gate_status": "NOT_EVALUATED_INCOMPLETE_COHORT"
+  },
+  "contamination_handling": {
+    "prior_invalidated_cohort_overlap_rows": 7,
+    "registry": "artifacts/manifests/vlm_exposure_registry.jsonl",
+    "replacement_cohort_qa_overlap_with_prior_vlm_at_freeze": 0,
+    "replacement_cohort_clip_overlap_with_prior_vlm_at_freeze": 0
+  },
+  "artifacts": {
+    "protocol": "reports/harn_stage2_native48_protocol.json",
+    "protocol_sha256": "d2811db969f8f632b99a458f1b18b894d218d513fb436f2869b10858cfd6a0d7",
+    "selection": "artifacts/manifests/harn_stage2_native48.csv",
+    "runner": "scripts/run_harn_stage2_native_v1.py",
+    "runner_sha256": "cfc8e91f4b0a17e0adb133a8154c3c053f123453d17129bad3c089e56c1baf36",
+    "partial_fresh_log": "artifacts/vlm/harn_stage2_native_v1_fresh48.jsonl",
+    "partial_fresh_log_sha256": "5fc095edf5b1c9fac27095e0cce0f385fe0dd94bbf64bea5934abefa1975cb70",
+    "network_preflight": "reports/harn_stage2_native_v1_network_isolation_preflight.json",
+    "network_preflight_sha256": "0b91b2971616540e1e4d67a8801e0073afa4b4d1bb285e01b65dfc07ed9e1d41"
+  },
+  "test_vlm_log_written": false,
+  "candidate_csv_written": false,
+  "submission_performed": false,
+  "leaderboard_used_for_tuning": false
+}

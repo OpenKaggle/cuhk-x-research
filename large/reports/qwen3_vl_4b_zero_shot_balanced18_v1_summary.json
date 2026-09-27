@@ -1,0 +1,88 @@
+{
+  "experiment": "qwen3_vl_4b_zero_shot_balanced18_v1",
+  "task": "zero-shot HARn single-choice action recognition",
+  "selection": "all recovered actions once, then new subjects, stable SHA-256 order; limit<=0 selects all",
+  "seed": 20260909,
+  "fps": 1,
+  "max_tokens": 8,
+  "temperature": 0,
+  "prompt_template_sha256": "f35c92f442c5daab051111449c7eebd084ea80de34a11145dc420d0ca178dee0",
+  "eligible_rows": 122,
+  "valid_predictions": 18,
+  "errors": 0,
+  "accuracy": 0.6111111111111112,
+  "action_coverage": 13,
+  "subject_coverage": 18,
+  "by_action": {
+    "14_Wipe_bowls": {
+      "count": 1,
+      "accuracy": 0
+    },
+    "15_Wipe_windows_and_tables": {
+      "count": 2,
+      "accuracy": 1
+    },
+    "22_Turn_pages": {
+      "count": 1,
+      "accuracy": 1
+    },
+    "23_Listen_to_music_with_headphones": {
+      "count": 2,
+      "accuracy": 1
+    },
+    "24_Use_a_mobile_phone": {
+      "count": 1,
+      "accuracy": 0
+    },
+    "25_Watch_TV": {
+      "count": 2,
+      "accuracy": 0.5
+    },
+    "2_Comb_hair": {
+      "count": 2,
+      "accuracy": 0
+    },
+    "37_Take_medicine": {
+      "count": 1,
+      "accuracy": 1
+    },
+    "43_Open_the_cabinet_(to_get_things)": {
+      "count": 2,
+      "accuracy": 0.5
+    },
+    "4_Wipe_hands": {
+      "count": 1,
+      "accuracy": 1
+    },
+    "5_Put_on_clothes": {
+      "count": 1,
+      "accuracy": 0
+    },
+    "8_Take_and_use_tableware": {
+      "count": 1,
+      "accuracy": 1
+    },
+    "9_Pour_drinks": {
+      "count": 1,
+      "accuracy": 1
+    }
+  },
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "license": "apache-2.0",
+    "manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+  },
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "partial_visual_manifest_sha256": "cd96f84c211c61f8b2034a660ef194db397c7bdd87e5abace392a28628381741",
+    "prediction_log_sha256": "0226bcbd084def2132db9f592363431453c63c0632345f436fe49a9a268cc6ff"
+  },
+  "versions": {
+    "python": "3.13.2",
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6",
+    "pandas": "3.0.3"
+  },
+  "incremental_runtime_seconds": 22.297745499992743
+}

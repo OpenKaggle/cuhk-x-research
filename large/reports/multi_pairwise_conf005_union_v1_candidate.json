@@ -1,0 +1,25 @@
+{
+  "candidate": "multi_pairwise_conf005_union_v1.csv",
+  "candidate_sha256": "7200aded1502a48b32003bac78946c338a0683e3cf13210b154984ffd309dd6b",
+  "gate": {
+    "category": "HAU multi",
+    "confidence_threshold": 0.05,
+    "selection_rule": "fixed grid; maximize OOF overlay exact-match accuracy, then worst-subject accuracy, then fewer overrides",
+    "validation_rows": 809,
+    "validation_parent_accuracy": 0.311495673671199,
+    "validation_overlay_accuracy": 0.36093943139678614,
+    "validation_net_correct_vs_parent": 40,
+    "validation_parent_worst_subject_accuracy": 0.21428571428571427,
+    "validation_overlay_worst_subject_accuracy": 0.23809523809523808
+  },
+  "total_rows_changed_vs_frozen_parent": 56,
+  "new_rows_changed_vs_visual_base": 49,
+  "inputs": {
+    "parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "visual_base_sha256": "e54652a8746fca7d434a6a4bd162458448e709ff224b074ca37a0f538dec5463",
+    "test_predictions_sha256": "3e69feeb5e30091bc3668f3ce5c99eaec73dfbbb363f42ea9a2b3f4bd29fc727",
+    "validation_sha256": "e6eaa4fbfbd580cc24f7a7bbad22b1e479fc232256594bab1cbfe9f2c53912b9",
+    "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "code_sha256": "aa212e0a64f28aad344bf2525867212d9a35ff79c07e7dc8ebf59413e863dfd1"
+  }
+}

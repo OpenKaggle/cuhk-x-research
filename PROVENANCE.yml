@@ -1,0 +1,51 @@
+schema_version: 1
+repository:
+  name: cuhk-x-research
+  url: https://github.com/openkaggle/cuhk-x-research
+snapshot:
+  kind: public-source-and-evidence-release
+  status: source_evidence_only
+  status_note: >-
+    Combined Large- and Small-track source and derived-evidence release. It is
+    not a copy of competition data, a model package, or an organizer statement.
+  rules_checked_at: null
+  rules_check_note: >-
+    The Large-track README records rule acceptance on 2026-09-08, but the
+    archive does not label a repository-wide rules-check time.
+competitions:
+  - name: CUHK-X Competition - Large Model Track
+    url: https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track
+  - name: CUHK-X Competition - Small Model Track
+    url: https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track
+included:
+  - first-party source code, tests, reports, and protocols
+  - sanitized derived validation and replay evidence
+  - upstream links and licensing/provenance records
+excluded:
+  - competition data and cache directories
+  - model weights and generated model artifacts
+  - generated submissions and submission bundles
+  - record-selection vectors and raw-input mappings
+  - copied organizer source and third-party notebook mirrors
+  - environments, credentials, and large outputs
+licensing:
+  original_work: MIT
+  boundary: >-
+    MIT covers only original OpenKaggle code and documentation for which
+    contributors hold rights.
+  third_party: >-
+    Organizer code, public notebooks, models, and other third-party assets are
+    linked from UPSTREAMS.md and retain their own terms.
+reproduction:
+  guide: REPRODUCIBILITY.md
+  documented_entry_points:
+    - large/README.md
+    - large/scripts/reproduce_public_077777.py
+    - large/scripts/validate_submission.py
+    - large/inference.sh
+    - large/inference_owned.sh
+    - small/README.md
+claims:
+  current_final_ready: false
+  organizer_recognition_claim_added_by_release_docs: false
+  score_claim_added_by_release_docs: false

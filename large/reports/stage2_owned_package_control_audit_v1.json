@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "audited_utc": "2026-09-11T06:19:13.858524+00:00",
+  "control_plane": "../CUHK_X_CONTROL_PLANE.md",
+  "candidate": "candidates/stage2_native_owned_v1.csv",
+  "candidate_sha256": "40361ab2b6a87d5b73da3114aada27b982b37c09d205864ec8ed272701ae06b8",
+  "decision": "PASS_TECHNICAL_RAW_PACKAGE_BLOCK_RELEASE_LICENSE_REVIEW",
+  "checks": {
+    "subject_disjoint_core_gate_pass": true,
+    "fixed_third_party_682_vector_dependency": false,
+    "official_682_row_grammar_pass": true,
+    "two_network_free_runs_byte_identical": true,
+    "arbitrary_qa_id_and_clip_key_smoke_pass": true,
+    "qwen_rejection_enforced": true,
+    "owned_builder_called_by_inference_sh": true,
+    "owned_builder_called_by_separate_inference_owned_sh": true,
+    "raw_organizer_sensor_to_feature_cache_packaged": true,
+    "new_clip_requires_precomputed_feature_cache": false,
+    "raw_input_fail_closed_tests_pass": true,
+    "two_clean_raw_input_runs_byte_identical": true,
+    "technical_raw_package_ready": true,
+    "post_competition_deadline_conflict_resolved": true,
+    "small_llm_rule_scope_resolved": true,
+    "finalist_license_layers_resolved": false,
+    "finalist_package_ready": false,
+    "submission_performed": false
+  },
+  "evidence": {
+    "raw_package_report": [
+      "reports/stage2_native_owned_raw_package_v1.json",
+      "5675fce4e43317ea0c3061592f2ba15af7d345974f90a7c3793521b6fbedd358"
+    ],
+    "release_manifest": [
+      "reports/stage2_native_owned_release_manifest_v1.json",
+      "5b1096f3bf72e75c83d3cc62b5d9ee6845484f52854b2ded9bfe7ae1bd101cf9"
+    ],
+    "legacy_inference_sh": [
+      "inference.sh",
+      "4494830c630d8cf74e6c710e93d947686ec807a8765e3b66333d6de2e5e6339a"
+    ],
+    "owned_entry_point": [
+      "inference_owned.sh",
+      "853f8636f73464414bdd814a674e6febc17ce5b4f6205823451ca21a83e34506"
+    ]
+  },
+  "required_next_steps": [
+    "Explicit participant approval to publish the clean-room source subset under Apache-2.0",
+    "Confirm organizer-delivery terms for participant-trained model files derived from non-redistributable data"
+  ],
+  "release": "Technical raw-input reproducibility passes. Finalist readiness remains blocked on explicit participant-source and derived-model delivery licensing decisions."
+}

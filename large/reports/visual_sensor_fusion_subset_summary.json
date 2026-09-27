@@ -1,0 +1,119 @@
+{
+  "experiment": "visual_sensor_agreement_on_recovered_harn_single_subset_v1",
+  "validation": "Sensor and public-graph predictions are 18-fold leave-one-subject-out; VLM is zero-shot; clips intact",
+  "scope_caution": "Recovered archive-prefix subset only; use to qualify mechanisms, not to claim full-dataset performance",
+  "rows": 122,
+  "actions": 13,
+  "baselines": {
+    "public_graph_oof": {
+      "rows": 122,
+      "accuracy": 0.5327868852459017,
+      "correct": 65,
+      "worst_subject_accuracy": 0.2
+    },
+    "sensor_loso": {
+      "rows": 122,
+      "accuracy": 0.7377049180327869,
+      "correct": 90,
+      "worst_subject_accuracy": 0.5714285714285714
+    },
+    "zero_shot_vlm": {
+      "rows": 122,
+      "accuracy": 0.7131147540983607,
+      "correct": 87,
+      "worst_subject_accuracy": 0
+    }
+  },
+  "sensor_vlm_consensus": {
+    "rows": 67,
+    "coverage": 0.5491803278688525,
+    "accuracy_when_agree": 0.9253731343283582,
+    "correct": 62,
+    "differs_from_parent_rows": 28
+  },
+  "fixed_confidence_sweep_for_consensus_overlay": {
+    "0.00": {
+      "rows": 122,
+      "accuracy": 0.7049180327868853,
+      "correct": 86,
+      "worst_subject_accuracy": 0.3,
+      "override_correct": 23,
+      "override_parent_correct": 2,
+      "net_correct_vs_parent": 21
+    },
+    "0.05": {
+      "rows": 122,
+      "accuracy": 0.6475409836065574,
+      "correct": 79,
+      "worst_subject_accuracy": 0.2727272727272727,
+      "override_correct": 15,
+      "override_parent_correct": 1,
+      "net_correct_vs_parent": 14
+    },
+    "0.10": {
+      "rows": 122,
+      "accuracy": 0.6065573770491803,
+      "correct": 74,
+      "worst_subject_accuracy": 0.2727272727272727,
+      "override_correct": 9,
+      "override_parent_correct": 0,
+      "net_correct_vs_parent": 9
+    },
+    "0.15": {
+      "rows": 122,
+      "accuracy": 0.5901639344262295,
+      "correct": 72,
+      "worst_subject_accuracy": 0.2727272727272727,
+      "override_correct": 7,
+      "override_parent_correct": 0,
+      "net_correct_vs_parent": 7
+    },
+    "0.20": {
+      "rows": 122,
+      "accuracy": 0.5819672131147541,
+      "correct": 71,
+      "worst_subject_accuracy": 0.2727272727272727,
+      "override_correct": 6,
+      "override_parent_correct": 0,
+      "net_correct_vs_parent": 6
+    },
+    "0.25": {
+      "rows": 122,
+      "accuracy": 0.5655737704918032,
+      "correct": 69,
+      "worst_subject_accuracy": 0.2727272727272727,
+      "override_correct": 4,
+      "override_parent_correct": 0,
+      "net_correct_vs_parent": 4
+    },
+    "0.30": {
+      "rows": 122,
+      "accuracy": 0.5573770491803278,
+      "correct": 68,
+      "worst_subject_accuracy": 0.2727272727272727,
+      "override_correct": 3,
+      "override_parent_correct": 0,
+      "net_correct_vs_parent": 3
+    },
+    "0.40": {
+      "rows": 122,
+      "accuracy": 0.5491803278688525,
+      "correct": 67,
+      "worst_subject_accuracy": 0.2727272727272727,
+      "override_correct": 2,
+      "override_parent_correct": 0,
+      "net_correct_vs_parent": 2
+    }
+  },
+  "error_overlap": {
+    "both_sensor_and_vlm_wrong": 7,
+    "sensor_wrong_vlm_right": 25,
+    "sensor_right_vlm_wrong": 28
+  },
+  "inputs": {
+    "vlm_predictions_sha256": "dbe71868f8e1e9700bdab1002136d3903999f157a3ebf1f9196a9dd8b6d25470",
+    "sensor_oof_sha256": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7",
+    "parent_oof_sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33",
+    "analysis_code_sha256": "d702ef5190b02efce641fd15f57321385737b98e1a3d4431f0a0ad991b96b997"
+  }
+}

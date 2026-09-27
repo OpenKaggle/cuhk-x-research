@@ -1,0 +1,41 @@
+{
+  "experiment": "qwen3_vl_4b_multiview_balanced18_v1",
+  "task": "zero-shot synchronized Depth_Color+IR+Depth HARn single recognition",
+  "selection": "same frozen action-first, then subject-spread selector as the single-view baseline; all three modalities required",
+  "seed": 20260909,
+  "fps_per_view": 1,
+  "max_tokens": 8,
+  "temperature": 0,
+  "prompt_template_sha256": "f30d3aa38f469faf6b44042cbb976bc84d60ccc29130edbd4dbcc3f90e6b48e5",
+  "eligible_rows": 112,
+  "valid_predictions": 18,
+  "errors": 0,
+  "accuracy": 0.8333333333333334,
+  "matched_single_view_accuracy": 0.6666666666666666,
+  "agreement_with_single_view": 13,
+  "multiview_only_correct": 4,
+  "single_view_only_correct": 1,
+  "action_coverage": 12,
+  "subject_coverage": 18,
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "license": "apache-2.0",
+    "manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+  },
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "partial_visual_manifest_sha256": "cd96f84c211c61f8b2034a660ef194db397c7bdd87e5abace392a28628381741",
+    "single_view_log_sha256": "dbe71868f8e1e9700bdab1002136d3903999f157a3ebf1f9196a9dd8b6d25470",
+    "prediction_log_sha256": "0071a4c42812bc6e4c90596ef49b76479b4d2007c4ce604f4bf2f9e66c85d754"
+  },
+  "versions": {
+    "python": "3.13.2",
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6",
+    "pandas": "3.0.3"
+  },
+  "code_sha256": "3bd3ec02110db95c7995b0d927026d7ed71a1663a80860bed2e83ba496324543",
+  "total_inference_runtime_seconds": 23.365040289820172,
+  "incremental_runtime_seconds": 24.059065667097457
+}

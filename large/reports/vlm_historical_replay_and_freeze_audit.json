@@ -1,0 +1,108 @@
+{
+  "audit": "VLM historical replay, post-hoc task/subject taxonomy, and hard freeze",
+  "small20_classification": "PASS_ONLY_AS_REPRODUCIBILITY_PIPELINE_SMOKE",
+  "small20_performance_evidence_decision": "REJECT_AS_NEW_PERFORMANCE_OR_PROMOTION_EVIDENCE",
+  "reason": "All 20 QA/clip pairs were inferred before the Small20 protocol in the historical full122/object66 runs with identical prompts and video inputs.",
+  "small20": {
+    "protocol_sha256": "cfcc3ac2ef8dde83ff30b60a5a1119806dab1ae1e68ef4d0349adb461f52229b",
+    "rows": 20,
+    "unique_qa_ids": 20,
+    "prior_overlap_rows": 20,
+    "prior_overlap_fraction": 1,
+    "field_consistency_counts_out_of_20": {
+      "prediction": 20,
+      "raw_output": 20,
+      "prompt_sha256": 20,
+      "video_sha256": 20
+    },
+    "exact_prediction_replay_rate": 1,
+    "invalid_or_empty_outputs": 0,
+    "implementation_failures": 0,
+    "retry_rows": 0,
+    "scientific_accuracy_reuse_prohibited": true
+  },
+  "fresh_validation_availability": {
+    "eligible_recovered_rows": 188,
+    "previously_inferred_qa_clip_pairs": 188,
+    "eligible_never_inferred_qa_clip_pairs": 0,
+    "required_for_new_screen": 20,
+    "new_screen_possible": false
+  },
+  "historical_post_hoc_taxonomy_only": {
+    "warning": "These rows were already inspected. Results may generate future hypotheses only; they cannot define, select, promote, or submit a router.",
+    "direct_vlm_vs_subject_disjoint_parent_by_task_and_subject": {
+      "object_interaction": {
+        "rows": 66,
+        "vlm_correct": 26,
+        "parent_correct": 53,
+        "net_correct": -27,
+        "vlm_accuracy": 0.3939393939393939,
+        "parent_accuracy": 0.803030303030303,
+        "subject_units": 17,
+        "positive_subjects": 1,
+        "negative_subjects": 13,
+        "tied_subjects": 3,
+        "one_sided_exact_positive_sign_p": 0.99993896484375
+      },
+      "single": {
+        "rows": 122,
+        "vlm_correct": 87,
+        "parent_correct": 65,
+        "net_correct": 22,
+        "vlm_accuracy": 0.7131147540983607,
+        "parent_accuracy": 0.5327868852459017,
+        "subject_units": 18,
+        "positive_subjects": 10,
+        "negative_subjects": 5,
+        "tied_subjects": 3,
+        "one_sided_exact_positive_sign_p": 0.15087890625
+      }
+    },
+    "existing_sensor_agreement_parent_disagreement_by_task_and_subject": {
+      "object_interaction": {
+        "rows": 4,
+        "vlm_correct": 3,
+        "parent_correct": 1,
+        "net_correct": 2,
+        "vlm_accuracy": 0.75,
+        "parent_accuracy": 0.25,
+        "subject_units": 3,
+        "positive_subjects": 2,
+        "negative_subjects": 1,
+        "tied_subjects": 0,
+        "one_sided_exact_positive_sign_p": 0.5
+      },
+      "single": {
+        "rows": 28,
+        "vlm_correct": 23,
+        "parent_correct": 2,
+        "net_correct": 21,
+        "vlm_accuracy": 0.8214285714285714,
+        "parent_accuracy": 0.07142857142857142,
+        "subject_units": 16,
+        "positive_subjects": 14,
+        "negative_subjects": 1,
+        "tied_subjects": 1,
+        "one_sided_exact_positive_sign_p": 0.00048828125
+      }
+    }
+  },
+  "future_fresh_screen_gate": {
+    "unit_of_independence": "subject",
+    "primary": "one-sided exact sign test over non-tied subject deltas, p <= 0.05",
+    "secondary": "both categories and both pre-frozen five-subject halves net positive; any negative subject or more than 1/20 implementation failures stops promotion",
+    "even_if_passed": "triggers larger fresh subject-disjoint validation, never direct submission"
+  },
+  "decision": "FREEZE_VLM_DIRECT_AND_NEW_ROUTER_DIRECTION",
+  "resume_condition": "At least 20 labeled QA/clip pairs from newly recovered clips that have never appeared in any historical VLM artifact, followed by a pre-frozen subject-clustered protocol.",
+  "submission": "NONE",
+  "inputs": {
+    "replay_sha256": "d7c1be3fa8d809e434272cf4ef26b21706536a4f8082aa83a4056f3b39804949",
+    "historical_single_sha256": "dbe71868f8e1e9700bdab1002136d3903999f157a3ebf1f9196a9dd8b6d25470",
+    "historical_object_sha256": "71dd5889022566694718360ad50f626a1d70784b4798e668f56fa766b0837b02",
+    "parent_oof_sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33",
+    "sensor_oof_sha256": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7",
+    "partial_visual_manifest_sha256": "cd96f84c211c61f8b2034a660ef194db397c7bdd87e5abace392a28628381741"
+  },
+  "code_sha256": "65e68f270ec55fd17a25ce8bf10cc42bf2888ea192d6e2339503de02f5ebfa93"
+}

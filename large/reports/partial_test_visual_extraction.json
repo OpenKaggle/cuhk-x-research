@@ -1,0 +1,33 @@
+{
+  "archive_prefix_bytes": 1207959552,
+  "expected_final_bytes": 1994984736,
+  "archive_prefix_fraction": 0.605498142518119,
+  "archive_prefix_sha256": "ede336d6b36904aff254459216496aec8fc58a90242e8eca49063fa72ccf99b5",
+  "complete_file_entries_before_boundary": 450,
+  "first_incomplete_entry": {
+    "name": "large_model_track_test/LM_test_0061/Depth/Depth.mp4",
+    "header_offset": 1207235054,
+    "data_offset": 1207235167,
+    "compressed_size": null,
+    "available_data_bytes": 724385
+  },
+  "selection": "official test units referenced by organizer test_qa.csv; complete MP4 entries only",
+  "qa_units": 208,
+  "extracted_units": 124,
+  "extracted_units_by_source": {
+    "HARn": 39,
+    "HAU": 85
+  },
+  "extracted_files": 450,
+  "extracted_bytes": 1299365081,
+  "modalities": {
+    "Depth": 124,
+    "Depth_Color": 119,
+    "IR": 124,
+    "Thermal": 83
+  },
+  "manifest_sha256": "b7c01918cb7b55f3df77257c151fbf267b1dcba471e0fb3f6baa1501954806f5",
+  "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+  "code_sha256": "ba2e75f2b1e4d2602072e373269d5bef218833130a9cfe9f9d37f28dd0bc5875",
+  "runtime_seconds": 5.476311915903352
+}

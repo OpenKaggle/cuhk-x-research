@@ -1,0 +1,34 @@
+{
+  "status": "PROPOSED_NOT_FROZEN_NO_INFERENCE",
+  "label_blind_columns": [
+    "qa_id",
+    "source",
+    "category",
+    "path",
+    "subject",
+    "subject_half",
+    "video metadata"
+  ],
+  "exposure_registry_sha256": "4de727a5821179dc3625de33f210346c4c1fa01feace823de1190320aed244af",
+  "unexposed_rows": 218,
+  "unexposed_unique_clips": 214,
+  "readable_rows": 218,
+  "manifest_hash_match_rows": 218,
+  "exact8_eligible_rows": 206,
+  "exact8_by_category": {
+    "object_interaction": 16,
+    "single": 190
+  },
+  "proposal": "Use every exact-8-eligible unexposed object-interaction row (the scarce hard stratum), then add label-blind deterministic single-action rows to balance the two subject halves and duration quartiles. Put FINAL=<letter> first, then verb/object/temporal evidence, to eliminate answer truncation. Freeze the selected IDs, clips, video hashes, exact 8-frame indices, prompts, max-token budget, parent route, and gates before inference.",
+  "pre_freeze_checks_required": [
+    "registry v2 check-and-reserve on QA and canonical clip",
+    "readable first/middle/last frames",
+    "total_frames >= 8",
+    "manifest video SHA-256",
+    "subject and duration-quartile coverage",
+    "no label/question/option access by selector"
+  ],
+  "why_not_frozen_now": "P1 failed. This audit only verifies the remaining label-blind media pool; a separately reviewed P2 protocol is required before consuming more fresh evidence.",
+  "preflight_csv": "artifacts/preflight/p2_unexposed_video_readiness_v1.csv",
+  "preflight_csv_sha256": "3822dd0fb2f9670ff00d86c3fa1fbb15f784c183a4771d67593d5e5848c20fa1"
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "experiment": "sensor_option_semantics_triad_v1",
+  "verified_utc": "2026-09-11T03:52:32Z",
+  "replays": 2,
+  "semantic_reproducibility": "PASS",
+  "byte_reproducibility": "EXPECTED_FLOAT_ROUNDOFF_ONLY",
+  "first": {
+    "oof_sha256": "308cc1dcd58157822e0a86f32c145202a397678b6866b715f02ca181a35a4b2a",
+    "report_sha256": "f9e9f90ca40ea8e2b89e19f3fdec36b3a2a4e404eed66d01cb51f552888108d6",
+    "runtime_seconds": 57.718768666964024
+  },
+  "second": {
+    "oof_sha256": "effe571266b15dba48e75e8dde512e0a7c1dc3ba46ecff415e31f3a4907e14a1",
+    "report_sha256": "d2f811f95f25996425d70c3329d75457a0717e6d217775fa53fc0f86643674bd",
+    "runtime_seconds": 52.0367105420446
+  },
+  "exact_equal": {
+    "shape": true,
+    "columns": true,
+    "qa_id_order": true,
+    "all_non_margin_oof_columns": true,
+    "all_predictions": true,
+    "consensus_and_parent_disagreements": true,
+    "correctness_and_invalid_flags": true,
+    "report_after_removing_runtime_and_embedded_oof_hash": true,
+    "decision": "REJECT_NO_TEST_NO_SUBMISSION",
+    "promotion_gate_passed": false
+  },
+  "floating_margin_roundoff": {
+    "cause": "Parallel tree probability summation changed only the final floating-point bits.",
+    "imu_max_absolute_difference": 3.0010716134398763e-16,
+    "radar_max_absolute_difference": 3.0531133177191805e-16,
+    "skeleton_max_absolute_difference": 3.885780586188048e-16,
+    "affected_any_prediction_or_gate": false
+  },
+  "containment": {
+    "test_qa_read": false,
+    "test_prediction_written": false,
+    "candidate_csv_written": false,
+    "submission_performed": false
+  }
+}

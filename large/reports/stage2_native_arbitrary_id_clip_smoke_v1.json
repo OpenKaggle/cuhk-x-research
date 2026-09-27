@@ -1,0 +1,45 @@
+{
+  "experiment": "stage2_native_arbitrary_id_clip_smoke_v1",
+  "decision": "PASS_ARBITRARY_QA_ID_AND_CLIP_KEY_INVARIANCE",
+  "passed": true,
+  "rows": 6,
+  "categories": {
+    "combination": 1,
+    "emotion": 1,
+    "multi": 1,
+    "sequence": 1,
+    "single": 2
+  },
+  "all_qa_ids_replaced": true,
+  "all_clip_keys_replaced": true,
+  "feature_values_identical_under_new_unit_keys": true,
+  "predictions_identical_by_row": true,
+  "network_blocked_both_runs": true,
+  "invalid_predictions_both_runs": 0,
+  "artifacts": {
+    "fixture": [
+      "artifacts/smoke/stage2_native_arbitrary_id_v1/fixture.json",
+      "670f9e2d870e8b66c60bc9895b94f002f174e1565ef62d2711d9ba9bd4753d82"
+    ],
+    "original_output": [
+      "artifacts/smoke/stage2_native_arbitrary_id_v1/original_ids_predictions.csv",
+      "b4acfce36635afc612777a574de8950aa54cb2577128cf04c7fba5688af83ab8"
+    ],
+    "renamed_output": [
+      "artifacts/smoke/stage2_native_arbitrary_id_v1/new_ids_clips_predictions.csv",
+      "cb5679784b4d3e105f846278eb5247cd47a3d10f698ecf6cc06cebfe59882817"
+    ],
+    "original_build_report": [
+      "artifacts/smoke/stage2_native_arbitrary_id_v1/original_ids_build.json",
+      "2d403f197b26c7909e2167ac9ed96a9dd19fe42d7810305f2eacfdf05968aa35"
+    ],
+    "renamed_build_report": [
+      "artifacts/smoke/stage2_native_arbitrary_id_v1/new_ids_clips_build.json",
+      "18f8b7c5e51a8c40e7adf3c31d3fca4df0293645e22667058d54036c10635f23"
+    ],
+    "builder_sha256": "21bcf764fb145f7879ccff5d512e2dc02fa5658f3133a342fd7fcc9f0eb71567",
+    "verifier_sha256": "7d81e18b3edb087825af95d111c036e351136aff3a536855965ad8f561a7ceb6"
+  },
+  "verified_utc": "2026-09-11T05:08:04.914545+00:00",
+  "claim_boundary": "This proves inference is independent of known qa_id and clip-key strings when the feature cache contains the new clip units; it does not replace raw sensor feature extraction packaging."
+}

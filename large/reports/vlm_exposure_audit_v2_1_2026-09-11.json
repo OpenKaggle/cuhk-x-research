@@ -1,0 +1,182 @@
+{
+  "generated_at_utc": "2026-09-11T04:53:40.351379Z",
+  "root": "[local-path]",
+  "registry": "[local-path]",
+  "scan": {
+    "sources_scanned": 54,
+    "candidate_events": 1217,
+    "records_appended": 18,
+    "registry_records": 1217,
+    "registry_sha256": "c22b421eab6ba1c61c57ed42656bbffb8023b509ab5e73577fe7d1e9acef347f"
+  },
+  "summary": {
+    "schema_version": "cuhk-vlm-exposure-v2",
+    "registry_records": 1217,
+    "source_files": 40,
+    "unique_qa_ids": 528,
+    "unique_clip_ids": 382,
+    "events_with_prediction": 803,
+    "qa_ids_in_multiple_source_files": 336,
+    "clip_ids_in_multiple_source_files": 316,
+    "qa_ids_in_multiple_inference_logs": 172,
+    "clip_ids_in_multiple_inference_logs": 152,
+    "top_pairwise_overlaps": [
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_full112_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_multiview_full112_v1.jsonl",
+        "qa_overlap": 112,
+        "clip_overlap": 112
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_full112_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "qa_overlap": 112,
+        "clip_overlap": 112
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_multiview_full112_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "qa_overlap": 112,
+        "clip_overlap": 112
+      },
+      {
+        "left": "artifacts/manifests/temporal_vlm_preregistered50.csv",
+        "right": "reports/temporal_vlm_preregistered50_protocol.json",
+        "qa_overlap": 50,
+        "clip_overlap": 50
+      },
+      {
+        "left": "artifacts/manifests/harn_stage2_native48.csv",
+        "right": "reports/harn_stage2_native48_protocol.json",
+        "qa_overlap": 48,
+        "clip_overlap": 48
+      },
+      {
+        "left": "artifacts/manifests/stage2_native_qwen_missing_sensor_v1.csv",
+        "right": "artifacts/vlm/stage2_native_qwen_missing_sensor_v1.jsonl",
+        "qa_overlap": 40,
+        "clip_overlap": 40
+      },
+      {
+        "left": "artifacts/manifests/harn_stage2_native48.csv",
+        "right": "artifacts/vlm/harn_stage2_native_v1_fresh48.jsonl",
+        "qa_overlap": 35,
+        "clip_overlap": 35
+      },
+      {
+        "left": "artifacts/vlm/harn_stage2_native_v1_fresh48.jsonl",
+        "right": "reports/harn_stage2_native48_protocol.json",
+        "qa_overlap": 35,
+        "clip_overlap": 35
+      },
+      {
+        "left": "artifacts/manifests/vlm_fresh20_validation.csv",
+        "right": "artifacts/vlm/qwen3_vl_4b_fresh20_v1.jsonl",
+        "qa_overlap": 20,
+        "clip_overlap": 20
+      },
+      {
+        "left": "artifacts/manifests/vlm_fresh20_validation.csv",
+        "right": "reports/vlm_fresh20_frozen_protocol.json",
+        "qa_overlap": 20,
+        "clip_overlap": 20
+      },
+      {
+        "left": "artifacts/manifests/vlm_small20_validation.csv",
+        "right": "artifacts/vlm/qwen3_vl_4b_small20_frozen_v1.jsonl",
+        "qa_overlap": 20,
+        "clip_overlap": 20
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_fresh20_v1.jsonl",
+        "right": "reports/vlm_fresh20_frozen_protocol.json",
+        "qa_overlap": 20,
+        "clip_overlap": 20
+      },
+      {
+        "left": "artifacts/manifests/p1_decomposed_sensor_fresh48_v1.csv",
+        "right": "artifacts/vlm/p1_decomposed_sensor_fresh48_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_mosaic_full112_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_multiview_balanced18_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_multiview_full112_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_full112_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_multiview_balanced18_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_multiview_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_multiview_full112_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_multiview_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_zero_shot_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_zero_shot_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_8b_zero_shot_balanced18_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_zero_shot_probe1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_8b_zero_shot_balanced18_v1.jsonl",
+        "qa_overlap": 18,
+        "clip_overlap": 18
+      },
+      {
+        "left": "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+        "right": "artifacts/vlm/qwen3_vl_4b_zero_shot_balanced18_v1.jsonl",
+        "qa_overlap": 16,
+        "clip_overlap": 16
+      }
+    ]
+  },
+  "governance": {
+    "append_only": true,
+    "freshness_rule": "A proposed cohort must share neither qa_id nor canonical clip_id with any registry event.",
+    "label_fields_copied": false,
+    "prediction_values_copied": false
+  }
+}

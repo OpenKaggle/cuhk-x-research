@@ -1,0 +1,251 @@
+{
+  "experiment": "nonvisual_rf_v1_subject_leave_one_out",
+  "seed": 20260909,
+  "validation": "18-fold leave-one-subject-out; clips intact",
+  "feature_source": "official LMT_(IMU,Radar,Skeleton).zip; IMU + Skeleton for HAU, Skeleton for HARn",
+  "radar_used": false,
+  "train_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+  "feature_cache_sha256": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+  "parent_oof_sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33",
+  "parent_test_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+  "versions": {
+    "python": "3.13.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scikit_learn": "1.8.0"
+  },
+  "model": {
+    "type": "RandomForestClassifier",
+    "n_estimators": 240,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample"
+  },
+  "covered_oof_rows": 2180,
+  "covered_test_rows": 360,
+  "metrics": {
+    "HARn/object_interaction": {
+      "rows": 133,
+      "parent_accuracy": 0.849624060150376,
+      "expert_accuracy": 0.849624060150376,
+      "parent_worst_subject": 0.42857142857142855,
+      "expert_worst_subject": 0.3333333333333333,
+      "disagreements": 29,
+      "disagreement_parent_correct": 14,
+      "disagreement_expert_correct": 14,
+      "mean_confidence": 0.14431834531146068,
+      "fixed_threshold_overlays": {
+        "0.00": {
+          "accuracy": 0.849624060150376,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.3333333333333333
+        },
+        "0.05": {
+          "accuracy": 0.9022556390977443,
+          "net_correct_vs_parent": 7,
+          "worst_subject_accuracy": 0.42857142857142855
+        },
+        "0.10": {
+          "accuracy": 0.8796992481203008,
+          "net_correct_vs_parent": 4,
+          "worst_subject_accuracy": 0.42857142857142855
+        },
+        "0.15": {
+          "accuracy": 0.8796992481203008,
+          "net_correct_vs_parent": 4,
+          "worst_subject_accuracy": 0.42857142857142855
+        },
+        "0.20": {
+          "accuracy": 0.8646616541353384,
+          "net_correct_vs_parent": 2,
+          "worst_subject_accuracy": 0.42857142857142855
+        },
+        "0.30": {
+          "accuracy": 0.8646616541353384,
+          "net_correct_vs_parent": 2,
+          "worst_subject_accuracy": 0.42857142857142855
+        },
+        "0.40": {
+          "accuracy": 0.849624060150376,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.42857142857142855
+        },
+        "0.50": {
+          "accuracy": 0.849624060150376,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.42857142857142855
+        }
+      }
+    },
+    "HARn/single": {
+      "rows": 429,
+      "parent_accuracy": 0.43356643356643354,
+      "expert_accuracy": 0.7668997668997669,
+      "parent_worst_subject": 0.17391304347826086,
+      "expert_worst_subject": 0.5333333333333333,
+      "disagreements": 253,
+      "disagreement_parent_correct": 41,
+      "disagreement_expert_correct": 184,
+      "mean_confidence": 0.16598930718326857,
+      "fixed_threshold_overlays": {
+        "0.00": {
+          "accuracy": 0.7668997668997669,
+          "net_correct_vs_parent": 143,
+          "worst_subject_accuracy": 0.5333333333333333
+        },
+        "0.05": {
+          "accuracy": 0.7272727272727273,
+          "net_correct_vs_parent": 126,
+          "worst_subject_accuracy": 0.5217391304347826
+        },
+        "0.10": {
+          "accuracy": 0.6596736596736597,
+          "net_correct_vs_parent": 97,
+          "worst_subject_accuracy": 0.4782608695652174
+        },
+        "0.15": {
+          "accuracy": 0.6037296037296037,
+          "net_correct_vs_parent": 73,
+          "worst_subject_accuracy": 0.43478260869565216
+        },
+        "0.20": {
+          "accuracy": 0.5571095571095571,
+          "net_correct_vs_parent": 53,
+          "worst_subject_accuracy": 0.34782608695652173
+        },
+        "0.30": {
+          "accuracy": 0.4965034965034965,
+          "net_correct_vs_parent": 27,
+          "worst_subject_accuracy": 0.2608695652173913
+        },
+        "0.40": {
+          "accuracy": 0.4801864801864802,
+          "net_correct_vs_parent": 20,
+          "worst_subject_accuracy": 0.2608695652173913
+        },
+        "0.50": {
+          "accuracy": 0.4662004662004662,
+          "net_correct_vs_parent": 14,
+          "worst_subject_accuracy": 0.21739130434782608
+        }
+      }
+    },
+    "HAU/emotion": {
+      "rows": 809,
+      "parent_accuracy": 0.32014833127317677,
+      "expert_accuracy": 0.44870210135970334,
+      "parent_worst_subject": 0.2727272727272727,
+      "expert_worst_subject": 0.3611111111111111,
+      "disagreements": 342,
+      "disagreement_parent_correct": 67,
+      "disagreement_expert_correct": 171,
+      "mean_confidence": 0.03154614750721055,
+      "fixed_threshold_overlays": {
+        "0.00": {
+          "accuracy": 0.44870210135970334,
+          "net_correct_vs_parent": 104,
+          "worst_subject_accuracy": 0.3611111111111111
+        },
+        "0.05": {
+          "accuracy": 0.34487021013597036,
+          "net_correct_vs_parent": 20,
+          "worst_subject_accuracy": 0.2826086956521739
+        },
+        "0.10": {
+          "accuracy": 0.32138442521631644,
+          "net_correct_vs_parent": 1,
+          "worst_subject_accuracy": 0.2727272727272727
+        },
+        "0.15": {
+          "accuracy": 0.32014833127317677,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.2727272727272727
+        },
+        "0.20": {
+          "accuracy": 0.32014833127317677,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.2727272727272727
+        },
+        "0.30": {
+          "accuracy": 0.32014833127317677,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.2727272727272727
+        },
+        "0.40": {
+          "accuracy": 0.32014833127317677,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.2727272727272727
+        },
+        "0.50": {
+          "accuracy": 0.32014833127317677,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.2727272727272727
+        }
+      }
+    },
+    "HAU/single": {
+      "rows": 809,
+      "parent_accuracy": 0.8912237330037083,
+      "expert_accuracy": 0.681087762669963,
+      "parent_worst_subject": 0.7843137254901961,
+      "expert_worst_subject": 0.5555555555555556,
+      "disagreements": 278,
+      "disagreement_parent_correct": 214,
+      "disagreement_expert_correct": 44,
+      "mean_confidence": 0.049804285125669555,
+      "fixed_threshold_overlays": {
+        "0.00": {
+          "accuracy": 0.681087762669963,
+          "net_correct_vs_parent": -170,
+          "worst_subject_accuracy": 0.5555555555555556
+        },
+        "0.05": {
+          "accuracy": 0.8887515451174289,
+          "net_correct_vs_parent": -2,
+          "worst_subject_accuracy": 0.7843137254901961
+        },
+        "0.10": {
+          "accuracy": 0.8887515451174289,
+          "net_correct_vs_parent": -2,
+          "worst_subject_accuracy": 0.7450980392156863
+        },
+        "0.15": {
+          "accuracy": 0.892459826946848,
+          "net_correct_vs_parent": 1,
+          "worst_subject_accuracy": 0.7843137254901961
+        },
+        "0.20": {
+          "accuracy": 0.8912237330037083,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.7843137254901961
+        },
+        "0.30": {
+          "accuracy": 0.8912237330037083,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.7843137254901961
+        },
+        "0.40": {
+          "accuracy": 0.8912237330037083,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.7843137254901961
+        },
+        "0.50": {
+          "accuracy": 0.8912237330037083,
+          "net_correct_vs_parent": 0,
+          "worst_subject_accuracy": 0.7843137254901961
+        }
+      }
+    }
+  },
+  "test_disagreements_vs_frozen_077777": {
+    "HARn/object_interaction": 6,
+    "HARn/single": 14,
+    "HAU/emotion": 59,
+    "HAU/single": 57
+  },
+  "model_sha256": {
+    "hau_action": "a08a7c44b125b4764364cac851b75b70114206ddd517167b1d4be153d88f61c4",
+    "hau_emotion": "7f20c9b509b01e3ee79b45d620fd43b5b83caaa6c0bc75ba707abbec32e3400e",
+    "harn_action": "592673f9ea7da7770ca0e95388e4379798acf6450284bfc359340175ef93d611"
+  },
+  "runtime_seconds": 96.49577249999857
+}

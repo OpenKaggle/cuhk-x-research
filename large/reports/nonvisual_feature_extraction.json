@@ -1,0 +1,38 @@
+{
+  "archive_sha256": "72f34e9f0005d2ee0fefe9a7687bd54fa6dbdf171b6112132523085fa7475afb",
+  "archive_bytes": 388866143,
+  "manifest_sha256": "1dd612c2fa27afda08ce693f46b9c04ac04b5501a6e099af31a173558803bee6",
+  "units": 3932,
+  "train_units": 3737,
+  "test_units": 195,
+  "feature_shapes": {
+    "imu": [
+      3932,
+      655
+    ],
+    "radar": [
+      3932,
+      84
+    ],
+    "skeleton": [
+      3932,
+      650
+    ]
+  },
+  "finite_rows": {
+    "imu": 3837,
+    "radar": 3905,
+    "skeleton": 3929
+  },
+  "manifest_declared_file_presence": {
+    "imu": 3895,
+    "radar": 3905,
+    "skeleton": 3929
+  },
+  "verified_actual_file_presence": {
+    "imu": 3895,
+    "radar": 3905,
+    "skeleton": 3929
+  },
+  "runtime_seconds": 206.66489962500054
+}

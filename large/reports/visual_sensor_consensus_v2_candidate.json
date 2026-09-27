@@ -1,0 +1,46 @@
+{
+  "candidate": "visual_sensor_consensus_v2.csv",
+  "candidate_sha256": "e54652a8746fca7d434a6a4bd162458448e709ff224b074ca37a0f538dec5463",
+  "base_submission_ref": 56116980,
+  "base_sha256": "e54652a8746fca7d434a6a4bd162458448e709ff224b074ca37a0f538dec5463",
+  "gate": "pre-qualified sensor-present sensor=VLM consensus differs frozen parent; no test labels",
+  "qualified_consensus_rows": 4,
+  "total_rows_changed_vs_parent": 7,
+  "new_rows_changed_vs_submitted_v1": 0,
+  "new_overrides": [],
+  "newly_covered_rows": [
+    {
+      "qa_id": "test_0513",
+      "category": "single",
+      "parent_prediction": "C",
+      "sensor_prediction": "A",
+      "vlm_prediction": "A",
+      "confidence": "0.004166666666666667",
+      "sensor_present_bool": false,
+      "sensor_vlm_consensus": false,
+      "qualified_override": false
+    },
+    {
+      "qa_id": "test_0529",
+      "category": "object_interaction",
+      "parent_prediction": "C",
+      "sensor_prediction": "C",
+      "vlm_prediction": "B",
+      "confidence": "0.175",
+      "sensor_present_bool": true,
+      "sensor_vlm_consensus": false,
+      "qualified_override": false
+    }
+  ],
+  "decision": "NO_CHANGE: test_0513 has no sensor input and test_0529 lacks sensor/VLM agreement; output bytes equal submitted v1",
+  "inputs": {
+    "parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "submitted_v1_sha256": "e54652a8746fca7d434a6a4bd162458448e709ff224b074ca37a0f538dec5463",
+    "sensor_test_sha256": "ff48f19986e95390430120630a73c253486b5f50fe88fe07145ac43a09da914d",
+    "single_vlm_sha256": "ecf8231bc10b8abe37c75ae95aad01cdc7aad8751f268fde6c4636136163bd6c",
+    "object_vlm_sha256": "d49f171d81f1008133e4bbc126f68e2f2e5b87fd9afbdaf37446fd6af5b5e2de",
+    "single_validation_sha256": "8fbbb6770ada4e118b029761b8cbd244620b2ad174e4eab6cee6d315079b506e",
+    "object_validation_sha256": "f71bb8c048d09838b6a8de9abe710cb04c58e80caf02d7386f1baaeb1134b436",
+    "code_sha256": "948aab2b3f2a8898242675dee5a0bac4b44e33c53d43dc23913cb70c2e703a46"
+  }
+}

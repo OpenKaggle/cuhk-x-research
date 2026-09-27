@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "verified_utc": "2026-09-11T04:56:38Z",
+  "experiment": "stage2_native_owned_candidate_v1",
+  "decision": "PASS_DETERMINISTIC_NETWORK_FREE_CANDIDATE_BUILD",
+  "network_blocked_in_each_run": true,
+  "runs": [
+    {
+      "candidate": "artifacts/dry_runs/stage2_native_v1_run1.csv",
+      "candidate_sha256": "40361ab2b6a87d5b73da3114aada27b982b37c09d205864ec8ed272701ae06b8",
+      "report": "reports/stage2_native_v1_run1.json",
+      "report_sha256": "4bcc1da87e32003111ac956c0ebde8c7ce9895c94328aee27fd788303cd9ec95"
+    },
+    {
+      "candidate": "artifacts/dry_runs/stage2_native_v1_run2.csv",
+      "candidate_sha256": "40361ab2b6a87d5b73da3114aada27b982b37c09d205864ec8ed272701ae06b8",
+      "report": "reports/stage2_native_v1_run2.json",
+      "report_sha256": "82e6f3472e5ae85618f007a37803141eef0be4ef94ce442c7bb2232fc610a868"
+    }
+  ],
+  "byte_identical": true,
+  "rows": 682,
+  "unique_qa_ids": 682,
+  "unique_test_clips": 208,
+  "invalid_predictions": 0,
+  "prediction_sources": {
+    "owned_semantic_base": 559,
+    "owned_harn_skeleton_rf": 41,
+    "owned_hau_emotion_et_rf_consensus": 82
+  },
+  "fixed_third_party_test_vector_dependency": false,
+  "qwen_prediction_effect": false,
+  "promoted_candidate": "candidates/stage2_native_owned_v1.csv",
+  "promoted_candidate_sha256": "40361ab2b6a87d5b73da3114aada27b982b37c09d205864ec8ed272701ae06b8",
+  "builder": "scripts/build_stage2_native_candidate_v1.py",
+  "builder_sha256": "21bcf764fb145f7879ccff5d512e2dc02fa5658f3133a342fd7fcc9f0eb71567",
+  "arbitrary_id_clip_smoke": {
+    "report": "reports/stage2_native_arbitrary_id_clip_smoke_v1.json",
+    "decision": "PASS_ARBITRARY_QA_ID_AND_CLIP_KEY_INVARIANCE",
+    "rows": 6,
+    "all_qa_ids_replaced": true,
+    "all_clip_keys_replaced": true,
+    "predictions_identical_by_row": true,
+    "invalid_predictions_both_runs": 0
+  },
+  "format_validator": "PASS rows=682; columns qa_id,prediction; grammar valid for every official category",
+  "submission": "NOT_ATTEMPTED"
+}

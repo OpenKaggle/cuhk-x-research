@@ -1,0 +1,191 @@
+{
+  "experiment": "hau_linked_combination_to_single_sensor_consensus_v1",
+  "rule": "Use the compact-graph combination prediction as an action set; infer the unique single option contained in that set; override only when a real independent sensor prediction agrees and both differ from the frozen parent single answer",
+  "validation": {
+    "design": "18-fold leave-one-subject-out graph and sensor predictions; clips intact; logical mapper has no fitted parameters",
+    "oracle_source_answer_upper_bound": {
+      "rows": 633,
+      "correct": 633,
+      "accuracy": 1,
+      "worst_subject_accuracy": 1
+    },
+    "oof_structural_unique": {
+      "rows": 620,
+      "correct": 601,
+      "accuracy": 0.9693548387096774,
+      "worst_subject_accuracy": 0.88
+    },
+    "oof_structural_parent_disagreements": {
+      "rows": 30,
+      "expert_correct": 25,
+      "expert_accuracy": 0.8333333333333334,
+      "parent_correct": 5,
+      "parent_accuracy": 0.16666666666666666,
+      "net_correct_vs_parent": 20,
+      "worst_subject_net": -1,
+      "discordant_wins": 25,
+      "discordant_losses": 5,
+      "one_sided_exact_sign_p": 0.00016245711594820023
+    },
+    "oof_sensor_consensus_parent_disagreements": {
+      "rows": 8,
+      "expert_correct": 8,
+      "expert_accuracy": 1,
+      "parent_correct": 0,
+      "parent_accuracy": 0,
+      "net_correct_vs_parent": 8,
+      "worst_subject_net": 1,
+      "discordant_wins": 8,
+      "discordant_losses": 0,
+      "one_sided_exact_sign_p": 0.00390625
+    },
+    "gate": "at least 8 selected rows; expert accuracy >=0.95; positive net and positive worst represented-subject net; one-sided exact sign p<=0.01; fixed odd/even subject cohorts each have at least 3 rows, accuracy >=0.95, and positive net",
+    "accepted_evidence": [
+      {
+        "source_qa_id": "training_2076",
+        "target_qa_id": "training_0461",
+        "user": 17,
+        "source_prediction": "A",
+        "source_action_set": "undressing, watching tv",
+        "target_parent_prediction": "B",
+        "structural_prediction": "A",
+        "sensor_prediction": "A",
+        "sensor_confidence": "0.054166666666666675",
+        "answer": "A"
+      },
+      {
+        "source_qa_id": "training_2204",
+        "target_qa_id": "training_0592",
+        "user": 20,
+        "source_prediction": "A",
+        "source_action_set": "checking the time, sitting down, typing on a keyboard, walking",
+        "target_parent_prediction": "D",
+        "structural_prediction": "C",
+        "sensor_prediction": "C",
+        "sensor_confidence": "0.07500000000000001",
+        "answer": "C"
+      },
+      {
+        "source_qa_id": "training_2257",
+        "target_qa_id": "training_0645",
+        "user": 21,
+        "source_prediction": "B",
+        "source_action_set": "brushing teeth, washing face",
+        "target_parent_prediction": "C",
+        "structural_prediction": "A",
+        "sensor_prediction": "A",
+        "sensor_confidence": "0.029166666666666667",
+        "answer": "A"
+      },
+      {
+        "source_qa_id": "training_2273",
+        "target_qa_id": "training_0661",
+        "user": 21,
+        "source_prediction": "A",
+        "source_action_set": "eating, grabbing utensils, listening to the music with headphones, taking medicine",
+        "target_parent_prediction": "D",
+        "structural_prediction": "B",
+        "sensor_prediction": "B",
+        "sensor_confidence": "0.008333333333333338",
+        "answer": "B"
+      },
+      {
+        "source_qa_id": "training_2305",
+        "target_qa_id": "training_0693",
+        "user": 22,
+        "source_prediction": "C",
+        "source_action_set": "checking body temperature, massaging oneself",
+        "target_parent_prediction": "D",
+        "structural_prediction": "B",
+        "sensor_prediction": "B",
+        "sensor_confidence": "0.08333333333333334",
+        "answer": "B"
+      },
+      {
+        "source_qa_id": "training_2392",
+        "target_qa_id": "training_0789",
+        "user": 24,
+        "source_prediction": "B",
+        "source_action_set": "massaging oneself, playing games",
+        "target_parent_prediction": "D",
+        "structural_prediction": "C",
+        "sensor_prediction": "C",
+        "sensor_confidence": "0.012499999999999997",
+        "answer": "C"
+      },
+      {
+        "source_qa_id": "training_1728",
+        "target_qa_id": "training_0109",
+        "user": 3,
+        "source_prediction": "A",
+        "source_action_set": "checking the time, reading, sitting down, standing up, sweeping",
+        "target_parent_prediction": "D",
+        "structural_prediction": "B",
+        "sensor_prediction": "B",
+        "sensor_confidence": "0.03333333333333333",
+        "answer": "B"
+      },
+      {
+        "source_qa_id": "training_1857",
+        "target_qa_id": "training_0238",
+        "user": 6,
+        "source_prediction": "B",
+        "source_action_set": "eating, grabbing utensils, pouring, stirring",
+        "target_parent_prediction": "C",
+        "structural_prediction": "A",
+        "sensor_prediction": "A",
+        "sensor_confidence": "0.004166666666666673",
+        "answer": "A"
+      }
+    ]
+  },
+  "test": {
+    "linked_clips": 139,
+    "unique_structural_rows": 106,
+    "structural_parent_disagreements": 2,
+    "accepted_rows": 1,
+    "accepted_evidence": [
+      {
+        "source_qa_id": "test_0272",
+        "target_qa_id": "test_0050",
+        "source_prediction": "D",
+        "source_action_set": "checking body temperature, getting dressed",
+        "target_parent_prediction": "A",
+        "structural_prediction": "B",
+        "sensor_prediction": "B",
+        "sensor_confidence": "0.020833333333333332",
+        "sensor_present_bool": true,
+        "differs_parent": true,
+        "sensor_consensus": true,
+        "accepted": true
+      }
+    ]
+  },
+  "prediction_structure_transport": {
+    "oof_combination_one_letter": 790,
+    "oof_combination_rows": 790,
+    "oof_single_one_letter": 809,
+    "oof_single_rows": 809,
+    "test_combination_one_letter": 139,
+    "test_combination_rows": 139,
+    "test_single_one_letter": 144,
+    "test_single_rows": 144
+  },
+  "candidate": "hau_linked_single_consensus_v1.csv",
+  "candidate_sha256": "cec3cde9c7b207c4e202a2623f88213bedccedebc108dd2afcb00782bb101106",
+  "base_submission_ref": 56116980,
+  "base_sha256": "e54652a8746fca7d434a6a4bd162458448e709ff224b074ca37a0f538dec5463",
+  "new_rows_changed_vs_base": 1,
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "public_graph_oof_sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33",
+    "sensor_oof_sha256": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7",
+    "sensor_test_sha256": "ff48f19986e95390430120630a73c253486b5f50fe88fe07145ac43a09da914d",
+    "frozen_parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "submitted_base_sha256": "e54652a8746fca7d434a6a4bd162458448e709ff224b074ca37a0f538dec5463",
+    "code_sha256": "4c2aa998d38a0a7fef19f4d2f8dcdaab7b2d8fb6cbc2c964e2c5dfb081c16a56"
+  },
+  "seed": 20260909,
+  "runtime_seconds": 1.3163674580864608
+}

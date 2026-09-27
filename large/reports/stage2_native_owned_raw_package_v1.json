@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "audited_utc": "2026-09-11T06:19:13.858058+00:00",
+  "experiment": "stage2_native_owned_raw_package_v1",
+  "decision": "PASS_TECHNICAL_RAW_PACKAGE_BLOCK_RELEASE_LICENSE_REVIEW",
+  "technical_package_gate": {
+    "status": "PASS",
+    "network_isolated": true,
+    "entrypoint_checks": {
+      "calls_raw_extractor": true,
+      "calls_owned_builder": true,
+      "requires_manifest": true,
+      "authorizes_explicit_all_sensor_missing": true,
+      "does_not_call_legacy_builders": true
+    },
+    "raw_files_hashed": 22661,
+    "raw_inventory_sha256": "19891129dd2f01619fd173111259012385fa667fea3a6bd0d4bdbe35bfe97199",
+    "raw_cache_sha256_both_runs": "7fd99f6e69f7543b10fd609ab63a91afc9b247b554441385e23bd6fe19c3f3a8",
+    "raw_cache_byte_identical": true,
+    "features_exactly_match_frozen_full_cache_for_selected_units": true,
+    "candidate_sha256_both_runs": "40361ab2b6a87d5b73da3114aada27b982b37c09d205864ec8ed272701ae06b8",
+    "candidate_byte_identical": true,
+    "candidate_equals_existing_owned_v1": true,
+    "rows": 682,
+    "invalid_predictions": 0,
+    "prediction_source_counts": {
+      "owned_harn_skeleton_rf": 41,
+      "owned_hau_emotion_et_rf_consensus": 82,
+      "owned_semantic_base": 559
+    },
+    "official_unique_clips": 208,
+    "matched_sensor_units": 195,
+    "organizer_clips_without_raw_sensor_unit": 13,
+    "fail_closed_tests": {
+      "passed": true,
+      "tests_passed": 8,
+      "coverage": [
+        "missing declared file",
+        "missing manifest-declared unit",
+        "corrupt JSON",
+        "short skeleton stream",
+        "extra file",
+        "reordered QA/manifest",
+        "unlisted clip requires explicit all-missing authorization",
+        "arbitrary new QA/clip"
+      ]
+    },
+    "legacy_inference_sh_unchanged_sha256": "4494830c630d8cf74e6c710e93d947686ec807a8765e3b66333d6de2e5e6339a",
+    "legacy_selected_submissions_preserved": {
+      "56108595": "a5d300381a79e751c08c03a36036cf56137121fc3f987832e64062b534204702",
+      "56122653": "3a76a36e6d3060979370f5b598e090c0e2436689d9eda6b17416ae8bc0aee3e4"
+    },
+    "submission_performed": false
+  },
+  "evidence": {
+    "entry_point": [
+      "inference_owned.sh",
+      "853f8636f73464414bdd814a674e6febc17ce5b4f6205823451ca21a83e34506"
+    ],
+    "raw_extractor": [
+      "scripts/extract_owned_raw_features_v1.py",
+      "9eeff5cd71e67444e3aa751c82936a45ce0e9ca92849ffce90f2b3157b2982af"
+    ],
+    "owned_builder": [
+      "scripts/build_stage2_native_candidate_v1.py",
+      "32faef845ccbe700e64025386dc84d66ee623233fc0725ae76d9a5b91fd651bc"
+    ],
+    "verifier": [
+      "scripts/verify_stage2_owned_raw_package_v1.py",
+      "9262b8b81076ace559bbd37494b79cf0d3efd1477e5da3c45d494fc693e3d876"
+    ],
+    "test_suite": [
+      "tests/test_owned_raw_package_v1.py",
+      "164eafcfcea71251d2c01f36fb9d9e731c6e87f7990053c6150e280982875861"
+    ],
+    "run_candidates": [
+      "artifacts/dry_runs/stage2_native_owned_raw_run1.csv",
+      "artifacts/dry_runs/stage2_native_owned_raw_run2.csv"
+    ],
+    "run_feature_caches": [
+      "artifacts/dry_runs/stage2_native_owned_raw_run1/nonvisual_features.npz",
+      "artifacts/dry_runs/stage2_native_owned_raw_run2/nonvisual_features.npz"
+    ],
+    "release_manifest": [
+      "reports/stage2_native_owned_release_manifest_v1.json",
+      "5b1096f3bf72e75c83d3cc62b5d9ee6845484f52854b2ded9bfe7ae1bd101cf9"
+    ]
+  },
+  "governance_boundaries": {
+    "post_competition_deadline": "Resolved operationally by using the earlier 2026-09-17T15:55:00Z deadline without claiming the wording conflict is settled",
+    "small_llm_scope": "Resolved by separation: Small final inference remains non-LLM; this Large owned candidate has no Qwen prediction effect",
+    "release_license": [
+      "Explicit participant approval to publish the clean-room source subset under Apache-2.0",
+      "Confirm organizer-delivery terms for participant-trained model files derived from non-redistributable data"
+    ]
+  },
+  "finalist_ready": false,
+  "submission": "NOT_ATTEMPTED"
+}

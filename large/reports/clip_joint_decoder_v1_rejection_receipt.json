@@ -1,0 +1,20 @@
+{
+  "experiment": "cuhk_x_large_clip_joint_decoder_v1",
+  "verdict": "REJECT_NO_TEST_CANDIDATE",
+  "failed_gates": [
+    "text_only_counterfactual_does_not_reproduce_half_the_net_gain"
+  ],
+  "causal_warning": "The text-only sibling-option counterfactual reproduced at least half of the joint decoder's net gain, so the apparent improvement cannot be attributed reliably to joint decoding of sibling predictions.",
+  "test_data_opened": false,
+  "candidate_created": false,
+  "kaggle_run": false,
+  "submission": false,
+  "summary": {
+    "path": "[local-path]",
+    "sha256": "94fb8c95518115a66e7287b55f954e180b90cb22ffd05f28272284f2f0d87875"
+  },
+  "code": {
+    "path": "[local-path]",
+    "sha256": "9db5ccb8d84ed75590c96a5e6d9aa515a7b2135dbf48220b968b632bfd6beabe"
+  }
+}

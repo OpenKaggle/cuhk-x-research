@@ -1,0 +1,50 @@
+{
+  "experiment": "qwen3_vl_4b_test_harn_object_v1",
+  "task": "test-time zero-shot HARn object_interaction recognition",
+  "intended_rows": 21,
+  "rows": 12,
+  "coverage": 0.5714285714285714,
+  "missing_units": [
+    "large_model_track_test/LM_test_0011",
+    "large_model_track_test/LM_test_0012",
+    "large_model_track_test/LM_test_0023",
+    "large_model_track_test/LM_test_0027",
+    "large_model_track_test/LM_test_0029",
+    "large_model_track_test/LM_test_0030",
+    "large_model_track_test/LM_test_0033",
+    "large_model_track_test/LM_test_0054",
+    "large_model_track_test/LM_test_0061"
+  ],
+  "valid_predictions": 12,
+  "errors": 0,
+  "prediction_distribution": {
+    "A": 3,
+    "B": 5,
+    "C": 3,
+    "D": 1
+  },
+  "sensor_present_rows": 10,
+  "sensor_vlm_consensus_rows": 5,
+  "sensor_vlm_consensus_differs_parent_rows": 1,
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "license": "apache-2.0",
+    "manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+  },
+  "inputs": {
+    "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "test_visual_manifest_sha256": "b7c01918cb7b55f3df77257c151fbf267b1dcba471e0fb3f6baa1501954806f5",
+    "parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "sensor_predictions_sha256": "ff48f19986e95390430120630a73c253486b5f50fe88fe07145ac43a09da914d",
+    "prediction_log_sha256": "d49f171d81f1008133e4bbc126f68e2f2e5b87fd9afbdaf37446fd6af5b5e2de"
+  },
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6",
+    "pandas": "3.0.3"
+  },
+  "code_sha256": "c87905e8355225807cc204f919139ccb296855ded1ab6f512e302badd2743bd3",
+  "total_inference_runtime_seconds": 45.70473324984778,
+  "incremental_runtime_seconds": 2.2390292499912903
+}

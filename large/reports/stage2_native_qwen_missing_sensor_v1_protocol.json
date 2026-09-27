@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "experiment": "stage2_native_qwen_missing_sensor_v1",
+  "status": "FROZEN_BEFORE_QWEN_INFERENCE",
+  "selection": {
+    "rule": "Every official training HARn/single row whose frozen skeleton feature row has no finite value; labels and prior VLM predictions are not used.",
+    "rows": 40,
+    "subject_halves": {
+      "first_nine": 14,
+      "second_nine": 26
+    },
+    "historically_observed_rows": 11,
+    "historically_unobserved_rows": 29,
+    "manifest": "artifacts/manifests/stage2_native_qwen_missing_sensor_v1.csv",
+    "manifest_sha256": "85e178c7d33134ffc2e2093267d72986e6f8dda3836cc3f0571d5a3c17f35245"
+  },
+  "inference": {
+    "model": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "license": "apache-2.0",
+    "network": "disabled before model import/load",
+    "modality": "Depth",
+    "fps": 1,
+    "temperature": 0,
+    "max_tokens": 8,
+    "prompt_template": "Classify the main human action shown in the video.\n{question}\n{options}\nReply with exactly one capital letter from A/B/C/D. Do not add punctuation or explanation.",
+    "prompt_template_sha256": "7be94283da25431d498307e3cabfdfac0ab5230394c6f55f5eb93552ab8da290"
+  },
+  "gate": {
+    "minimum_rows": 30,
+    "valid_rate_min": 1,
+    "accuracy_min": 0.6,
+    "both_subject_halves_accuracy_min": 0.5,
+    "must_not_reduce_core_oof_accuracy": true,
+    "all_conditions_required": true
+  },
+  "history_audit": [
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_fresh20_v1.jsonl",
+      "sha256": "49322840722b880d324a49fdbb99031902d01168534201ddd96060446729a67d"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_hau_combination_user8_v1.jsonl",
+      "sha256": "9f0ab16550981373bebdf04163afe3c2ce66db87721eb4eb55fa13b6fbe9907a"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_hau_emotion_user8_full22_v1.jsonl",
+      "sha256": "cbdb01c64c53328d427684e7921b6893e610d13a284b13b1dc17b56a29dbcdb5"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_hau_emotion_user8_probe8_v1.jsonl",
+      "sha256": "03c9c88de3d860fdbec2c7a48ccd5301fd80f0cc7cc607acad3eefbd7e8ea8a6"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_hau_multi_user8_v1.jsonl",
+      "sha256": "c4fbf0eabcb1ad079316811408bcd0980eef7660552a0a06e521d9daacc9b7fc"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_hau_sequence_user8_v1.jsonl",
+      "sha256": "c9ce79ac13462f1b7494e81aa4653bd613014d462091f6eda062ce8240e982a3"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_hau_single_user8_probe8_v1.jsonl",
+      "sha256": "68aae6e5fa3d877a6fcfb1287ee73ee77b3160d8b39a900bfcc8215229e2f69e"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+      "sha256": "05098c36d4ef52bdcd4f57eab42acd069284677616095498996be17270650036"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_mosaic_full112_v1.jsonl",
+      "sha256": "f53e0a650f65fe6c71d616f7373807a89588110ae0fdb0aa1630412a4aaabc3d"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_mosaic_smoke_training_3591.jsonl",
+      "sha256": "b7c879b6bee8aa48697d5ecdb044572144c5fc1cf264ecf8242039c5789cb4ae"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_multiview_balanced18_v1.jsonl",
+      "sha256": "0071a4c42812bc6e4c90596ef49b76479b4d2007c4ce604f4bf2f9e66c85d754"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_multiview_full112_v1.jsonl",
+      "sha256": "fe07976a0c26e6193aba5fba3d4a9e0b85e0b7d60cc206daa63f3a4335a3255e"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_multiview_smoke_training_3591.jsonl",
+      "sha256": "27251bf43ac26ef1e42e6a92953ac65446b85dbb8cb9dfb90ac836808cd25905"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_multiview_smoke_training_3591_v2.jsonl",
+      "sha256": "f281c18c9fa3eec4e187445d16a3f46b033311ff5933f179715cc7f951a9c5be"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_small20_frozen_v1.jsonl",
+      "sha256": "d7c1be3fa8d809e434272cf4ef26b21706536a4f8082aa83a4056f3b39804949"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_test_harn_object_v1.jsonl",
+      "sha256": "d49f171d81f1008133e4bbc126f68e2f2e5b87fd9afbdaf37446fd6af5b5e2de"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_full_v1.jsonl",
+      "sha256": "d822aae7892c9f5b023198d53854bc131c60bcc32f1539e5a20432f2d7c8f020"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_mosaic_v1.jsonl",
+      "sha256": "eb075d2626ab7edca94c91fa1b16a7ae252130414069db3f5fe78e087f2162c3"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_multiview_v1.jsonl",
+      "sha256": "1122b7b20b23774ae6bf024322f5e4b505b99227b3a684ddbe642d33b29bd8ed"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_v1.jsonl",
+      "sha256": "ecf8231bc10b8abe37c75ae95aad01cdc7aad8751f268fde6c4636136163bd6c"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_balanced18_v1.jsonl",
+      "sha256": "0226bcbd084def2132db9f592363431453c63c0632345f436fe49a9a268cc6ff"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+      "sha256": "dbe71868f8e1e9700bdab1002136d3903999f157a3ebf1f9196a9dd8b6d25470"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_object66_v1.jsonl",
+      "sha256": "71dd5889022566694718360ad50f626a1d70784b4798e668f56fa766b0837b02"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_probe1.jsonl",
+      "sha256": "6c914db50e91c4fa2e9b5f25a2ae9b2cfd95bb444b072e3d1526077de68fcbb1"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_probe2.jsonl",
+      "sha256": "42fe21acc25b5664a02874c5f744fdaee9781663088df91a76a9be3c7c2cb6bd"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_8b_smoke_training_3591.jsonl",
+      "sha256": "b5a0398a170df66d026e89433cc73cd899369889ce6b7ae2f4862d4c21c6c26d"
+    },
+    {
+      "path": "artifacts/vlm/qwen3_vl_8b_zero_shot_balanced18_v1.jsonl",
+      "sha256": "dd121ca4bf7c8f178c74bc87dae21d0c9f6a4b904e97f7ff89f84d024b25f9f0"
+    }
+  ],
+  "inputs": {
+    "data/raw/kaggle/training_qa.csv": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "cache/nonvisual_features.npz": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+    "cache/harn_visual_manifest.json": "e31e3b7c6f3799f8dd179e01577409ae45721b06d33e37c6f80b8366534021e2",
+    "reports/qwen3_vl_4b_mlx_model_manifest.json": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+  },
+  "prohibited": [
+    "Reading historical VLM predictions to choose cohort rows or prompt",
+    "Using Fresh20 as a selector",
+    "Reading test QA or producing a test prediction before this gate passes"
+  ]
+}

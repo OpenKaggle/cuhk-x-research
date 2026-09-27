@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-09-09T13:36:35.876895+00:00",
+  "status": "FROZEN_BEFORE_INFERENCE",
+  "purpose": "fixed small-batch audit of the established one-video/one-question VLM path",
+  "selection_policy": {
+    "labels_used_for_selection": false,
+    "seed": 20260909,
+    "eligible_source": "HARn",
+    "eligible_categories": [
+      "single",
+      "object_interaction"
+    ],
+    "rows_per_subject": 2,
+    "rows_per_category": {
+      "single": 10,
+      "object_interaction": 10
+    },
+    "tie_break": "stable SHA-256 order; prefer an unused clip and action",
+    "subject_disjoint_statement": "The zero-shot VLM has no task-data fitting. The frozen comparator prediction for every row comes from the 18-fold model that excluded that row's subject."
+  },
+  "precommitted_stop_rules": {
+    "implementation_failure_rate": "If read, inference, or parser implementation failures exceed 1/20 (5%), stop candidate evaluation and repair the pipeline before judging the model.",
+    "invalid_outputs": "Exclude invalid/empty outputs from scientific accuracy; report them separately.",
+    "candidate_gate": "Do not propose an override unless valid VLM evidence has positive net correctness versus the frozen subject-disjoint parent separately in both tasks, remains positive in both fixed five-subject halves, and maps to a label-free test-time rule.",
+    "submission": "This audit cannot submit automatically."
+  },
+  "task_distribution": {
+    "object_interaction": 10,
+    "single": 10
+  },
+  "action_distribution": {
+    "14_Wipe_bowls": 2,
+    "15_Wipe_windows_and_tables": 1,
+    "22_Turn_pages": 3,
+    "23_Listen_to_music_with_headphones": 3,
+    "24_Use_a_mobile_phone": 2,
+    "25_Watch_TV": 1,
+    "2_Comb_hair": 1,
+    "37_Take_medicine": 1,
+    "43_Open_the_cabinet_(to_get_things)": 1,
+    "4_Wipe_hands": 1,
+    "5_Put_on_clothes": 2,
+    "8_Take_and_use_tableware": 1,
+    "9_Pour_drinks": 1
+  },
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "partial_visual_manifest_sha256": "cd96f84c211c61f8b2034a660ef194db397c7bdd87e5abace392a28628381741",
+    "subject_disjoint_parent_oof_sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33"
+  },
+  "selection_file_sha256": "c96d984b7af5bc8e712d951a8ac40dc1c247dfe7c1233520f4edff075e818041",
+  "code_sha256": "63689cd221299b3f70898945605b323fef849411be847b7ca25494849a12b022"
+}

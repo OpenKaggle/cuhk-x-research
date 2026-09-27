@@ -1,0 +1,39 @@
+{
+  "experiment": "qwen3_vl_4b_test_harn_single_full_v1",
+  "task": "test-time zero-shot HARn single recognition",
+  "intended_rows": 51,
+  "rows": 51,
+  "coverage": 1,
+  "missing_units": [],
+  "valid_predictions": 51,
+  "errors": 0,
+  "prediction_distribution": {
+    "A": 19,
+    "B": 10,
+    "C": 22
+  },
+  "sensor_present_rows": 41,
+  "sensor_vlm_consensus_rows": 29,
+  "sensor_vlm_consensus_differs_parent_rows": 5,
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "license": "apache-2.0",
+    "manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+  },
+  "inputs": {
+    "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "test_visual_manifest_sha256": "041d7163fd3225509206b9fe722b592cc7f1d9b73a3a6da419b73ef47d7447c3",
+    "parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "sensor_predictions_sha256": "ff48f19986e95390430120630a73c253486b5f50fe88fe07145ac43a09da914d",
+    "prediction_log_sha256": "d822aae7892c9f5b023198d53854bc131c60bcc32f1539e5a20432f2d7c8f020"
+  },
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6",
+    "pandas": "3.0.3"
+  },
+  "code_sha256": "c87905e8355225807cc204f919139ccb296855ded1ab6f512e302badd2743bd3",
+  "total_inference_runtime_seconds": 245.22365337924566,
+  "incremental_runtime_seconds": 247.9396792090265
+}

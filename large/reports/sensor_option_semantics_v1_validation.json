@@ -1,0 +1,792 @@
+{
+  "experiment": "sensor_option_semantics_triad_v1",
+  "decision": "REJECT_NO_TEST_NO_SUBMISSION",
+  "promoted": false,
+  "test_qa_read": false,
+  "test_prediction_written": false,
+  "candidate_csv_written": false,
+  "submission_performed": false,
+  "validation": {
+    "design": "18-fold subject-disjoint LOSO; one intact clip per HAU emotion row; fold-local fitting",
+    "rows": 809,
+    "folds": [
+      {
+        "held_user": 1,
+        "fit_rows": 776,
+        "validation_rows": 33,
+        "fit_subjects": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          1
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 2,
+        "fit_rows": 766,
+        "validation_rows": 43,
+        "fit_subjects": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          2
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 3,
+        "fit_rows": 773,
+        "validation_rows": 36,
+        "fit_subjects": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          3
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 4,
+        "fit_rows": 773,
+        "validation_rows": 36,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          4
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 5,
+        "fit_rows": 767,
+        "validation_rows": 42,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          5
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 6,
+        "fit_rows": 758,
+        "validation_rows": 51,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          6
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 7,
+        "fit_rows": 763,
+        "validation_rows": 46,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          7
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 8,
+        "fit_rows": 767,
+        "validation_rows": 42,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          8
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 9,
+        "fit_rows": 755,
+        "validation_rows": 54,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          9
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 16,
+        "fit_rows": 758,
+        "validation_rows": 51,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          16
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 17,
+        "fit_rows": 761,
+        "validation_rows": 48,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          17
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 18,
+        "fit_rows": 767,
+        "validation_rows": 42,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          18
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 19,
+        "fit_rows": 755,
+        "validation_rows": 54,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          19
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 20,
+        "fit_rows": 767,
+        "validation_rows": 42,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          20
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 21,
+        "fit_rows": 767,
+        "validation_rows": 42,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          21
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 22,
+        "fit_rows": 760,
+        "validation_rows": 49,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          23,
+          24
+        ],
+        "validation_subjects": [
+          22
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 23,
+        "fit_rows": 756,
+        "validation_rows": 53,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          24
+        ],
+        "validation_subjects": [
+          23
+        ],
+        "fit_validation_clip_overlap": 0
+      },
+      {
+        "held_user": 24,
+        "fit_rows": 764,
+        "validation_rows": 45,
+        "fit_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "validation_subjects": [
+          24
+        ],
+        "fit_validation_clip_overlap": 0
+      }
+    ],
+    "modalities": {
+      "imu": {
+        "rows": 809,
+        "present_rows": 789,
+        "accuracy_all_rows": 0.49938195302843014,
+        "accuracy_present_rows": 0.5057034220532319
+      },
+      "radar": {
+        "rows": 809,
+        "present_rows": 801,
+        "accuracy_all_rows": 0.34981458590852904,
+        "accuracy_present_rows": 0.3495630461922597
+      },
+      "skeleton": {
+        "rows": 809,
+        "present_rows": 806,
+        "accuracy_all_rows": 0.4215080346106304,
+        "accuracy_present_rows": 0.4230769230769231
+      }
+    },
+    "consensus_eligible_rows": 704,
+    "owned_parent": {
+      "definition": "nonvisual_sensor_oof.csv prediction on HAU/emotion; imported parent_prediction column excluded",
+      "overall_accuracy": 0.44870210135970334
+    },
+    "candidate_overall_accuracy": 0.46600741656365885,
+    "disagreements": {
+      "rows": 270,
+      "candidate_correct": 101,
+      "candidate_accuracy": 0.37407407407407406,
+      "parent_correct": 87,
+      "parent_accuracy": 0.32222222222222224,
+      "net_correct_vs_parent": 14
+    },
+    "subject_halves": {
+      "first_nine": {
+        "rows": 134,
+        "candidate_correct": 54,
+        "candidate_accuracy": 0.40298507462686567,
+        "parent_correct": 39,
+        "parent_accuracy": 0.291044776119403,
+        "net_correct_vs_parent": 15
+      },
+      "second_nine": {
+        "rows": 136,
+        "candidate_correct": 47,
+        "candidate_accuracy": 0.34558823529411764,
+        "parent_correct": 48,
+        "parent_accuracy": 0.35294117647058826,
+        "net_correct_vs_parent": -1
+      }
+    },
+    "by_subject_on_disagreements": {
+      "1": {
+        "rows": 12,
+        "candidate_correct": 3,
+        "candidate_accuracy": 0.25,
+        "parent_correct": 6,
+        "parent_accuracy": 0.5,
+        "net_correct_vs_parent": -3
+      },
+      "2": {
+        "rows": 17,
+        "candidate_correct": 5,
+        "candidate_accuracy": 0.29411764705882354,
+        "parent_correct": 7,
+        "parent_accuracy": 0.4117647058823529,
+        "net_correct_vs_parent": -2
+      },
+      "3": {
+        "rows": 11,
+        "candidate_correct": 5,
+        "candidate_accuracy": 0.45454545454545453,
+        "parent_correct": 3,
+        "parent_accuracy": 0.2727272727272727,
+        "net_correct_vs_parent": 2
+      },
+      "4": {
+        "rows": 11,
+        "candidate_correct": 5,
+        "candidate_accuracy": 0.45454545454545453,
+        "parent_correct": 5,
+        "parent_accuracy": 0.45454545454545453,
+        "net_correct_vs_parent": 0
+      },
+      "5": {
+        "rows": 17,
+        "candidate_correct": 8,
+        "candidate_accuracy": 0.47058823529411764,
+        "parent_correct": 3,
+        "parent_accuracy": 0.17647058823529413,
+        "net_correct_vs_parent": 5
+      },
+      "6": {
+        "rows": 17,
+        "candidate_correct": 6,
+        "candidate_accuracy": 0.35294117647058826,
+        "parent_correct": 2,
+        "parent_accuracy": 0.11764705882352941,
+        "net_correct_vs_parent": 4
+      },
+      "7": {
+        "rows": 14,
+        "candidate_correct": 6,
+        "candidate_accuracy": 0.42857142857142855,
+        "parent_correct": 2,
+        "parent_accuracy": 0.14285714285714285,
+        "net_correct_vs_parent": 4
+      },
+      "8": {
+        "rows": 14,
+        "candidate_correct": 6,
+        "candidate_accuracy": 0.42857142857142855,
+        "parent_correct": 4,
+        "parent_accuracy": 0.2857142857142857,
+        "net_correct_vs_parent": 2
+      },
+      "9": {
+        "rows": 21,
+        "candidate_correct": 10,
+        "candidate_accuracy": 0.47619047619047616,
+        "parent_correct": 7,
+        "parent_accuracy": 0.3333333333333333,
+        "net_correct_vs_parent": 3
+      },
+      "16": {
+        "rows": 17,
+        "candidate_correct": 6,
+        "candidate_accuracy": 0.35294117647058826,
+        "parent_correct": 6,
+        "parent_accuracy": 0.35294117647058826,
+        "net_correct_vs_parent": 0
+      },
+      "17": {
+        "rows": 10,
+        "candidate_correct": 4,
+        "candidate_accuracy": 0.4,
+        "parent_correct": 4,
+        "parent_accuracy": 0.4,
+        "net_correct_vs_parent": 0
+      },
+      "18": {
+        "rows": 14,
+        "candidate_correct": 3,
+        "candidate_accuracy": 0.21428571428571427,
+        "parent_correct": 5,
+        "parent_accuracy": 0.35714285714285715,
+        "net_correct_vs_parent": -2
+      },
+      "19": {
+        "rows": 18,
+        "candidate_correct": 6,
+        "candidate_accuracy": 0.3333333333333333,
+        "parent_correct": 6,
+        "parent_accuracy": 0.3333333333333333,
+        "net_correct_vs_parent": 0
+      },
+      "20": {
+        "rows": 16,
+        "candidate_correct": 5,
+        "candidate_accuracy": 0.3125,
+        "parent_correct": 6,
+        "parent_accuracy": 0.375,
+        "net_correct_vs_parent": -1
+      },
+      "21": {
+        "rows": 12,
+        "candidate_correct": 6,
+        "candidate_accuracy": 0.5,
+        "parent_correct": 4,
+        "parent_accuracy": 0.3333333333333333,
+        "net_correct_vs_parent": 2
+      },
+      "22": {
+        "rows": 21,
+        "candidate_correct": 5,
+        "candidate_accuracy": 0.23809523809523808,
+        "parent_correct": 10,
+        "parent_accuracy": 0.47619047619047616,
+        "net_correct_vs_parent": -5
+      },
+      "23": {
+        "rows": 16,
+        "candidate_correct": 7,
+        "candidate_accuracy": 0.4375,
+        "parent_correct": 3,
+        "parent_accuracy": 0.1875,
+        "net_correct_vs_parent": 4
+      },
+      "24": {
+        "rows": 12,
+        "candidate_correct": 5,
+        "candidate_accuracy": 0.4166666666666667,
+        "parent_correct": 4,
+        "parent_accuracy": 0.3333333333333333,
+        "net_correct_vs_parent": 1
+      }
+    },
+    "environment_proxy_on_disagreements": {
+      "trial_prefix_1_2": {
+        "rows": 72,
+        "candidate_correct": 23,
+        "candidate_accuracy": 0.3194444444444444,
+        "parent_correct": 24,
+        "parent_accuracy": 0.3333333333333333,
+        "net_correct_vs_parent": -1
+      },
+      "trial_prefix_3_5": {
+        "rows": 125,
+        "candidate_correct": 46,
+        "candidate_accuracy": 0.368,
+        "parent_correct": 39,
+        "parent_accuracy": 0.312,
+        "net_correct_vs_parent": 7
+      },
+      "trial_prefix_6_7": {
+        "rows": 73,
+        "candidate_correct": 32,
+        "candidate_accuracy": 0.4383561643835616,
+        "parent_correct": 24,
+        "parent_accuracy": 0.3287671232876712,
+        "net_correct_vs_parent": 8
+      }
+    },
+    "environment_proxy_caveat": "Released metadata calls x-y-z a trial; prefix bins are recording-condition proxies, not organizer-provided environment labels.",
+    "invalid_predictions": 0
+  },
+  "counterfactual_audits": {
+    "option_permutation": {
+      "permutations_per_row": 24,
+      "evaluation": "exact column reindex of independently computed option scores",
+      "semantic_checks": 19416,
+      "semantic_mismatches": 0
+    },
+    "synonym_rewrite": {
+      "rewrite_form": "in a/an <adjective> manner",
+      "semantic_checks": 809,
+      "semantic_mismatches": 0,
+      "vocabulary_size": 54
+    }
+  },
+  "promotion_gate": {
+    "checks": {
+      "disagreements_at_least_30": true,
+      "candidate_accuracy_at_least_0_60": false,
+      "parent_accuracy_at_most_0_40": true,
+      "first_subject_half_positive": true,
+      "second_subject_half_positive": false,
+      "invalid_zero": true,
+      "permutation_mismatches_zero": true,
+      "synonym_mismatches_zero": true
+    },
+    "all_conditions_required": true,
+    "passed": false
+  },
+  "artifacts": {
+    "protocol": "reports/sensor_option_semantics_v1_preregistered_protocol.json",
+    "protocol_sha256": "1b7772d1893ec46e30c793a9d0f8396b21c8c23483ee1348739caada58ba8757",
+    "oof": "artifacts/oof/sensor_option_semantics_v1_oof.csv",
+    "oof_sha256": "effe571266b15dba48e75e8dde512e0a7c1dc3ba46ecff415e31f3a4907e14a1",
+    "code": "scripts/run_sensor_option_semantics_v1.py",
+    "code_sha256": "d2363bb5c50a634be96ea7929ebc3f574244a59e7dc46c32993142913e2b15d2",
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "feature_cache_sha256": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+    "owned_parent_oof_sha256": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7"
+  },
+  "versions": {
+    "python": "3.13.2",
+    "numpy": "2.2.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1"
+  },
+  "seed": 20260911,
+  "runtime_seconds": 52.0367105420446
+}

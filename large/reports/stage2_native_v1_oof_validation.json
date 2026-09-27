@@ -1,0 +1,149 @@
+{
+  "experiment": "stage2_native_owned_full_system_v1",
+  "decision": "PASS_CORE_ALLOW_NETWORK_FREE_TEST_BUILD",
+  "passed": true,
+  "test_qa_read": false,
+  "test_prediction_written": false,
+  "candidate_csv_written": false,
+  "submission_performed": false,
+  "validation": {
+    "design": "18-fold subject-disjoint LOSO; 4087 rows; 1333 intact clips",
+    "summary": {
+      "rows": 4087,
+      "semantic_base_correct": 2302,
+      "semantic_base_accuracy": 0.5632493271348177,
+      "system_correct": 2542,
+      "system_accuracy": 0.6219721066797161,
+      "net_gain": 240,
+      "accuracy_gain": 0.058722779544898455,
+      "changed_vs_base": 415,
+      "by_category": {
+        "HARn/object_interaction": {
+          "rows": 133,
+          "base_accuracy": 0.8421052631578947,
+          "system_accuracy": 0.8421052631578947,
+          "net_gain": 0
+        },
+        "HARn/single": {
+          "rows": 429,
+          "base_accuracy": 0.4382284382284382,
+          "system_accuracy": 0.7855477855477856,
+          "net_gain": 149
+        },
+        "HAU/combination": {
+          "rows": 790,
+          "base_accuracy": 0.8202531645569621,
+          "system_accuracy": 0.8202531645569621,
+          "net_gain": 0
+        },
+        "HAU/emotion": {
+          "rows": 809,
+          "base_accuracy": 0.32138442521631644,
+          "system_accuracy": 0.4338689740420272,
+          "net_gain": 91
+        },
+        "HAU/multi": {
+          "rows": 809,
+          "base_accuracy": 0.311495673671199,
+          "system_accuracy": 0.311495673671199,
+          "net_gain": 0
+        },
+        "HAU/sequence": {
+          "rows": 308,
+          "base_accuracy": 0.39285714285714285,
+          "system_accuracy": 0.39285714285714285,
+          "net_gain": 0
+        },
+        "HAU/single": {
+          "rows": 809,
+          "base_accuracy": 0.8912237330037083,
+          "system_accuracy": 0.8912237330037083,
+          "net_gain": 0
+        }
+      }
+    },
+    "subject_halves": {
+      "first_nine": {
+        "rows": 1939,
+        "net_gain": 127,
+        "base_accuracy": 0.5507993811242908,
+        "system_accuracy": 0.6162970603403817
+      },
+      "second_nine": {
+        "rows": 2148,
+        "net_gain": 113,
+        "base_accuracy": 0.574487895716946,
+        "system_accuracy": 0.6270949720670391
+      }
+    },
+    "worst_subject_net_gain": 4,
+    "hau_emotion_consensus_disagreements": {
+      "rows": 186,
+      "system_correct": 117,
+      "system_accuracy": 0.6290322580645161,
+      "base_correct": 26,
+      "base_accuracy": 0.13978494623655913,
+      "net_gain": 91
+    },
+    "invalid_predictions": 0
+  },
+  "counterfactuals": {
+    "semantic_base_ablation_accuracy": 0.5632493271348177,
+    "sensor_overlay_gain": 0.058722779544898455,
+    "option_permutation": {
+      "permutations": 24,
+      "checks": 98088,
+      "mismatches": 0
+    }
+  },
+  "visual_qwen_readiness": {
+    "harn_visual_files": 1524,
+    "harn_visual_units": 524,
+    "test_visual_files": 754,
+    "test_visual_units": 208,
+    "qwen_repo": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "qwen_revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "qwen_files": 16,
+    "core_prediction_effect": false
+  },
+  "gate": {
+    "checks": {
+      "full_system_accuracy_at_least_0_60": true,
+      "gain_vs_semantic_base_at_least_0_03": true,
+      "first_subject_half_positive": true,
+      "second_subject_half_positive": true,
+      "worst_subject_net_nonnegative": true,
+      "harn_single_accuracy_at_least_0_75": true,
+      "hau_emotion_disagreements_at_least_100": true,
+      "hau_emotion_accuracy_at_least_0_60": true,
+      "hau_emotion_base_accuracy_at_most_0_40": true,
+      "permutation_mismatches_zero": true,
+      "invalid_zero": true
+    },
+    "all_required": true,
+    "passed": true
+  },
+  "artifacts": {
+    "protocol": "reports/stage2_native_v1_preregistered_protocol.json",
+    "protocol_sha256": "5c521089d3b327e6d6374f7baf552e2b5e22f733bff3f3bdeac493df60dc9b70",
+    "oof": "artifacts/oof/stage2_native_v1_oof.csv",
+    "oof_sha256": "8cf9879a1e147456db67dffe3246bb108e2816170dc787347ce24e93a8f7d1b7",
+    "code": "scripts/run_stage2_native_oof_v1.py",
+    "code_sha256": "156072ebdfeec071863f726944f2afc1ded4fa0b375cea3af3fbac3a829de7f2",
+    "inputs": {
+      "train": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+      "features": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+      "rf_oof": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7",
+      "et_oof": "c89c06f082d3214331ab39f8b14bb922899769b1ad7108b6b25ceaab298e8259",
+      "harn_visual": "e31e3b7c6f3799f8dd179e01577409ae45721b06d33e37c6f80b8366534021e2",
+      "test_visual": "041d7163fd3225509206b9fe722b592cc7f1d9b73a3a6da419b73ef47d7447c3",
+      "qwen": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+    }
+  },
+  "versions": {
+    "python": "3.13.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3"
+  },
+  "runtime_seconds": 99.94438029103912
+}

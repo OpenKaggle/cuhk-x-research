@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: >-
+  If this archive supports your work, cite it as software and review NOTICE.md
+  for competition and third-party licensing boundaries.
+title: CUHK-X Large and Small Model Track Research Archive
+type: software
+authors:
+  - name: OpenKaggle contributors
+repository-code: https://github.com/openkaggle/cuhk-x-research
+license: MIT
+abstract: >-
+  Combined public archive snapshot of the CUHK-X Large- and Small-track source,
+  protocols, reports, tests, and lightweight receipts.

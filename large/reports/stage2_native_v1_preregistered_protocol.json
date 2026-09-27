@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "experiment": "stage2_native_owned_full_system_v1",
+  "frozen_utc": "2026-09-11T04:29:33Z",
+  "status": "FROZEN_BEFORE_OWNED_DECODER_OOF",
+  "objective": "Generate every answer for arbitrary new qa_id/clip inputs without reading or inheriting any third-party fixed 682-row answer vector.",
+  "registration": {
+    "status": "USER_CONFIRMED_COMPLETE",
+    "receipt": "official_receipts/2026-09-11T0422Z_official_team_registration.md",
+    "receipt_sha256": "b302799667568ad8a7528d74259d516ce6eba7d321765577061d47b8c36c24a4"
+  },
+  "immutable_inputs": {
+    "training_qa": [
+      "data/raw/kaggle/training_qa.csv",
+      "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc"
+    ],
+    "sensor_features": [
+      "cache/nonvisual_features.npz",
+      "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661"
+    ],
+    "owned_rf_oof": [
+      "artifacts/oof/nonvisual_sensor_oof.csv",
+      "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7"
+    ],
+    "owned_emotion_et_oof": [
+      "artifacts/oof/emotion_pairwise_extratrees_oof.csv",
+      "c89c06f082d3214331ab39f8b14bb922899769b1ad7108b6b25ceaab298e8259"
+    ],
+    "complete_harn_visual_manifest": [
+      "cache/harn_visual_manifest.json",
+      "e31e3b7c6f3799f8dd179e01577409ae45721b06d33e37c6f80b8366534021e2"
+    ],
+    "complete_test_visual_manifest": [
+      "cache/test_visual_manifest.json",
+      "041d7163fd3225509206b9fe722b592cc7f1d9b73a3a6da419b73ef47d7447c3"
+    ],
+    "pinned_qwen_manifest": [
+      "reports/qwen3_vl_4b_mlx_model_manifest.json",
+      "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+    ]
+  },
+  "prohibited_inputs": [
+    "candidates/public_fususu_077777.csv",
+    "artifacts/predictions/public_graph_test.csv",
+    "any third-party fixed test answer vector",
+    "Fresh20 predictions or labels as a selector",
+    "public leaderboard scores as a row or hyperparameter selector"
+  ],
+  "validation": {
+    "rows": 4087,
+    "folds": 18,
+    "split": "leave one subject out; all rows sharing a clip path remain together",
+    "frozen_cohort": "all released training rows and clips; no post-result row selection",
+    "subject_halves": {
+      "first_nine": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "second_nine": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "owned_system": {
+    "semantic_base": "Self-contained fit/predict implementation using only fold-training option correctness counts, option-set memory, HAU sibling option-text support, multi-answer size priors, and sequence pairwise precedence. It loads no third-party notebook or prediction artifact.",
+    "sensor_overlays": [
+      "HARn/single: use the existing owned skeleton RandomForest OOF whenever the frozen skeleton feature row is numerically present; otherwise retain semantic base.",
+      "HAU/emotion: use the prediction only where the independently trained owned ExtraTrees and RandomForest OOF experts agree and the ExtraTrees sensor input is present; otherwise retain semantic base."
+    ],
+    "qwen_visual_channel": "Pinned local Qwen3-VL and complete visual manifests are integrity-checked now. Deployment is optional and disabled in core OOF. It may only become a missing-sensor HARn/single fallback after a separately frozen all-missing-sensor cohort passes its own gate.",
+    "prediction_grammar": {
+      "single_combination_emotion_object": "exactly one of A/B/C/D",
+      "multi": "nonempty sorted unique subset of A/B/C/D",
+      "sequence": "a permutation of ABCD"
+    }
+  },
+  "counterfactuals": {
+    "semantic_base_ablation": "Disable all sensor overlays; its loss must account for the claimed gain.",
+    "option_permutation": "All 24 global A/B/C/D permutations are run through the full 18-fold owned system and inverted to canonical labels; every row must be equivariant.",
+    "invalid": "No invalid or missing prediction is permitted."
+  },
+  "core_promotion_gate": {
+    "full_system_accuracy_min": 0.6,
+    "gain_vs_semantic_base_min": 0.03,
+    "first_subject_half_net_gain_min_exclusive": 0,
+    "second_subject_half_net_gain_min_exclusive": 0,
+    "worst_subject_net_gain_min": 0,
+    "harn_single_accuracy_min": 0.75,
+    "hau_emotion_consensus_disagreements_min": 100,
+    "hau_emotion_consensus_accuracy_min": 0.6,
+    "hau_emotion_base_accuracy_max": 0.4,
+    "permutation_mismatches_max": 0,
+    "invalid_predictions_max": 0,
+    "all_conditions_required": true
+  },
+  "qwen_missing_sensor_gate": {
+    "minimum_rows": 30,
+    "valid_rate_min": 1,
+    "accuracy_min": 0.6,
+    "both_subject_halves_accuracy_min": 0.5,
+    "must_not_reduce_core_oof_accuracy": true
+  },
+  "release_policy": {
+    "core_gate_failure": "REJECT_NO_TEST_NO_CANDIDATE_NO_SUBMISSION",
+    "core_gate_pass": "Permit a separate network-free test build and two-run byte comparison; do not submit yet.",
+    "qwen_gate_failure": "Keep Qwen diagnostic-only and use semantic-base fallback for missing sensor rows.",
+    "submission": "Only after a complete 682-row candidate passes two network-free dry-runs, manifest verification, quota and finalist-diversity checks."
+  }
+}

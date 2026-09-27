@@ -1,0 +1,144 @@
+{
+  "experiment": "label_free_linked_question_structure_audit",
+  "rule": "sequence option texts define an occurring-action set; multi selects exact overlaps; combination selects the unique option whose comma-separated atoms are all in that set",
+  "training": {
+    "multi": {
+      "unique_rows": 270,
+      "accuracy": 0.6555555555555556,
+      "worst_subject_accuracy": 0.45454545454545453
+    },
+    "combination": {
+      "unique_rows": 126,
+      "accuracy": 1,
+      "worst_subject_accuracy": 1
+    }
+  },
+  "testing": {
+    "multi": {
+      "unique_rows": 33,
+      "differs_frozen_parent": 21,
+      "differences": [
+        {
+          "qa_id": "test_0578",
+          "prediction": "D",
+          "parent_prediction": "ACD"
+        },
+        {
+          "qa_id": "test_0117",
+          "prediction": "D",
+          "parent_prediction": "BD"
+        },
+        {
+          "qa_id": "test_0118",
+          "prediction": "CD",
+          "parent_prediction": "D"
+        },
+        {
+          "qa_id": "test_0582",
+          "prediction": "D",
+          "parent_prediction": "BD"
+        },
+        {
+          "qa_id": "test_0124",
+          "prediction": "B",
+          "parent_prediction": "C"
+        },
+        {
+          "qa_id": "test_0125",
+          "prediction": "D",
+          "parent_prediction": "CD"
+        },
+        {
+          "qa_id": "test_0134",
+          "prediction": "D",
+          "parent_prediction": "BD"
+        },
+        {
+          "qa_id": "test_0593",
+          "prediction": "C",
+          "parent_prediction": "BCD"
+        },
+        {
+          "qa_id": "test_0147",
+          "prediction": "CD",
+          "parent_prediction": "BCD"
+        },
+        {
+          "qa_id": "test_0595",
+          "prediction": "AB",
+          "parent_prediction": "B"
+        },
+        {
+          "qa_id": "test_0150",
+          "prediction": "AB",
+          "parent_prediction": "B"
+        },
+        {
+          "qa_id": "test_0151",
+          "prediction": "AB",
+          "parent_prediction": "ABD"
+        },
+        {
+          "qa_id": "test_0159",
+          "prediction": "AC",
+          "parent_prediction": "ABC"
+        },
+        {
+          "qa_id": "test_0201",
+          "prediction": "D",
+          "parent_prediction": "CD"
+        },
+        {
+          "qa_id": "test_0202",
+          "prediction": "CD",
+          "parent_prediction": "ACD"
+        },
+        {
+          "qa_id": "test_0207",
+          "prediction": "C",
+          "parent_prediction": "BC"
+        },
+        {
+          "qa_id": "test_0208",
+          "prediction": "AC",
+          "parent_prediction": "ACD"
+        },
+        {
+          "qa_id": "test_0211",
+          "prediction": "BD",
+          "parent_prediction": "BCD"
+        },
+        {
+          "qa_id": "test_0212",
+          "prediction": "A",
+          "parent_prediction": "ACD"
+        },
+        {
+          "qa_id": "test_0220",
+          "prediction": "C",
+          "parent_prediction": "CD"
+        },
+        {
+          "qa_id": "test_0222",
+          "prediction": "C",
+          "parent_prediction": "ACD"
+        }
+      ]
+    },
+    "combination": {
+      "unique_rows": 16,
+      "differs_frozen_parent": 0,
+      "differences": []
+    }
+  },
+  "decision": {
+    "combination": "NO_CHANGE: perfect on 126 training rows but frozen parent already matches every unique test inference",
+    "multi": "REJECTED: only 65.56% training accuracy and worst-[participant-index].45%"
+  },
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "frozen_parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "code_sha256": "2afff3749d08e3c25ebb5b0203b370134ba5b410a5331200a8c8696f6303e8ec"
+  }
+}

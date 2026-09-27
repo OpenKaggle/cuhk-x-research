@@ -1,0 +1,26 @@
+{
+  "candidate": "emotion_rf_xgb_consensus_v1.csv",
+  "candidate_sha256": "a98e211c5aea9d00df68d60e2b4a9d8c86281d170f26d1c8b67c054a98031980",
+  "input_sha256": {
+    "parent": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "rf": "ff48f19986e95390430120630a73c253486b5f50fe88fe07145ac43a09da914d",
+    "xgb": "1f4b2028857d8fccdc5f5eca0d0170e5424c7c0a4f2053223cbf2fd839bf5a4d",
+    "graph": "165f204ba3a4358db93c116c288260dd09484e8ea6212021f246425157807677"
+  },
+  "gate": {
+    "source_category": "HAU/emotion",
+    "sensor_present": true,
+    "rf_equals_xgb": true,
+    "prediction_differs_from_frozen_parent": true,
+    "prediction_differs_from_public_compact_graph": true,
+    "xgb_confidence_at_least": 0.05
+  },
+  "corresponding_subject_disjoint_oof_gate": {
+    "rf_threshold": 0,
+    "xgb_threshold": 0.05,
+    "accuracy": 0.39555006180469715,
+    "net_correct_vs_public_graph_parent": 61,
+    "worst_subject_accuracy": 0.3333333333333333
+  },
+  "changed_row_count": 3
+}

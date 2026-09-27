@@ -1,0 +1,117 @@
+{
+  "experiment": "hau_emotion_extratrees_rf_consensus_union_v1",
+  "validation": {
+    "design": "18-fold leave-one-subject-out; fold-local median imputation; clips intact; fixed ExtraTrees and RandomForest agreement",
+    "gate": "real ExtraTrees sensor input; ExtraTrees=RF; differs OOF graph parent; >=100 rows; accuracy >=0.60; all 18 subjects and every represented subject net positive; one-sided sign p<=1e-8; fixed odd/even cohorts each >=40 rows and positive",
+    "overall": {
+      "rows": 186,
+      "expert_correct": 117,
+      "expert_accuracy": 0.6290322580645161,
+      "parent_correct": 26,
+      "parent_accuracy": 0.13978494623655913,
+      "net_correct_vs_parent": 91,
+      "worst_subject_net": 1,
+      "discordant_wins": 117,
+      "discordant_losses": 26,
+      "one_sided_exact_sign_p": 2.7593188069240852e-15
+    }
+  },
+  "test": {
+    "gate": "real ET and RF inputs; ET=RF; differs frozen public parent and separately reproduced public compact graph",
+    "accepted_rows": 6,
+    "accepted_evidence": [
+      {
+        "qa_id": "test_0428",
+        "parent_prediction": "D",
+        "graph_prediction": "D",
+        "et_prediction": "C",
+        "et_confidence": "0.12234285714285725",
+        "rf_prediction": "C",
+        "rf_confidence": "0.037500000000000006",
+        "et_present": true,
+        "rf_present": true,
+        "accepted": true
+      },
+      {
+        "qa_id": "test_0444",
+        "parent_prediction": "A",
+        "graph_prediction": "A",
+        "et_prediction": "B",
+        "et_confidence": "0.006294209956709651",
+        "rf_prediction": "B",
+        "rf_confidence": "0.008333333333333331",
+        "et_present": true,
+        "rf_present": true,
+        "accepted": true
+      },
+      {
+        "qa_id": "test_0455",
+        "parent_prediction": "C",
+        "graph_prediction": "B",
+        "et_prediction": "D",
+        "et_confidence": "0.0845403430951317",
+        "rf_prediction": "D",
+        "rf_confidence": "0.024999999999999994",
+        "et_present": true,
+        "rf_present": true,
+        "accepted": true
+      },
+      {
+        "qa_id": "test_0456",
+        "parent_prediction": "C",
+        "graph_prediction": "B",
+        "et_prediction": "A",
+        "et_confidence": "0.05771174746146035",
+        "rf_prediction": "A",
+        "rf_confidence": "0.008333333333333331",
+        "et_present": true,
+        "rf_present": true,
+        "accepted": true
+      },
+      {
+        "qa_id": "test_0464",
+        "parent_prediction": "A",
+        "graph_prediction": "A",
+        "et_prediction": "B",
+        "et_confidence": "0.027347899159663958",
+        "rf_prediction": "B",
+        "rf_confidence": "0.0",
+        "et_present": true,
+        "rf_present": true,
+        "accepted": true
+      },
+      {
+        "qa_id": "test_0653",
+        "parent_prediction": "D",
+        "graph_prediction": "C",
+        "et_prediction": "B",
+        "et_confidence": "0.09875714285714299",
+        "rf_prediction": "B",
+        "rf_confidence": "0.03750000000000002",
+        "et_present": true,
+        "rf_present": true,
+        "accepted": true
+      }
+    ]
+  },
+  "candidate": "emotion_extratrees_rf_union_v1.csv",
+  "candidate_sha256": "3a76a36e6d3060979370f5b598e090c0e2436689d9eda6b17416ae8bc0aee3e4",
+  "base_submission_ref": 56122175,
+  "base_sha256": "cec3cde9c7b207c4e202a2623f88213bedccedebc108dd2afcb00782bb101106",
+  "new_rows_changed_vs_base": 4,
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+    "graph_test_sha256": "165f204ba3a4358db93c116c288260dd09484e8ea6212021f246425157807677",
+    "base_sha256": "cec3cde9c7b207c4e202a2623f88213bedccedebc108dd2afcb00782bb101106",
+    "et_oof_sha256": "c89c06f082d3214331ab39f8b14bb922899769b1ad7108b6b25ceaab298e8259",
+    "et_test_sha256": "2874b93d6adb0806c6f98574440a834feb2f05bb7f7885cf472506b3668e0ebb",
+    "et_summary_sha256": "8e2ba657786423585545e94ba4bbc0cfd4df3d81fe23dcda4529527901789d31",
+    "rf_oof_sha256": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7",
+    "rf_test_sha256": "ff48f19986e95390430120630a73c253486b5f50fe88fe07145ac43a09da914d",
+    "code_sha256": "f0b4bbb600becf652fbc039fd3d80e8ed84077a2a4a2b7bbde629cf51ea1d2d9"
+  },
+  "seed": 20260909,
+  "runtime_seconds": 0.035926208016462624
+}

@@ -1,0 +1,43 @@
+{
+  "experiment": "stage2_native_owned_candidate_v1",
+  "network_isolation": {
+    "hf_hub_offline": "1",
+    "transformers_offline": "1",
+    "socket_probe_blocked": true
+  },
+  "rows": 682,
+  "unique_qa_ids": 682,
+  "unique_input_clips": 208,
+  "official_strict_mode": true,
+  "invalid_predictions": 0,
+  "fixed_third_party_test_vector_dependency": false,
+  "qwen_prediction_effect": false,
+  "prediction_source_counts": {
+    "owned_harn_skeleton_rf": 41,
+    "owned_hau_emotion_et_rf_consensus": 82,
+    "owned_semantic_base": 559
+  },
+  "output": "artifacts/dry_runs/stage2_native_v1_run1.csv",
+  "output_sha256": "40361ab2b6a87d5b73da3114aada27b982b37c09d205864ec8ed272701ae06b8",
+  "inputs": {
+    "train": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "input_qa": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "features": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+    "harn_model": "592673f9ea7da7770ca0e95388e4379798acf6450284bfc359340175ef93d611",
+    "hau_emotion_model": "7f20c9b509b01e3ee79b45d620fd43b5b83caaa6c0bc75ba707abbec32e3400e",
+    "emotion_et_model": "4af817095c602500db2ad6a8a7637ded103de7fbae5a24cdc3765dcf7dc81a42",
+    "core_report": "2f3caffe9e4aec49cd38ee722b1e3c403e6e009527703fbc1358cfd919bf5288",
+    "qwen_report": "4d093c43141963a4be9c19db35cdc11bef0251cacd0ed475f3b93435da0cae18",
+    "sample_order": "456905af98ce5257042f3779982e5b48e0ea248fcdf38eb79c9dd3e4f88a0a38"
+  },
+  "code_sha256": "21bcf764fb145f7879ccff5d512e2dc02fa5658f3133a342fd7fcc9f0eb71567",
+  "versions": {
+    "python": "3.13.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "runtime_seconds": 9.185619416064583,
+  "submission": "NOT_ATTEMPTED"
+}

@@ -1,0 +1,21 @@
+{
+  "candidate": "nonvisual_sensor_union_v1.csv",
+  "candidate_sha256": "a5d300381a79e751c08c03a36036cf56137121fc3f987832e64062b534204702",
+  "parent_sha256": "4e3391e70d0c8ff5a40efb7c317468e8eda3f84e27b40ab3c35ea735352fda9c",
+  "component_sha256": {
+    "harn": "1154a175c51b989957206ba02d9091528ffe5a50eda9cc87da8221614d8cb300",
+    "emotion": "a98e211c5aea9d00df68d60e2b4a9d8c86281d170f26d1c8b67c054a98031980"
+  },
+  "component_submission_evidence": {
+    "harn": {
+      "submission_ref": 56108202,
+      "public_score": 0.77777
+    },
+    "emotion": {
+      "submission_ref": 56108577,
+      "public_score": 0.7807
+    }
+  },
+  "changed_row_count": 4,
+  "selection_rationale": "Disjoint union of two independently pre-gated mechanisms; no row-level leaderboard inference."
+}

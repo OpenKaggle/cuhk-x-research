@@ -1,0 +1,219 @@
+{
+  "experiment": "p1_decomposed_sensor_fresh48_independent_audit_v1",
+  "generated_utc": "2026-09-11T05:28:14.988596+00:00",
+  "decision": "REJECT_P1_NO_CANDIDATE_NO_SUBMISSION",
+  "passed": false,
+  "no_inference_performed": true,
+  "no_test_qa_read_by_audit": true,
+  "candidate_csv_written": false,
+  "submission_performed": false,
+  "leaderboard_used": false,
+  "hashes": {
+    "protocol": "e547c24f90fa412b763fee8437975d58bd1c7cd68fe50a5368d14e60e0ee89c5",
+    "manifest": "a829fece2c2ed85f0ba59a2f6765c8dc767542e3153c35bdc4dd8d37486323e5",
+    "log": "d6916e14aad5bac523ff062b6a8bfe5d4b178b8e3e12e33365baf3b24370dbd8",
+    "reported": "daec1dbe0730f38dc277c8c997e92cca794bf1d06f4d0ea41ffeee971d69b8f8",
+    "runner": "761306ad4584d76dd9267a5cc57c915a0f7a7596aee9633dea2b25bbc45264d7",
+    "train": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "sensor": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7",
+    "core": "8cf9879a1e147456db67dffe3246bb108e2816170dc787347ce24e93a8f7d1b7",
+    "features": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661",
+    "visual_manifest": "e31e3b7c6f3799f8dd179e01577409ae45721b06d33e37c6f80b8366534021e2",
+    "registry": "4de727a5821179dc3625de33f210346c4c1fa01feace823de1190320aed244af",
+    "audit_code": "b0e30f7954674ab42668da71a7f37f06ecd8f96d4d3dcac0ace4a726b47345ef"
+  },
+  "hash_checks": {
+    "protocol_matches_runner_constant": true,
+    "manifest_matches_protocol": true,
+    "protocol_matches_report": true,
+    "manifest_matches_report": true,
+    "log_matches_report": true,
+    "runner_matches_report": true,
+    "runner_hash_was_in_protocol": false
+  },
+  "registry_v2": {
+    "registry_sha256": "4de727a5821179dc3625de33f210346c4c1fa01feace823de1190320aed244af",
+    "p1_inference_records": 66,
+    "p1_final_log_hash_records": 48,
+    "earlier_partial_registration_records": 18,
+    "p1_log_pairs_all_registered": true,
+    "p1_registry_source_hashes": [
+      "74b763769627bd27c86a267d541e3ccd45131d171d5047e0cfc93e452595f944",
+      "d6916e14aad5bac523ff062b6a8bfe5d4b178b8e3e12e33365baf3b24370dbd8"
+    ],
+    "p1_registry_contains_complete_final_log_hash": true,
+    "qa_overlap_with_prior_inference_logs": 0,
+    "clip_overlap_with_prior_inference_logs": 0
+  },
+  "network_isolation": {
+    "forbidden_network_imports": [],
+    "literal_urls": [],
+    "offline_environment_set": true,
+    "socket_connect_blocked": true,
+    "block_installed_before_model_import": true
+  },
+  "equal_budget": {
+    "same_model_revision": true,
+    "same_video_per_pair": true,
+    "same_modality_per_pair": true,
+    "same_requested_fps_per_pair": true,
+    "same_max_generation_tokens_per_pair": true,
+    "same_temperature_per_pair": true,
+    "readable_videos": 48,
+    "unique_videos": 48,
+    "derived_sampled_frames_min": 4,
+    "derived_sampled_frames_max": 12,
+    "paired_frame_count_mismatches": 0,
+    "video_hash_mismatches": 0,
+    "note": "The pair is equal-budget for each QA because both prompts reuse the identical video and loader settings. Frame count varies across QAs under the frozen 1-fps policy and was reconstructed from local video metadata; it was not logged by the sibling runner."
+  },
+  "parent_fairness": {
+    "same_sensor_oof": true,
+    "same_semantic_base_oof": true,
+    "same_thresholds_and_route": true,
+    "subject_disjoint_parent": true,
+    "clip_grouped_parent": true,
+    "confound": "The parent has 28 parse-invalid outputs versus 1 for P1, so the large apparent gain is dominated by output-format/truncation reliability. The frozen zero-invalid gates correctly forbid promotion."
+  },
+  "parse_checks": {
+    "generic_recorded_parse_mismatches": 0,
+    "decomposed_recorded_parse_mismatches": 0,
+    "decomposed_recorded_schema_mismatches": 0
+  },
+  "recomputed": {
+    "overall": {
+      "rows": 48,
+      "parent_correct": 12,
+      "parent_accuracy": 0.25,
+      "candidate_correct": 33,
+      "candidate_accuracy": 0.6875,
+      "net_correct": 21,
+      "accuracy_gain": 0.4375
+    },
+    "by_category": {
+      "object_interaction": {
+        "rows": 24,
+        "parent_correct": 3,
+        "parent_accuracy": 0.125,
+        "candidate_correct": 21,
+        "candidate_accuracy": 0.875,
+        "net_correct": 18,
+        "accuracy_gain": 0.75
+      },
+      "single": {
+        "rows": 24,
+        "parent_correct": 9,
+        "parent_accuracy": 0.375,
+        "candidate_correct": 12,
+        "candidate_accuracy": 0.5,
+        "net_correct": 3,
+        "accuracy_gain": 0.125
+      }
+    },
+    "by_subject_half": {
+      "first_nine": {
+        "rows": 24,
+        "parent_correct": 6,
+        "parent_accuracy": 0.25,
+        "candidate_correct": 17,
+        "candidate_accuracy": 0.7083333333333334,
+        "net_correct": 11,
+        "accuracy_gain": 0.4583333333333333
+      },
+      "second_nine": {
+        "rows": 24,
+        "parent_correct": 6,
+        "parent_accuracy": 0.25,
+        "candidate_correct": 16,
+        "candidate_accuracy": 0.6666666666666666,
+        "net_correct": 10,
+        "accuracy_gain": 0.4166666666666667
+      }
+    },
+    "subject_macro_gain": 0.37777777777777777,
+    "worst_subject_accuracy_delta": 0,
+    "generic_invalid": 28,
+    "decomposed_invalid": 1,
+    "decomposed_schema_invalid": 1,
+    "temporal_field_invalid": 0,
+    "by_decomposed_temporal_bucket_descriptive_only": {
+      "early": {
+        "rows": 1,
+        "parent_correct": 0,
+        "parent_accuracy": 0,
+        "candidate_correct": 1,
+        "candidate_accuracy": 1,
+        "net_correct": 1,
+        "accuracy_gain": 1
+      },
+      "late": {
+        "rows": 1,
+        "parent_correct": 1,
+        "parent_accuracy": 1,
+        "candidate_correct": 0,
+        "candidate_accuracy": 0,
+        "net_correct": -1,
+        "accuracy_gain": -1
+      },
+      "middle": {
+        "rows": 2,
+        "parent_correct": 1,
+        "parent_accuracy": 0.5,
+        "candidate_correct": 2,
+        "candidate_accuracy": 1,
+        "net_correct": 1,
+        "accuracy_gain": 0.5
+      },
+      "throughout": {
+        "rows": 44,
+        "parent_correct": 10,
+        "parent_accuracy": 0.22727272727272727,
+        "candidate_correct": 30,
+        "candidate_accuracy": 0.6818181818181818,
+        "net_correct": 20,
+        "accuracy_gain": 0.45454545454545453
+      }
+    },
+    "parent_disagreements": 30,
+    "parent_disagreement_net_gain": 21
+  },
+  "gate": {
+    "frozen": {
+      "candidate_vs_equal_budget_generic_subject_macro_gain_min": 0.02,
+      "single_net_gain_min": 0,
+      "object_net_gain_min": 0,
+      "worst_subject_accuracy_delta_min": -0.03,
+      "generic_invalid_max": 0,
+      "decomposed_invalid_max": 0,
+      "decomposed_evidence_schema_invalid_max": 0,
+      "parent_disagreement_net_gain_min_exclusive": 0,
+      "all_conditions_required": true
+    },
+    "checks": {
+      "hashes_except_unfrozen_runner": true,
+      "runner_hash_preregistered": false,
+      "registry_complete_and_prior_fresh": true,
+      "network_isolation_reproducible": true,
+      "equal_budget_pair": true,
+      "subject_macro_gain": true,
+      "single_nonnegative": true,
+      "object_nonnegative": true,
+      "worst_subject_loss": true,
+      "generic_invalid_zero": false,
+      "decomposed_invalid_zero": false,
+      "decomposed_schema_invalid_zero": false,
+      "parent_disagreement_net_positive": true,
+      "independent_parse_matches_log": true
+    },
+    "all_required": true,
+    "passed": false
+  },
+  "strict_rejection_reasons": [
+    "runner_hash_preregistered",
+    "generic_invalid_zero",
+    "decomposed_invalid_zero",
+    "decomposed_schema_invalid_zero"
+  ],
+  "p2_proposal": "reports/p2_unexposed_video_preflight_and_proposal_v1.json",
+  "p2_proposal_sha256": "66afa0b4ea857c9087feb534d3337b00add717cc24d8884367e62c9f3b4172ca"
+}

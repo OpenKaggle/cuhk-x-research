@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-09-11T05:12:33.502150+00:00",
+  "manifest": "reports/final_reproducibility_manifest_2026-09-11_v5.json",
+  "manifest_sha256": "8bc28ce1d22fa9001a9004ac8fe986554bf28ca9d7443c6b80238b4dc60a4760",
+  "artifact_files_verified": 170,
+  "qwen_model_files_verified": 16,
+  "selected_candidates_verified": 2,
+  "owned_stage2_candidate_verified": true,
+  "experiment_log_rows": 69,
+  "verifier_code_sha256": "ff43dbcb561cb10c422008c5ade62391d40588ed1ea32f39d294a0698c3717e1"
+}

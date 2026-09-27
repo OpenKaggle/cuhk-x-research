@@ -1,0 +1,38 @@
+{
+  "archive_prefix_bytes": 603980800,
+  "archive_prefix_sha256": "4558d3aa56288c1417a4aa146ddf85ce2c29c3bf4adb65d5d65db43dff8165ea",
+  "complete_archive_file_entries_before_boundary": 2353,
+  "first_incomplete_entry": {
+    "name": "HARn/22_Turn_pages/[participant-index]/6-2-1/Depth_Color/Depth_Color.mp4",
+    "header_offset": 603927041,
+    "data_offset": 603927129,
+    "compressed_size": 199721,
+    "available_data_bytes": 53671
+  },
+  "selection": "HARn units referenced by organizer training_qa.csv only",
+  "extracted_files": 475,
+  "extracted_units": 165,
+  "extracted_bytes": 131898543,
+  "actions": {
+    "14_Wipe_bowls": 51,
+    "15_Wipe_windows_and_tables": 30,
+    "22_Turn_pages": 43,
+    "23_Listen_to_music_with_headphones": 39,
+    "24_Use_a_mobile_phone": 45,
+    "25_Watch_TV": 33,
+    "2_Comb_hair": 30,
+    "37_Take_medicine": 30,
+    "43_Open_the_cabinet_(to_get_things)": 36,
+    "4_Wipe_hands": 30,
+    "5_Put_on_clothes": 54,
+    "8_Take_and_use_tableware": 24,
+    "9_Pour_drinks": 30
+  },
+  "modalities": {
+    "Depth": 165,
+    "Depth_Color": 146,
+    "IR": 164
+  },
+  "manifest_sha256": "cd96f84c211c61f8b2034a660ef194db397c7bdd87e5abace392a28628381741",
+  "runtime_seconds": 2.053194500040263
+}

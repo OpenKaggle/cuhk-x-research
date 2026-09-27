@@ -1,0 +1,759 @@
+{
+  "validation_contract": "18-fold leave-one-subject-out; clip intact",
+  "coverage": {
+    "archive_sha256": "72f34e9f0005d2ee0fefe9a7687bd54fa6dbdf171b6112132523085fa7475afb",
+    "archive_bytes": 388866143,
+    "manifest_sha256": "1dd612c2fa27afda08ce693f46b9c04ac04b5501a6e099af31a173558803bee6",
+    "units": 3932,
+    "train_units": 3737,
+    "test_units": 195,
+    "feature_shapes": {
+      "imu": [
+        3932,
+        655
+      ],
+      "radar": [
+        3932,
+        84
+      ],
+      "skeleton": [
+        3932,
+        650
+      ]
+    },
+    "finite_rows": {
+      "imu": 3837,
+      "radar": 3905,
+      "skeleton": 3929
+    },
+    "manifest_declared_file_presence": {
+      "imu": 3895,
+      "radar": 3905,
+      "skeleton": 3929
+    },
+    "verified_actual_file_presence": {
+      "imu": 3895,
+      "radar": 3905,
+      "skeleton": 3929
+    },
+    "runtime_seconds": 206.66489962500054
+  },
+  "slices": {
+    "HARn/object_interaction": {
+      "rows": 133,
+      "outcomes": {
+        "both_correct": 99,
+        "expert_only": 14,
+        "parent_only": 14,
+        "both_wrong": 6
+      },
+      "user_delta_min": -0.4444444444444445,
+      "user_delta_median": 0,
+      "user_delta_max": 0.5,
+      "confidence_bins": [
+        {
+          "bin": 0,
+          "rows": 27,
+          "confidence_min": 0,
+          "confidence_max": 0.0208333333333333,
+          "expert_accuracy": 0.48148148148148145,
+          "disagreement_accuracy": 0.29411764705882354
+        },
+        {
+          "bin": 1,
+          "rows": 26,
+          "confidence_min": 0.0208333333333333,
+          "confidence_max": 0.063572607260726,
+          "expert_accuracy": 0.9615384615384616,
+          "disagreement_accuracy": 0.6666666666666666
+        },
+        {
+          "bin": 2,
+          "rows": 27,
+          "confidence_min": 0.0636454062125276,
+          "confidence_max": 0.1166666666666666,
+          "expert_accuracy": 0.8888888888888888,
+          "disagreement_accuracy": 0.6
+        },
+        {
+          "bin": 3,
+          "rows": 26,
+          "confidence_min": 0.125,
+          "confidence_max": 0.2541666666666666,
+          "expert_accuracy": 0.9230769230769231,
+          "disagreement_accuracy": 1
+        },
+        {
+          "bin": 4,
+          "rows": 27,
+          "confidence_min": 0.2583333333333333,
+          "confidence_max": 0.6666666666666666,
+          "expert_accuracy": 1,
+          "disagreement_accuracy": 1
+        }
+      ],
+      "largest_label_gains": [
+        {
+          "label": "a keyboard",
+          "rows": 10,
+          "parent": 0.6,
+          "expert": 1,
+          "delta": 0.4
+        },
+        {
+          "label": "a cloth",
+          "rows": 10,
+          "parent": 0.7,
+          "expert": 0.9,
+          "delta": 0.20000000000000007
+        },
+        {
+          "label": "a remote",
+          "rows": 10,
+          "parent": 0.1,
+          "expert": 0.3,
+          "delta": 0.19999999999999998
+        },
+        {
+          "label": "a phone",
+          "rows": 18,
+          "parent": 0.7777777777777778,
+          "expert": 0.8333333333333334,
+          "delta": 0.05555555555555558
+        },
+        {
+          "label": "a clothes",
+          "rows": 20,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "a documents",
+          "rows": 20,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "a smartphone",
+          "rows": 18,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "a glass",
+          "rows": 10,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        }
+      ],
+      "largest_label_losses": [
+        {
+          "label": "a cabinet",
+          "rows": 10,
+          "parent": 1,
+          "expert": 0.2,
+          "delta": -0.8
+        },
+        {
+          "label": "a headphones",
+          "rows": 7,
+          "parent": 1,
+          "expert": 0.8571428571428571,
+          "delta": -0.1428571428571429
+        },
+        {
+          "label": "a clothes",
+          "rows": 20,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "a documents",
+          "rows": 20,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "a smartphone",
+          "rows": 18,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "a glass",
+          "rows": 10,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "a phone",
+          "rows": 18,
+          "parent": 0.7777777777777778,
+          "expert": 0.8333333333333334,
+          "delta": 0.05555555555555558
+        },
+        {
+          "label": "a remote",
+          "rows": 10,
+          "parent": 0.1,
+          "expert": 0.3,
+          "delta": 0.19999999999999998
+        }
+      ]
+    },
+    "HARn/single": {
+      "rows": 429,
+      "outcomes": {
+        "expert_only": 184,
+        "both_correct": 145,
+        "both_wrong": 59,
+        "parent_only": 41
+      },
+      "user_delta_min": 0.06666666666666665,
+      "user_delta_median": 0.31217391304347825,
+      "user_delta_max": 0.5789473684210527,
+      "confidence_bins": [
+        {
+          "bin": 0,
+          "rows": 86,
+          "confidence_min": 0,
+          "confidence_max": 0.0208333333333333,
+          "expert_accuracy": 0.4186046511627907,
+          "disagreement_accuracy": 0.3793103448275862
+        },
+        {
+          "bin": 1,
+          "rows": 86,
+          "confidence_min": 0.0208333333333333,
+          "confidence_max": 0.0583333333333333,
+          "expert_accuracy": 0.7093023255813954,
+          "disagreement_accuracy": 0.6346153846153846
+        },
+        {
+          "bin": 2,
+          "rows": 85,
+          "confidence_min": 0.0624999999999999,
+          "confidence_max": 0.1166666666666666,
+          "expert_accuracy": 0.7764705882352941,
+          "disagreement_accuracy": 0.8235294117647058
+        },
+        {
+          "bin": 3,
+          "rows": 86,
+          "confidence_min": 0.1207325897647029,
+          "confidence_max": 0.2666666666666667,
+          "expert_accuracy": 0.9302325581395349,
+          "disagreement_accuracy": 0.9107142857142857
+        },
+        {
+          "bin": 4,
+          "rows": 86,
+          "confidence_min": 0.2690089672232529,
+          "confidence_max": 0.9208333333333332,
+          "expert_accuracy": 1,
+          "disagreement_accuracy": 1
+        }
+      ],
+      "largest_label_gains": [
+        {
+          "label": "taking off their clothes",
+          "rows": 10,
+          "parent": 0,
+          "expert": 1,
+          "delta": 1
+        },
+        {
+          "label": "typing on the keyboard",
+          "rows": 10,
+          "parent": 0,
+          "expert": 1,
+          "delta": 1
+        },
+        {
+          "label": "eating food",
+          "rows": 9,
+          "parent": 0,
+          "expert": 1,
+          "delta": 1
+        },
+        {
+          "label": "doing squats",
+          "rows": 10,
+          "parent": 0,
+          "expert": 0.9,
+          "delta": 0.9
+        },
+        {
+          "label": "peeling fruit",
+          "rows": 10,
+          "parent": 0,
+          "expert": 0.9,
+          "delta": 0.9
+        },
+        {
+          "label": "turning pages",
+          "rows": 10,
+          "parent": 0,
+          "expert": 0.9,
+          "delta": 0.9
+        },
+        {
+          "label": "wiping surfaces",
+          "rows": 10,
+          "parent": 0,
+          "expert": 0.9,
+          "delta": 0.9
+        },
+        {
+          "label": "making a phone call",
+          "rows": 8,
+          "parent": 0,
+          "expert": 0.875,
+          "delta": 0.875
+        }
+      ],
+      "largest_label_losses": [
+        {
+          "label": "standing on one leg",
+          "rows": 10,
+          "parent": 0.8,
+          "expert": 0,
+          "delta": -0.8
+        },
+        {
+          "label": "folding clothes",
+          "rows": 10,
+          "parent": 1,
+          "expert": 0.4,
+          "delta": -0.6
+        },
+        {
+          "label": "brushing their teeth",
+          "rows": 10,
+          "parent": 1,
+          "expert": 0.7,
+          "delta": -0.30000000000000004
+        },
+        {
+          "label": "sweeping the floor",
+          "rows": 10,
+          "parent": 0.9,
+          "expert": 0.6,
+          "delta": -0.30000000000000004
+        },
+        {
+          "label": "taking medicine",
+          "rows": 10,
+          "parent": 1,
+          "expert": 0.7,
+          "delta": -0.30000000000000004
+        },
+        {
+          "label": "using a smartphone",
+          "rows": 18,
+          "parent": 0.9444444444444444,
+          "expert": 0.7222222222222222,
+          "delta": -0.2222222222222222
+        },
+        {
+          "label": "combing their hair",
+          "rows": 10,
+          "parent": 1,
+          "expert": 0.9,
+          "delta": -0.09999999999999998
+        },
+        {
+          "label": "doing stretching exercises",
+          "rows": 10,
+          "parent": 1,
+          "expert": 0.9,
+          "delta": -0.09999999999999998
+        }
+      ]
+    },
+    "HAU/emotion": {
+      "rows": 809,
+      "outcomes": {
+        "both_wrong": 379,
+        "both_correct": 192,
+        "expert_only": 171,
+        "parent_only": 67
+      },
+      "user_delta_min": 0.019607843137254888,
+      "user_delta_median": 0.14285714285714285,
+      "user_delta_max": 0.33333333333333337,
+      "confidence_bins": [
+        {
+          "bin": 0,
+          "rows": 162,
+          "confidence_min": 0,
+          "confidence_max": 0.0083333333333333,
+          "expert_accuracy": 0.35802469135802467,
+          "disagreement_accuracy": 0.40816326530612246
+        },
+        {
+          "bin": 1,
+          "rows": 162,
+          "confidence_min": 0.0083333333333333,
+          "confidence_max": 0.0166666666666666,
+          "expert_accuracy": 0.42592592592592593,
+          "disagreement_accuracy": 0.5421686746987951
+        },
+        {
+          "bin": 2,
+          "rows": 161,
+          "confidence_min": 0.0166666666666666,
+          "confidence_max": 0.0291666666666666,
+          "expert_accuracy": 0.4472049689440994,
+          "disagreement_accuracy": 0.4925373134328358
+        },
+        {
+          "bin": 3,
+          "rows": 162,
+          "confidence_min": 0.0333333333333333,
+          "confidence_max": 0.05,
+          "expert_accuracy": 0.4876543209876543,
+          "disagreement_accuracy": 0.5454545454545454
+        },
+        {
+          "bin": 4,
+          "rows": 162,
+          "confidence_min": 0.05,
+          "confidence_max": 0.1916666666666666,
+          "expert_accuracy": 0.5246913580246914,
+          "disagreement_accuracy": 0.5897435897435898
+        }
+      ],
+      "largest_label_gains": [
+        {
+          "label": "lazily",
+          "rows": 6,
+          "parent": 0,
+          "expert": 0.6666666666666666,
+          "delta": 0.6666666666666666
+        },
+        {
+          "label": "tensely",
+          "rows": 6,
+          "parent": 0,
+          "expert": 0.5,
+          "delta": 0.5
+        },
+        {
+          "label": "absentmindedly",
+          "rows": 2,
+          "parent": 0,
+          "expert": 0.5,
+          "delta": 0.5
+        },
+        {
+          "label": "hasitly",
+          "rows": 2,
+          "parent": 0,
+          "expert": 0.5,
+          "delta": 0.5
+        },
+        {
+          "label": "soothingly",
+          "rows": 2,
+          "parent": 0,
+          "expert": 0.5,
+          "delta": 0.5
+        },
+        {
+          "label": "rapidly",
+          "rows": 24,
+          "parent": 0,
+          "expert": 0.4583333333333333,
+          "delta": 0.4583333333333333
+        },
+        {
+          "label": "frantically",
+          "rows": 11,
+          "parent": 0,
+          "expert": 0.45454545454545453,
+          "delta": 0.45454545454545453
+        },
+        {
+          "label": "hastily",
+          "rows": 35,
+          "parent": 0.2571428571428571,
+          "expert": 0.6571428571428571,
+          "delta": 0.4
+        }
+      ],
+      "largest_label_losses": [
+        {
+          "label": "leisurely",
+          "rows": 53,
+          "parent": 0.9245283018867925,
+          "expert": 0.7169811320754716,
+          "delta": -0.20754716981132082
+        },
+        {
+          "label": "slowly",
+          "rows": 70,
+          "parent": 0.9142857142857143,
+          "expert": 0.7428571428571429,
+          "delta": -0.17142857142857137
+        },
+        {
+          "label": "confidently",
+          "rows": 1,
+          "parent": 0,
+          "expert": 0,
+          "delta": 0
+        },
+        {
+          "label": "diligently",
+          "rows": 1,
+          "parent": 0,
+          "expert": 0,
+          "delta": 0
+        },
+        {
+          "label": "eagerly",
+          "rows": 1,
+          "parent": 0,
+          "expert": 0,
+          "delta": 0
+        },
+        {
+          "label": "earnestly",
+          "rows": 1,
+          "parent": 0,
+          "expert": 0,
+          "delta": 0
+        },
+        {
+          "label": "firmly",
+          "rows": 1,
+          "parent": 0,
+          "expert": 0,
+          "delta": 0
+        },
+        {
+          "label": "joyfully",
+          "rows": 1,
+          "parent": 0,
+          "expert": 0,
+          "delta": 0
+        }
+      ]
+    },
+    "HAU/single": {
+      "rows": 809,
+      "outcomes": {
+        "both_correct": 507,
+        "parent_only": 214,
+        "expert_only": 44,
+        "both_wrong": 44
+      },
+      "user_delta_min": -0.3095238095238094,
+      "user_delta_median": -0.22835497835497837,
+      "user_delta_max": -0.09523809523809523,
+      "confidence_bins": [
+        {
+          "bin": 0,
+          "rows": 162,
+          "confidence_min": 0,
+          "confidence_max": 0.0083333333333333,
+          "expert_accuracy": 0.43209876543209874,
+          "disagreement_accuracy": 0.07692307692307693
+        },
+        {
+          "bin": 1,
+          "rows": 162,
+          "confidence_min": 0.0083333333333333,
+          "confidence_max": 0.0249999999999999,
+          "expert_accuracy": 0.48148148148148145,
+          "disagreement_accuracy": 0.11494252873563218
+        },
+        {
+          "bin": 2,
+          "rows": 161,
+          "confidence_min": 0.0249999999999999,
+          "confidence_max": 0.0416666666666666,
+          "expert_accuracy": 0.7204968944099379,
+          "disagreement_accuracy": 0.16981132075471697
+        },
+        {
+          "bin": 3,
+          "rows": 162,
+          "confidence_min": 0.0458333333333333,
+          "confidence_max": 0.0833333333333333,
+          "expert_accuracy": 0.8333333333333334,
+          "disagreement_accuracy": 0.3142857142857143
+        },
+        {
+          "bin": 4,
+          "rows": 162,
+          "confidence_min": 0.0833333333333333,
+          "confidence_max": 0.2375,
+          "expert_accuracy": 0.9382716049382716,
+          "disagreement_accuracy": 0.5833333333333334
+        }
+      ],
+      "largest_label_gains": [
+        {
+          "label": "walking",
+          "rows": 103,
+          "parent": 1,
+          "expert": 1,
+          "delta": 0
+        },
+        {
+          "label": "pouring",
+          "rows": 30,
+          "parent": 0.8666666666666667,
+          "expert": 0.8666666666666667,
+          "delta": 0
+        },
+        {
+          "label": "getting dressed",
+          "rows": 18,
+          "parent": 0.8333333333333334,
+          "expert": 0.8333333333333334,
+          "delta": 0
+        },
+        {
+          "label": "jumping jacks",
+          "rows": 11,
+          "parent": 0.6363636363636364,
+          "expert": 0.6363636363636364,
+          "delta": 0
+        },
+        {
+          "label": "squats",
+          "rows": 25,
+          "parent": 0.88,
+          "expert": 0.8,
+          "delta": -0.07999999999999996
+        },
+        {
+          "label": "typing on a keyboard",
+          "rows": 22,
+          "parent": 0.8636363636363636,
+          "expert": 0.7727272727272727,
+          "delta": -0.09090909090909094
+        },
+        {
+          "label": "brushing teeth",
+          "rows": 10,
+          "parent": 0.8,
+          "expert": 0.7,
+          "delta": -0.10000000000000009
+        },
+        {
+          "label": "sitting down",
+          "rows": 37,
+          "parent": 0.8648648648648649,
+          "expert": 0.7567567567567568,
+          "delta": -0.10810810810810811
+        }
+      ],
+      "largest_label_losses": [
+        {
+          "label": "using a phone",
+          "rows": 10,
+          "parent": 0.8,
+          "expert": 0,
+          "delta": -0.8
+        },
+        {
+          "label": "watching tv",
+          "rows": 5,
+          "parent": 0.8,
+          "expert": 0,
+          "delta": -0.8
+        },
+        {
+          "label": "writing",
+          "rows": 9,
+          "parent": 0.7777777777777778,
+          "expert": 0,
+          "delta": -0.7777777777777778
+        },
+        {
+          "label": "washing dishes",
+          "rows": 9,
+          "parent": 0.7777777777777778,
+          "expert": 0.2222222222222222,
+          "delta": -0.5555555555555556
+        },
+        {
+          "label": "calling",
+          "rows": 13,
+          "parent": 0.9230769230769231,
+          "expert": 0.38461538461538464,
+          "delta": -0.5384615384615385
+        },
+        {
+          "label": "stretching",
+          "rows": 17,
+          "parent": 0.9411764705882353,
+          "expert": 0.47058823529411764,
+          "delta": -0.47058823529411764
+        },
+        {
+          "label": "wiping surface",
+          "rows": 16,
+          "parent": 0.875,
+          "expert": 0.4375,
+          "delta": -0.4375
+        },
+        {
+          "label": "running",
+          "rows": 10,
+          "parent": 0.9,
+          "expert": 0.5,
+          "delta": -0.4
+        }
+      ]
+    }
+  },
+  "error_taxonomy": [
+    {
+      "type": "sensor_recovers_structural_miss",
+      "evidence": {
+        "HARn/object_interaction": 14,
+        "HARn/single": 184,
+        "HAU/emotion": 171,
+        "HAU/single": 44
+      },
+      "action": "Retain only slices and confidence bands with positive subject-disjoint delta."
+    },
+    {
+      "type": "structure_beats_sensor",
+      "evidence": {
+        "HARn/object_interaction": 14,
+        "HARn/single": 41,
+        "HAU/emotion": 67,
+        "HAU/single": 214
+      },
+      "action": "Reject broad HAU single overrides and preserve the parent prediction."
+    },
+    {
+      "type": "modality_missing_or_empty",
+      "evidence": {
+        "manifest_imu_files": 3895,
+        "imu_rows_with_values": 3837,
+        "empty_imu_units": 58
+      },
+      "action": "Abstain from sensor-only overrides when the test unit has no usable modality."
+    },
+    {
+      "type": "partial_public_leaderboard_ambiguity",
+      "evidence": "One changed row tied the 0.77777 parent publicly.",
+      "action": "Do not infer the hidden label; keep selection anchored to OOF and private robustness."
+    }
+  ]
+}

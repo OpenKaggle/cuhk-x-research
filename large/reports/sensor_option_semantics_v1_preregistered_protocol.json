@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "experiment": "sensor_option_semantics_triad_v1",
+  "frozen_utc": "2026-09-11T03:20:00Z",
+  "status": "FROZEN_BEFORE_RESULT_BEARING_RUN",
+  "pre_result_amendments": [
+    {
+      "id": "A01",
+      "recorded_utc": "2026-09-11T03:28:56Z",
+      "reason": "The first launch stopped on a width assertion before any model fit or result artifact. The IMU sensor-only motion selector has 305 columns; 359 is the expanded width after adding 54 option one-hot columns.",
+      "old_protocol_sha256": "698da1612003afb2c912aa55eb06c211d508e8604f1a31d86b225e68583770d9",
+      "failed_source_sha256": "f8de2af2b222f15c59d00fa175b753cf07b4fc53b09fb408dda049cfbc67f653",
+      "result_artifacts_created": false,
+      "model_gate_or_threshold_changed": false,
+      "receipt": "official_receipts/2026-09-11T0328Z_sensor_option_semantics_v1_pre_fit_failure.md"
+    },
+    {
+      "id": "A02",
+      "recorded_utc": "2026-09-11T03:33:53Z",
+      "reason": "A retry was manually stopped while fitting the second subject fold because the permutation audit redundantly re-called the independent option scorer. Exhaustive permutation evaluation is changed to exact reindexing of each fold's already computed four option scores.",
+      "old_protocol_sha256": "12bc209945b96fb5ad4a8bfd866da0594f3896b409bba269963945449c4fefe5",
+      "interrupted_source_sha256": "9a52e1fc783cf1112efe8707d91f2a66817d1541861d2f4c143ce5ed13430e7c",
+      "result_artifacts_created": false,
+      "aggregate_metrics_observed": false,
+      "model_gate_or_threshold_changed": false,
+      "receipt": "official_receipts/2026-09-11T0333Z_sensor_option_semantics_v1_pre_result_runtime_abort.md"
+    },
+    {
+      "id": "A03",
+      "recorded_utc": "2026-09-11T03:48:01Z",
+      "reason": "The full deterministic run reached report construction, then failed because five JSON-style boolean literals were used in Python. Only those literals are corrected.",
+      "old_protocol_sha256": "1ab0f05df5fe2508a70a22858989ec4ece9291fa7a6e0275d4c3576716909972",
+      "failed_source_sha256": "61033f2c65c43115e370956f6e9d7f530e03e2e876a888c50f2f51729ccb1da5",
+      "partial_oof_sha256": "302e68902a0ebd776fc2882fcb90957832b88a27bba941256ab88fef5bb66ae3",
+      "aggregate_metrics_observed": false,
+      "model_gate_or_threshold_changed": false,
+      "receipt": "official_receipts/2026-09-11T0348Z_sensor_option_semantics_v1_report_literal_failure.md"
+    }
+  ],
+  "scope": {
+    "source": "HAU",
+    "category": "emotion",
+    "reason": "This is the only single-answer slice with enough rows, 18 subjects, and a direct option-semantics formulation while keeping one bounded independent branch.",
+    "fresh20_reused": false,
+    "public_leaderboard_used_for_model_or_gate_selection": false,
+    "unknown_077777_anchor_used": false,
+    "test_qa_may_be_read_before_gate": false,
+    "test_prediction_or_candidate_may_be_written_before_gate": false,
+    "submission_allowed_by_this_protocol": false
+  },
+  "immutable_inputs": {
+    "training_qa": {
+      "path": "data/raw/kaggle/training_qa.csv",
+      "sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc"
+    },
+    "nonvisual_features": {
+      "path": "cache/nonvisual_features.npz",
+      "sha256": "a8ed7d5925977dabd18b4b55a2beecb02a8a7435ce0773268a41d188cefdd661"
+    },
+    "parent_oof": {
+      "path": "artifacts/oof/nonvisual_sensor_oof.csv",
+      "sha256": "8054484a387472f04336d6c37fe77c4b9ae442484940538f6aaa777a71f5b7b7",
+      "prediction_column": "prediction",
+      "slice": "source == HAU and category == emotion",
+      "excluded_column": "parent_prediction",
+      "definition": "Current owned nonvisual RandomForest expert OOF. Its imported public-graph parent_prediction column is explicitly excluded."
+    },
+    "parent_source": {
+      "path": "scripts/run_sensor_oof.py",
+      "sha256": "06fd58e37f57f6a98734464224c7e858c868219d63486a3fc0252ce151808d88"
+    },
+    "sensor_readme": {
+      "path": "data/raw/nonvisual/LMT_(IMU,Radar,Skeleton)/README.md",
+      "sha256": "2a53c915a106ffac5d699ef50946033c0dc7a1447b5193e61c0d7fa8cd8e2f22"
+    }
+  },
+  "validation": {
+    "folds": 18,
+    "split": "leave exactly one released subject ID out per fold",
+    "clip_grouping": "All four expanded options for a QA row and every QA row sharing its clip path stay in the same subject fold.",
+    "label_access": "Only the 17 training-subject labels in a fold may fit that fold's models.",
+    "subject_halves": {
+      "first_nine": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "second_nine": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "environment_strata": {
+      "field": "first integer in the released HAU trial token <x>-<y>-<z>",
+      "caveat": "The supplement calls the full token a trial and does not publish a ground-truth environment label, so this is reported only as a recording-condition proxy.",
+      "bins": {
+        "trial_prefix_1_2": [
+          1,
+          2
+        ],
+        "trial_prefix_3_5": [
+          3,
+          4,
+          5
+        ],
+        "trial_prefix_6_7": [
+          6,
+          7
+        ]
+      }
+    }
+  },
+  "candidate": {
+    "modalities": [
+      "imu",
+      "radar",
+      "skeleton"
+    ],
+    "independence": "Fit one separate option-ranking model per modality and fold; no early-fusion features or cross-modality feature sharing.",
+    "features": {
+      "imu": "The frozen 305 sensor-only motion columns used by the existing option-ranking expert; concatenating the 54 option one-hot columns yields 359 expanded features.",
+      "radar": "All 84 cached radar features.",
+      "skeleton": "All 650 cached skeleton features.",
+      "option": "One-hot canonical option-text identity after typo normalization; sensor and option features are concatenated per option."
+    },
+    "model_per_modality": {
+      "type": "fold-local median imputation plus ExtraTreesClassifier",
+      "n_estimators": 320,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "class_weight": "balanced",
+      "random_state": 20260911,
+      "n_jobs": -1
+    },
+    "row_decision": "When all three modalities are numerically present and at least two modality predictions agree, use their majority option. Otherwise fall back to the owned parent prediction.",
+    "confidence_threshold": null,
+    "post_result_model_or_threshold_selection": false
+  },
+  "counterfactual_audits": {
+    "option_permutation": "For every OOF row, evaluate all 24 permutations of A/B/C/D by exact reindexing of its four independently scored options; compare the selected canonical option text rather than its remapped letter.",
+    "synonym_rewrite": "Deterministically rewrite every canonical adverb as an equivalent 'in a/an <adjective> manner' phrase using a frozen morphological rule plus exceptions, then canonicalize it back before scoring.",
+    "required": {
+      "permutation_semantic_mismatches": 0,
+      "synonym_semantic_mismatches": 0
+    }
+  },
+  "promotion_gate": {
+    "disagreements_vs_owned_parent_min": 30,
+    "candidate_accuracy_on_disagreements_min": 0.6,
+    "parent_accuracy_on_disagreements_max": 0.4,
+    "first_subject_half_net_correct_vs_parent_min_exclusive": 0,
+    "second_subject_half_net_correct_vs_parent_min_exclusive": 0,
+    "invalid_predictions_max": 0,
+    "all_counterfactual_mismatches_max": 0,
+    "all_conditions_required": true
+  },
+  "fail_closed_outputs": {
+    "always_allowed": [
+      "artifacts/oof/sensor_option_semantics_v1_oof.csv",
+      "reports/sensor_option_semantics_v1_validation.json",
+      "official_receipts/2026-09-11_sensor_option_semantics_v1_decision.md"
+    ],
+    "forbidden_when_gate_fails": [
+      "any test prediction file",
+      "any candidate CSV",
+      "any Kaggle submission"
+    ],
+    "required_decision_when_gate_fails": "REJECT_NO_TEST_NO_SUBMISSION"
+  }
+}

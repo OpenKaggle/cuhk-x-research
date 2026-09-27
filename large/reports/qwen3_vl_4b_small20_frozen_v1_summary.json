@@ -1,0 +1,73 @@
+{
+  "experiment": "qwen3_vl_4b_small20_frozen_v1",
+  "protocol_sha256": "cfcc3ac2ef8dde83ff30b60a5a1119806dab1ae1e68ef4d0349adb461f52229b",
+  "planned_rows": 20,
+  "processed_rows": 20,
+  "valid_predictions": 20,
+  "invalid_outputs": 0,
+  "implementation_failures": 0,
+  "implementation_failure_rate_on_planned_batch": 0,
+  "implementation_gate": "PASS",
+  "stopped_early": false,
+  "overall": {
+    "rows": 20,
+    "vlm_correct": 8,
+    "parent_correct": 15,
+    "net_correct": -7,
+    "vlm_accuracy": 0.4,
+    "parent_accuracy": 0.75
+  },
+  "by_task": {
+    "object_interaction": {
+      "rows": 10,
+      "vlm_correct": 0,
+      "parent_correct": 10,
+      "net_correct": -10,
+      "vlm_accuracy": 0,
+      "parent_accuracy": 1
+    },
+    "single": {
+      "rows": 10,
+      "vlm_correct": 8,
+      "parent_correct": 5,
+      "net_correct": 3,
+      "vlm_accuracy": 0.8,
+      "parent_accuracy": 0.5
+    }
+  },
+  "by_fixed_subject_cohort": {
+    "first_five": {
+      "rows": 10,
+      "vlm_correct": 4,
+      "parent_correct": 8,
+      "net_correct": -4,
+      "vlm_accuracy": 0.4,
+      "parent_accuracy": 0.8
+    },
+    "second_five": {
+      "rows": 10,
+      "vlm_correct": 4,
+      "parent_correct": 7,
+      "net_correct": -3,
+      "vlm_accuracy": 0.4,
+      "parent_accuracy": 0.7
+    }
+  },
+  "cross_task_and_cohort_stability_gate": false,
+  "label_free_test_rule_defined_by_this_audit": false,
+  "candidate_decision": "NO_PROPOSAL",
+  "candidate_reason": "The audit is diagnostic only and defines no new label-free test-time override rule. The 0.78070 public score is contextual and is not directly comparable to this local batch.",
+  "online_anchor_public_score_context": "0.78070",
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4",
+    "seed": 20260909,
+    "fps": 1,
+    "max_tokens": 8,
+    "temperature": 0
+  },
+  "prediction_log_sha256": "d7c1be3fa8d809e434272cf4ef26b21706536a4f8082aa83a4056f3b39804949",
+  "code_sha256": "4c9d0ef8769d6d9c73838385c4d7891e4a0f99ce8a26a6253621c17aa661943c",
+  "runtime_seconds": 38.585313291987404
+}

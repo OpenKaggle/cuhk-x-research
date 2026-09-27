@@ -1,0 +1,50 @@
+{
+  "experiment": "qwen3_vl_4b_test_harn_single_mosaic_v1",
+  "task": "test-time single-video 2x2 mosaic HARn single recognition",
+  "layout": "Depth_Color top-left; IR top-right; Depth bottom-left; blank bottom-right",
+  "intended_rows": 51,
+  "eligible_rows": 27,
+  "rows_attempted": 2,
+  "coverage_attempted": 0.0392156862745098,
+  "valid_predictions": 0,
+  "empty_predictions": 2,
+  "errors": 0,
+  "candidate_eligible": false,
+  "model": {
+    "repo_id": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "license": "apache-2.0",
+    "manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4"
+  },
+  "inputs": {
+    "test_qa_sha256": "d694c7abc5a003d5c9048098880f0f77716fae0eb18d1c9fe9330e4e987320a5",
+    "test_visual_manifest_sha256": "7e5ec38ec6f42bfd5e28804a59c1c45765c8feffd2f9c52309cef8d9c847d717",
+    "validation_report_sha256": "93bb590401b28f220566f691abbd9b129d95179bf08aaf6c019920076b58a956",
+    "prediction_log_sha256": "eb075d2626ab7edca94c91fa1b16a7ae252130414069db3f5fe78e087f2162c3"
+  },
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6",
+    "pandas": "3.0.3"
+  },
+  "code_sha256": "8d46917b2688ea0180daac01edb1174176ed9bc5cbaafb8c9d71653313c91c48",
+  "total_inference_runtime_seconds": 20.22007062402554,
+  "incremental_runtime_seconds": 21.92634437500965,
+  "invalid_evidence": [
+    {
+      "qa_id": "test_0473",
+      "prediction": "",
+      "raw_output": "",
+      "error": "",
+      "runtime_seconds": 9.666541083017364
+    },
+    {
+      "qa_id": "test_0474",
+      "prediction": "",
+      "raw_output": "",
+      "error": "",
+      "runtime_seconds": 10.553529541008174
+    }
+  ],
+  "decision": "REJECTED_STABILITY: mosaic test evidence is incomplete or contains invalid output; failed rows are excluded, no retry is permitted after two failures, and no candidate is built"
+}

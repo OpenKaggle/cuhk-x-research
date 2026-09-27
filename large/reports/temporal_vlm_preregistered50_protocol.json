@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-09-11T03:22:33.206734+00:00",
+  "status": "FROZEN_BEFORE_ANY_TEMPORAL_LOCALIZATION_OR_NEW_VLM_INFERENCE",
+  "purpose": "question-driven coarse-localization to dense-frame sampling versus uniform sampling",
+  "scientific_question": "Does question-conditioned temporal localization improve exact HAU QA accuracy under the same model, coarse-context, fine-frame, and generation-token budget?",
+  "freshness": {
+    "historical_training_clips": 207,
+    "selected_qa_overlap_with_history": 0,
+    "selected_clip_overlap_with_history": 0,
+    "historical_artifacts_frozen_at_selection": [
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_fresh20_v1.jsonl",
+        "sha256": "49322840722b880d324a49fdbb99031902d01168534201ddd96060446729a67d",
+        "rows": 20
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_hau_combination_user8_v1.jsonl",
+        "sha256": "9f0ab16550981373bebdf04163afe3c2ce66db87721eb4eb55fa13b6fbe9907a",
+        "rows": 22
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_hau_emotion_user8_full22_v1.jsonl",
+        "sha256": "cbdb01c64c53328d427684e7921b6893e610d13a284b13b1dc17b56a29dbcdb5",
+        "rows": 22
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_hau_emotion_user8_probe8_v1.jsonl",
+        "sha256": "03c9c88de3d860fdbec2c7a48ccd5301fd80f0cc7cc607acad3eefbd7e8ea8a6",
+        "rows": 8
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_hau_multi_user8_v1.jsonl",
+        "sha256": "c4fbf0eabcb1ad079316811408bcd0980eef7660552a0a06e521d9daacc9b7fc",
+        "rows": 22
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_hau_sequence_user8_v1.jsonl",
+        "sha256": "c9ce79ac13462f1b7494e81aa4653bd613014d462091f6eda062ce8240e982a3",
+        "rows": 8
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_hau_single_user8_probe8_v1.jsonl",
+        "sha256": "68aae6e5fa3d877a6fcfb1287ee73ee77b3160d8b39a900bfcc8215229e2f69e",
+        "rows": 8
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_mosaic_balanced18_v1.jsonl",
+        "sha256": "05098c36d4ef52bdcd4f57eab42acd069284677616095498996be17270650036",
+        "rows": 18
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_mosaic_full112_v1.jsonl",
+        "sha256": "f53e0a650f65fe6c71d616f7373807a89588110ae0fdb0aa1630412a4aaabc3d",
+        "rows": 112
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_mosaic_smoke_training_3591.jsonl",
+        "sha256": "b7c879b6bee8aa48697d5ecdb044572144c5fc1cf264ecf8242039c5789cb4ae",
+        "rows": 1
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_multiview_balanced18_v1.jsonl",
+        "sha256": "0071a4c42812bc6e4c90596ef49b76479b4d2007c4ce604f4bf2f9e66c85d754",
+        "rows": 18
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_multiview_full112_v1.jsonl",
+        "sha256": "fe07976a0c26e6193aba5fba3d4a9e0b85e0b7d60cc206daa63f3a4335a3255e",
+        "rows": 112
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_multiview_smoke_training_3591.jsonl",
+        "sha256": "27251bf43ac26ef1e42e6a92953ac65446b85dbb8cb9dfb90ac836808cd25905",
+        "rows": 1
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_multiview_smoke_training_3591_v2.jsonl",
+        "sha256": "f281c18c9fa3eec4e187445d16a3f46b033311ff5933f179715cc7f951a9c5be",
+        "rows": 1
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_small20_frozen_v1.jsonl",
+        "sha256": "d7c1be3fa8d809e434272cf4ef26b21706536a4f8082aa83a4056f3b39804949",
+        "rows": 20
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_test_harn_object_v1.jsonl",
+        "sha256": "d49f171d81f1008133e4bbc126f68e2f2e5b87fd9afbdaf37446fd6af5b5e2de",
+        "rows": 12
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_full_v1.jsonl",
+        "sha256": "d822aae7892c9f5b023198d53854bc131c60bcc32f1539e5a20432f2d7c8f020",
+        "rows": 51
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_mosaic_v1.jsonl",
+        "sha256": "eb075d2626ab7edca94c91fa1b16a7ae252130414069db3f5fe78e087f2162c3",
+        "rows": 2
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_multiview_v1.jsonl",
+        "sha256": "1122b7b20b23774ae6bf024322f5e4b505b99227b3a684ddbe642d33b29bd8ed",
+        "rows": 27
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_test_harn_single_v1.jsonl",
+        "sha256": "ecf8231bc10b8abe37c75ae95aad01cdc7aad8751f268fde6c4636136163bd6c",
+        "rows": 31
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_balanced18_v1.jsonl",
+        "sha256": "0226bcbd084def2132db9f592363431453c63c0632345f436fe49a9a268cc6ff",
+        "rows": 18
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_full122_v1.jsonl",
+        "sha256": "dbe71868f8e1e9700bdab1002136d3903999f157a3ebf1f9196a9dd8b6d25470",
+        "rows": 122
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_object66_v1.jsonl",
+        "sha256": "71dd5889022566694718360ad50f626a1d70784b4798e668f56fa766b0837b02",
+        "rows": 66
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_probe1.jsonl",
+        "sha256": "6c914db50e91c4fa2e9b5f25a2ae9b2cfd95bb444b072e3d1526077de68fcbb1",
+        "rows": 18
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_4b_zero_shot_probe2.jsonl",
+        "sha256": "42fe21acc25b5664a02874c5f744fdaee9781663088df91a76a9be3c7c2cb6bd",
+        "rows": 1
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_8b_smoke_training_3591.jsonl",
+        "sha256": "b5a0398a170df66d026e89433cc73cd899369889ce6b7ae2f4862d4c21c6c26d",
+        "rows": 1
+      },
+      {
+        "path": "artifacts/vlm/qwen3_vl_8b_zero_shot_balanced18_v1.jsonl",
+        "sha256": "dd121ca4bf7c8f178c74bc87dae21d0c9f6a4b904e97f7ff89f84d024b25f9f0",
+        "rows": 18
+      }
+    ]
+  },
+  "selection_policy": {
+    "labels_used_for_selection": false,
+    "seed": 20260911,
+    "source": "HAU",
+    "excluded_subject": "[participant-index] (only HAU subject exposed in prior VLM runs)",
+    "subject_halves": {
+      "A_user1_9": [
+        "[participant-index]",
+        "[participant-index]",
+        "[participant-index]",
+        "[participant-index]",
+        "[participant-index]"
+      ],
+      "B_user16_24": [
+        "[participant-index]",
+        "[participant-index]",
+        "[participant-index]",
+        "[participant-index]",
+        "[participant-index]"
+      ]
+    },
+    "rows_per_subject": 5,
+    "rows_per_category": {
+      "sequence": 10,
+      "combination": 10,
+      "multi": 10,
+      "single": 10,
+      "emotion": 10
+    },
+    "clip_uniqueness": "all 50 paths unique",
+    "tie_break": "stable SHA-256 of seed and qa_id",
+    "comparator": "18-fold subject-disjoint public-graph OOF prediction"
+  },
+  "fixed_budget": {
+    "model": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "revision": "2fd8dacbdb8f1e54b8c005f081ec5bf79c56376b",
+    "license": "apache-2.0",
+    "reason_for_instruct_not_thinking": "Use the already pinned local model to isolate sampling as the only causal variable; a model change would confound this comparison.",
+    "coarse_frames": 8,
+    "fine_frames_per_arm": 16,
+    "coarse_generation_max_tokens": 64,
+    "answer_generation_max_tokens_per_arm": 32,
+    "temperature": 0,
+    "arms": {
+      "uniform": "16 fixed uniformly spaced fine frames",
+      "localized": "16 chronological fine frames centered on up to two coarse indices selected from the question and options"
+    },
+    "fairness": "Both arms receive the same shared 8-frame coarse localization call, one 16-frame answer video, the identical answer prompt, and 32 answer tokens. The uniform arm ignores the location indices but retains the same coarse-call allocation."
+  },
+  "metrics": {
+    "primary": "localized minus uniform exact accuracy on sequence+combination+multi",
+    "secondary": [
+      "overall exact accuracy",
+      "exact accuracy by all five tasks",
+      "exact accuracy in both frozen subject halves",
+      "localized accuracy where localized and subject-disjoint parent disagree",
+      "invalid-output and implementation-failure rates",
+      "runtime"
+    ]
+  },
+  "precommitted_gate": {
+    "implementation": "50/50 rows finish; zero read/inference failures; zero invalid answer outputs in either arm; at least 48/50 locator parses",
+    "primary_temporal": "localized minus uniform >= 3 exact answers on the 30 sequence+combination+multi rows (>=10 percentage points)",
+    "overall": "localized exact correctness is not below uniform",
+    "task_stability": "sequence, combination, and multi each have nonnegative net correctness and at least two are strictly positive",
+    "subject_half_stability": "localized has strictly positive net correctness in both frozen 25-row subject halves",
+    "parent_disagreement": "at least 10 localized-parent disagreements; localized accuracy >=0.60 and parent accuracy <=0.40 on them",
+    "operational": "experiment runtime after model load <=7200 seconds",
+    "all_required": true,
+    "candidate_if_pass": "validation-qualified only; a separate frozen full-test run is required before any candidate CSV",
+    "candidate_if_fail": "NONE; reject the temporal-localization route without post-hoc cohort or threshold edits",
+    "submission": "PROHIBITED in this experiment"
+  },
+  "category_distribution": {
+    "combination": 10,
+    "emotion": 10,
+    "multi": 10,
+    "sequence": 10,
+    "single": 10
+  },
+  "inputs": {
+    "training_qa_sha256": "2509ed00f9305d552378618d8987559bdff7a4b56241c630ba99dc4051f535bc",
+    "subject_disjoint_parent_oof_sha256": "6216e1db44c6cae7077fafb2e0d4a75d90071547bffcdc7720128a2634080e33",
+    "model_manifest_sha256": "6f2156b299b448eb9e184f8b9775ef07d4c270de940a668b5d509da9248db5a4",
+    "runner_sha256": "12ad966374a2587ee87b7a6356eb2b5a83fcf59b9cf16fc9b65a15e17cbfc7b6",
+    "freezer_sha256": "c5653773cf50331e560d3f860385eceaa3c570ed923ed8c9e86239658c96a0d2"
+  },
+  "selection_file_sha256": "d5ef77e26e93122528bb3dcbdea12686bea9721c1aba95fa987365ad17306d91"
+}

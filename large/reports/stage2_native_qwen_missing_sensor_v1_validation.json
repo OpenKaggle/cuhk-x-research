@@ -1,0 +1,105 @@
+{
+  "experiment": "stage2_native_qwen_missing_sensor_v1",
+  "decision": "REJECT_KEEP_QWEN_DIAGNOSTIC_ONLY",
+  "passed": false,
+  "test_qa_read": false,
+  "test_prediction_written": false,
+  "candidate_csv_written": false,
+  "submission_performed": false,
+  "network_isolation": {
+    "hf_hub_offline": "1",
+    "transformers_offline": "1",
+    "socket_probe_blocked": true,
+    "original_socket_type": "<class 'socket.socket'>",
+    "original_connection": "<function create_connection at 0x109859e40>"
+  },
+  "validation": {
+    "overall": {
+      "rows": 40,
+      "valid": 39,
+      "valid_rate": 0.975,
+      "qwen_correct": 18,
+      "qwen_accuracy": 0.45,
+      "base_correct": 10,
+      "base_accuracy": 0.25,
+      "net_gain": 8
+    },
+    "by_subject_half": {
+      "first_nine": {
+        "rows": 14,
+        "valid": 14,
+        "valid_rate": 1,
+        "qwen_correct": 5,
+        "qwen_accuracy": 0.35714285714285715,
+        "base_correct": 3,
+        "base_accuracy": 0.21428571428571427,
+        "net_gain": 2
+      },
+      "second_nine": {
+        "rows": 26,
+        "valid": 25,
+        "valid_rate": 0.9615384615384616,
+        "qwen_correct": 13,
+        "qwen_accuracy": 0.5,
+        "base_correct": 7,
+        "base_accuracy": 0.2692307692307692,
+        "net_gain": 6
+      }
+    },
+    "by_historical_visibility": {
+      "historically_unobserved": {
+        "rows": 29,
+        "valid": 28,
+        "valid_rate": 0.9655172413793104,
+        "qwen_correct": 11,
+        "qwen_accuracy": 0.3793103448275862,
+        "base_correct": 9,
+        "base_accuracy": 0.3103448275862069,
+        "net_gain": 2
+      },
+      "historically_observed": {
+        "rows": 11,
+        "valid": 11,
+        "valid_rate": 1,
+        "qwen_correct": 7,
+        "qwen_accuracy": 0.6363636363636364,
+        "base_correct": 1,
+        "base_accuracy": 0.09090909090909091,
+        "net_gain": 6
+      }
+    }
+  },
+  "gate": {
+    "frozen": {
+      "minimum_rows": 30,
+      "valid_rate_min": 1,
+      "accuracy_min": 0.6,
+      "both_subject_halves_accuracy_min": 0.5,
+      "must_not_reduce_core_oof_accuracy": true,
+      "all_conditions_required": true
+    },
+    "checks": {
+      "minimum_rows": true,
+      "valid_rate": false,
+      "accuracy": false,
+      "both_subject_halves_accuracy": false,
+      "does_not_reduce_core_oof": true
+    },
+    "passed": false
+  },
+  "artifacts": {
+    "protocol_sha256": "201f85ed09a8ac3d49d0361cb6cf98a0523b4fc76bc9b3615da0cbfb34b2ce23",
+    "cohort_sha256": "85e178c7d33134ffc2e2093267d72986e6f8dda3836cc3f0571d5a3c17f35245",
+    "owned_oof_sha256": "8cf9879a1e147456db67dffe3246bb108e2816170dc787347ce24e93a8f7d1b7",
+    "prediction_log_sha256": "892fa26e92000104b30761ae577da85d5425c48b20eb90c3a0a4f79df7d1d1a4",
+    "code_sha256": "242b9ba0c99b3c2a01eb7cf763cac9eee73aae71c828c90c5d7f4ae0d7fcf5ad"
+  },
+  "versions": {
+    "python": "3.13.2",
+    "pandas": "3.0.3",
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.6.6"
+  },
+  "inference_runtime_seconds": 39.81748091999907,
+  "incremental_runtime_seconds": 41.50882008404005
+}
