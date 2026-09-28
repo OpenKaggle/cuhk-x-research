@@ -7,7 +7,14 @@ type: software
 authors:
   - name: OpenKaggle contributors
 repository-code: https://github.com/openkaggle/cuhk-x-research
+url: https://github.com/OpenKaggle/cuhk-x-research/tree/snapshot-2026-09
 license: MIT
+version: snapshot-2026-09
+date-released: 2026-09-28
 abstract: >-
   Combined public archive snapshot of the CUHK-X Large- and Small-track source,
   protocols, reports, tests, and lightweight receipts.
+keywords:
+  - Kaggle
+  - multimodal learning
+  - reproducibility
