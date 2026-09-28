@@ -5,7 +5,7 @@ message: >-
 title: CUHK-X Large and Small Model Track Research Archive
 type: software
 authors:
-  - name: OpenKaggle contributors
+  - name: Jah-yee
 repository-code: https://github.com/openkaggle/cuhk-x-research
 url: https://github.com/OpenKaggle/cuhk-x-research/tree/snapshot-2026-09
 license: MIT
